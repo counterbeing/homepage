@@ -45,48 +45,21 @@ configure :build do
 end
 
 
+require('pry')
 ###
 # Build South America Blog
 ###
-#
-# ["tom", "dick", "harry"].each do |name|
-#   proxy "/about/#{name}.html", "south_america.html",
-#   :locals => { :person_name => name },
-#   :ignore => true
-# end
-
-f = Dir.glob("data/south_america/*").first
-content = File.read(f + "/post.md")
-data = YAML.parse(content).to_ruby
-content.gsub!(/---.*---/m, '')
-proxy "/map/#{data["date"]}.html", "/south_america.html",
-locals: {
-  body: render_markdown(content),
-  city: data['city'],
-  country: data['country'],
-  latitude: data['longitude'],
-  flickr_link: data['flickr_link'],
-},
-layout: false
-
-
-# Dir.glob("data/south_america/*").map do |f|
-#   # {
-#   #   "date"=>"20130109",
-#   #   "latitude"=>23.2361111,
-#   #   "longitude"=>-106.4152778,
-#   #   "city"=>"Mazatlán",
-#   #   "country"=>"Mexico",
-#   #   "flickr_link"=>"72157638459496024"
-#   # }
-#   content = File.read(f + "/post.md")
-#   data = YAML.parse(content).to_ruby
-#   content.gsub!(/---.*---/m, '')
-#   proxy "map/#{data["date"]}.html",
-#     "source/layouts/south_america.html",
-#     locals: {
-#       body: content,
-#       city: data["city"]
-#     },
-#     :ignore => true
-# end
+Dir.glob('data/south_america/*').each do |f|
+  content = File.read(f + '/post.md')
+  data = YAML.parse(content).to_ruby
+  content.gsub!(/---.*---/m, '')
+  proxy "/map/#{data['date']}.html", '/south_america.html',
+        locals: {
+          body: render_markdown(content),
+          city: data['city'],
+          country: data['country'],
+          latitude: data['longitude'],
+          flickr_link: data['flickr_link']
+        },
+        layout: false
+end

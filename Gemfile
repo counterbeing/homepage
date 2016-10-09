@@ -9,6 +9,7 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 gem 'pry'
+gem 'pry-coolline'
 
 # Middleman Gems
 gem 'middleman', '>= 4.0.0'

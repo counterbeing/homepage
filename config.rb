@@ -44,7 +44,6 @@ configure :build do
   activate :minify_javascript
 end
 
-
 require('pry')
 ###
 # Build South America Blog

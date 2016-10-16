@@ -1,0 +1,44 @@
+---
+title: Personal - The Things That Make Life Worth All The Trouble 
+header: About My Life
+subtitle: There's more to life than computers and tech. Here are some of the things I like to spend my time doing. 
+
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+
+      <div class="centered">
+        <div class="circular" style="width: 80%; height: 80%;background: url(images/cory-climbing-grack.jpg) no-repeat; background-size: cover;"><img itemprop="image" src="images/cory-climbing-grack.jpg" title="Photo of Cory climbing the grack." alt="Photo of cory climbing the grack."></div>
+        <h3>Hi, I'm Cory, pleased to meet you. Got something fun to do? Maybe you should bring me along! </h3>
+      </div>
+    </div>
+    <div class="col-md-4">
+
+<%= markdown = <<-MARKDOWN
+## My History
+I'm originally from [Brunswick, Maine](https://en.wikipedia.org/wiki/Brunswick,_Maine "The place I was born."), and if you've never been there, yes, it's a beautiful place. And if you've never even heard of it, no it's not in Canada (I get that a lot). I spent a lot of time outside with my father as a kid. I didn't always appreciate it, but I'd say I do now, and will gladly torture my own children when the time comes. 
+
+Somehow landed in California when my mom met a man in a beer garden in Germany. I attended high school there, and made some life long friends, and then headed north for San Francisco around 2005. The rest is history.
+
+I'm currently riding a motorcycle from San Francisco, California, to Argentina. So far so good. I'll keep you posted. I actually just started a [motorcycle touring blog](/map "A motorcycle travel blog. Pictures and stories from South America.")
+MARKDOWN
+render_markdown(markdown) %>
+
+    </div>
+    <div class="col-md-4">
+<%= markdown = <<-MARKDOWN
+## Interests
+- **Rock Climbing**: Like a lot of things, I got started climbing because it was on my life to-do list. It wasn't long before I was accumulating a trad rack, and traveling just to climb. Whoops.
+- **Surfing**: Love it. My first surfboard, and surf lesson, came from my buddy Bruce.
+- **Backpacking**: More the get out in the woods and get dirty type. Though I've done some international travel like this too. In either case, it's a good feeling to walk around with everything you need on your back.
+- **Motorcycles in General**: My father used to race motocross, thus I received my first motorcycle at age five. My mother, used to drop me off at school on a motorcycle. She gave me my second motorcycle at around age 18 (the same one she used to drop me off with). You could say it runs in the family.
+MARKDOWN
+render_markdown(markdown) %>
+
+
+    </div>
+  </div>
+</div>
+

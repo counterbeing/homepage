@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= current_page.data.title %> | Cory Logan</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Cory Logan is a traveling developer. Should you be friends with Cory? Or do you need help with a web development project?" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,800' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/stylesheets/site.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  </head>
+
+  <body itemscope itemtype="http://schema.org/Person">
+      <header id="white-header">
+
+        <%= partial(:stacked_icon, :locals => { icon: 'fa-envelope', link: 'mailto:he@corylogan.com'}) %>
+        <%= partial(:stacked_icon, :locals => { icon: 'fa-linkedin', link: 'http://www.linkedin.com/in/counterbeing'}) %>
+        <%= partial(:stacked_icon, :locals => { icon: 'fa-facebook', link: 'https://www.facebook.com/counterbeing'}) %>
+        <%= partial(:stacked_icon, :locals => { icon: 'fa-twitter', link: 'https://twitter.com/counterbeing'}) %>
+        <%= partial(:stacked_icon, :locals => { icon: 'fa-github', link: 'https://github.com/counterbeing'}) %>
+        <%= partial(:stacked_icon, :locals => { icon: 'fa-stack-exchange', link: 'http://stackoverflow.com/users/250934/counterbeing'}) %>
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <h1 id="page_title"><span itemprop="name"><%= current_page.data.header %></span></h1>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                <h4 id="subtitle"><%= current_page.data.subtitle %></h4>
+              </div>
+              </div>
+            <div class="row">
+              <nav id="nav">
+                <a href="/index.html">home</a>
+                <a href="/professional.html">professional</a>
+                <a href="/personal.html">personal</a>
+              </nav>
+            </div>
+          </div>
+        </div><!-- end container -->
+      </header>
+
+      <div class="triangle">
+				<%= partial(:triangle_svg) %>
+      </div>
+
+    <%= yield %>
+
+    <div class="container">
+      <footer class="row">
+        <div class="col-md-6">
+          <p>By Cory Logan</p>
+        </div>
+      </footer>
+    </div>
+
+      <script type="text/javascript">
+        $(document).ready(function(){
+        });
+      </script>
+			<%= partial(:google_analytics) %>
+    </body>
+  </html>

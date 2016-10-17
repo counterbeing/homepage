@@ -1,9 +1,46 @@
 - 
+  title: Able Health
+  client: Able Health
+  year: 2016
+  season: summer
+  image: able_health.jpg
+  kind: job
+  technologies:
+    - Rails
+    - Terraform
+    - AWS
+  description: >
+    In recent months I joined [Able Health](http://ablehealth.com/). I'm just beginning to help withe the development of a product that will simplify the calculations  that many provider associations need to enroll in pay-for-performance programs. I constantly feel honored to be with such a dedicated and talented group of people. 
+
+
+    It's a bit early to say what all of my job here will entail, but I'm excited to see where it goes.
+
+- 
+  title: CloudPassage
+  client: CloudPassage
+  year: 2015
+  season: summer
+  image: cp.jpg
+  kind: job
+  technologies:
+    - Rails
+    - Sinatra
+    - CVE
+  description: >
+    I had a great experience with CloudPassage working on the core product. Eventually a lot of my job solidified around an internal tool I built to collect and version vulnerability content.
+
+    
+    I proposed and built a project that resulted in one of our first in-house microservices. The benefits included centralization, and reduced redundancy in tons of data processing.
+    
+
+
+- 
   title: Solicitor Mail Templates
   client: Self
   year: 2015
   season: Spring
   image: solicitor.jpg
+  kind: project
   technologies:
     - Sails.js
     - Angularjs
@@ -14,7 +51,9 @@
   description: >
     This was a tool that I decided I needed. I looked around at various applications that were intended for the purpose but was generally dissatisfied at the primitive templating.  
 
+
     As a programmer, when you do something more than once, you begin to think of ways to automate it. This project began as that, but now I'm beginning to wonder if I'll be able to turn it into a sellable product.  
+
 
     The initial goal was to create a super slick interface that revolves around real time updating of data by using Angularjs resources, as well as a live templating preview that includes all the functionality  of Handlebars. The flexibility within templates gives you conditionals and loops for writing templates that are robust, and completely reusable.
     
@@ -29,6 +68,7 @@
   season: Fall
   url: https://flirtmoji.co
   image: flirtmoji.jpg
+  kind: job
   technologies:
     - Ruby on Rails
     - ActiveAdmin
@@ -52,6 +92,7 @@
   season: Spring
   url: http://collar.corylogan.com
   image: collar-app.jpg
+  kind: project
   technologies:
     - jQuery
     - Facebook API
@@ -67,6 +108,7 @@
   season: Fall
   image: maccentric-website.jpg
   quote: I’ve never worked with a developer as friendly, inventive, and engaging as Cory. He connects with me on my vision, teases out the nuances through the development process, and always produces a stellar, living product that's well worth the investment, because I’m always happy with it.  – Noam Birnbaum, CEO
+  kind: job
   technologies:
     - Sammy.js
     - Assemble
@@ -83,6 +125,7 @@
   year: 2013
   season: Summer
   image: x-winery-website.jpg
+  kind: job
   technologies:
     - jQuery
     - LocomotiveCMS
@@ -95,6 +138,7 @@
   year: 2009
   season: Fall
   image: samples-database.jpg
+  kind: job
   technologies:
       - jQuery
       - Ruby
@@ -113,6 +157,7 @@
   year: 2009
   season: Spring
   image: dptwatch.jpg
+  kind: project
   technologies:
       - Ruby on Rails
       - Heroku

@@ -72,6 +72,7 @@ a {
     .timeline-icon {
       @include prefix(border-radius, 50%);
       background: $timeline-color;
+      color: $white;
       height: 50px;
       left: 50%;
       margin-left: -23px;
@@ -80,10 +81,10 @@ a {
       top: 0;
       width: 50px;
 
-      svg {
+      i {
         position: relative;
-        top: 14px;
-        left: 14px;
+        top: 9px;
+        left: 9px;
       }
     }
 

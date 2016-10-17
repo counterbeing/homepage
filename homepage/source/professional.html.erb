@@ -6,77 +6,48 @@ image: mobile-office
 image_title: my mobile office
 ---
 
- <div class="container">
-   <div class="row">
-     <div class="col-md-8">
-       <% data.projects.each do |project| %>
-         <div class="timeline-entry">
-           <div class="date">
-             <span class="year"><%= project.year %></span>
-             <span class="season"><%= project.season %> </span>
-           </div>
-           <h4><%= project.title %> | <%= project.client %>
-             <%=  project.url %> 
-             <a href="<%= project.url %> " title="launch project" target="_blank"><i class="fa fa-globe"></i> </a>
-           </h4>
-           <div class="tokens">
-             <% if project.technologies %> 
-               <% project.technologies.each do |technology| %> 
-                 <span class="token"><%= technology %> </span>
-               <% end %> 
-             <% end %> 
-           </div>
-           <% if project.description %> 
-             <%= render_markdown(project.description) %>   
-           <% end %> 
-           <% if project.quote %> 
-             <blockquote>
-               <%= project.quote%> 
-             </blockquote>
-           <% end %> 
-           <% if project.image %> 
-             <img class="event-image" src="/images/portfolio/<%= project.image %> ">
-           <% end %> 
-         </div>
-       <% end  %>  
-    </div>
+<div class="container">
+  <div class='row'>
 
-    <div class="col-md-3 offset-md-1">
+    <div class="timeline-container">
+      <div id="timeline">
 
-<%= markdown = <<-MARKDOWN
-## Languages and Frameworks
-- **Ruby and Rails**: [Rails](http://rubyonrails.org/ "A highly opinionated application framework") was originally what got me into [Ruby](https://www.ruby-lang.org/en/ "A fantastic programming language."). Initially I found Ruby tough to follow, being used to less civilized languages (I'm looking at you PHP). But one day a switch was flipped, and I loved it.
-- **JavaScript**: I remember the days I cursed JS. I just didn't understand why it had to work the way it did. But, once jQuery and other frameworks made JS feel so much more manageable, I jumped back on board. And now we see all sorts of new uses for it.
-- **Front End Frameworks**: I'm developing a new passion for front end frameworks. Currently my focus is on [Backbone.js](http://backbonejs.org/ "A JavaScript framework to give information structure."), and I'm awestruck with all the potential it holds. It's clear that this is part of the future, and it's not hard to explain why. I often find myself at a middle ground using something like [Sammy.](http://sammyjs.org/ "A simple framework, kind of like sinatra, but for the browser.") On smaller projects that are starting to resemble a spaghetti monster. 
-- **Information Technology**: For the past several years, I've been managing a fleet of Mac computers using [Puppet](http://puppetlabs.com/ "A system management tool."). I can't say I always love the organization of puppet, but I am constantly amazed at what it's capable of, and all of the man hours it has saved.
-MARKDOWN
-render_markdown(markdown) %>
+        <% data.projects.each_with_index do |project, index| %>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <%= partial(:star_svg) %>
+            </div>
+            <div class="timeline-content <%= 'flipped' if index.even? %>">
+              <h2><%= project.title %></h2>
+              <p>
+                <% if project.description %> 
+                  <%= render_markdown(project.description) %>   
+                <% end %> 
+              </p>
+            </div>
+            <div class="timeline-opposite <%= 'flipped' if index.even? %>">
+              <h3><%= project.season %> of <%= project.year %></h3>
+              <h4><%= project.client %></h4>
 
+                <% if project.image %> 
+                  <img class="event-image" src="/images/portfolio/<%= project.image %> ">
+                <% end %> 
 
+                <% if project.technologies %> 
+                  <div class="tokens">
+                    <% project.technologies.each do |technology| %> 
+                      <span class="token"><%= technology %> </span>
+                    <% end %> 
+                  </div>
+                <% end %> 
 
-<div class="centered">
-  <% cp = current_page.data %>
-  <div class="circular200" style="background: url(images/<%= cp.image%> .jpg) no-repeat; background-size: cover;"><img itemprop="image" src="images/<%= cp.image%> .jpg" title="<%= cp.image_title %> " alt="<%= cp.image_title%> "></div>
-</div>
+            </div>
+          </div>
+        <% end  %>  
 
-<%= markdown = <<-MARKDOWN
-## What I've Done So Far
+      </div>
+    </div> 
 
-I started out doing web design just out of high school. That was many years ago now. It was a scary and exciting time living on my own and working on my own for the first time in my life.
-
-After a couple of years of working on my own on various small projects, I met up with [MacCentric Solutions](http://www.maccentricsolutions.com) and began working in IT with them. There were many helpdesk tasks at the beginning, but after a few years of that, I started to loop back around to coding. Rails was all the rage at the time, and I became very excited about it and started to take on jobs on the side.
-
-Eventually, I realized I didn't want to be in IT any more, and moved into a development role. And here I am.
-
-## What's Up Next? The Things I Want To Work On
-I've done a pretty good job of working on things that I want to. Right now, my current goal is to work on a SAAS product. I think it's a really good business model. I just need to do some exploration in some markets that I love.
-
-While this is a common and somewhat nebulous sentiment, I feel the strong desire to have my work help people.
-
-MARKDOWN
-render_markdown(markdown) %>
-
-    </div>
   </div>
 </div>
 

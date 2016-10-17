@@ -1,13 +1,8 @@
 @charset 'utf-8';
 // @import "bootstrap";
+@import 'variables';
 @import 'normalize';
-
-$selection-color: #66c1ff;
-$bg-color: #e2e2e2;
-$orangeish: #f6756f;
-$grey: #333;
-$code-bg: rgba(255, 255, 255, .3);
-$white: #fff;
+@import 'timeline';
 
 body {
   background-attachment: fixed;

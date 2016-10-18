@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <title><%= current_page.data.title || "Bits and Pieces" %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <%= stylesheet_link_tag :site %>
+    <%= javascript_include_tag :all %>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <%= partial 'header' %>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-2'>
+          <ul>
+            <% blog.tags.each do |tag| %>
+              <%= tag.first %>
+            <% end %>
+          </ul>
+
+        </div>
+        <div class='col-md-10'>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

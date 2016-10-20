@@ -10,6 +10,7 @@ GEM
     addressable (2.4.0)
     backports (3.6.8)
     builder (3.2.2)
+    coderay (1.1.1)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -42,6 +43,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     memoist (0.15.0)
+    method_source (0.8.2)
     middleman (4.1.10)
       coffee-script (~> 2.2)
       compass-import-once (= 1.0.5)
@@ -94,16 +96,22 @@ GEM
     padrino-support (0.13.3.2)
       activesupport (>= 3.1)
     parallel (1.9.0)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rack (1.6.4)
     rack-livereload (0.3.16)
       rack
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    rb-readline (0.5.3)
     redcarpet (3.3.3)
     rouge (2.0.6)
     sass (3.4.22)
     servolux (0.12.0)
+    slop (3.6.0)
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
@@ -121,6 +129,8 @@ DEPENDENCIES
   middleman-blog
   middleman-livereload
   middleman-syntax
+  pry
+  rb-readline
   redcarpet (~> 3.3, >= 3.3.3)
   tzinfo-data
   wdm (~> 0.1.0)

@@ -1,0 +1,7 @@
+<ul>
+  <% blog.tags.each do |tag, articles| %>
+    <li>
+      <h5><%= link_to tag, tag_path(tag) %></h5>
+    </li>
+  <% end %>
+</ul>

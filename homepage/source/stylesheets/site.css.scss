@@ -95,7 +95,11 @@ h3 {
   text-transform: uppercase;
 }
 
-h4 { color: $orangeish; font-size: 20px; }
+h4 { 
+color: $orangeish; 
+font-size: 20px; 
+
+}
 
 
 header {
@@ -205,18 +209,15 @@ nav {
     font-size: 40px;
     margin-left: 15px;
   }
+
+  h4 {
+    margin-top: 30px;
+  }
 }
 
-
-
-.timeline-entry h4{
-  margin-top: 30px;
-}
-
-
-.outline {
-  border: 1px solid red;
-}
+// .outline {
+//   border: 1px solid red;
+// }
 
 input {
   border: 0;

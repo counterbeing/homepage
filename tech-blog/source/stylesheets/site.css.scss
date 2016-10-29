@@ -1,11 +1,25 @@
-@charset "utf-8";
+@charset 'utf-8';
 // @import "normalize";
-@import "monokai";
+@import 'monokai';
 @import url('https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro');
 
+$off-brand: #fff;
+$brand: #f6756f;
+$darker: #62312e;
 
-$off-brand: #FFF;
-$brand: #A8383B;
+@mixin fade-links {
+  a {
+    color: $brand;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    transition: color .75s;
+  }
+
+  a:hover {
+    color: $darker;
+    text-decoration: none;
+  }
+}
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -26,6 +40,16 @@ img {
   margin-right: auto;
 }
 
+.link-bar {
+  @include fade-links;
+  font-size: 1rem;
+}
+
+.tag-bar {
+  @include fade-links;
+  list-style: none;
+}
+
 header {
   background-color: $brand;
   color: $off-brand;
@@ -43,3 +67,5 @@ h1 {
 h2 {
   color: $brand;
 }
+
+

@@ -33,7 +33,7 @@ the formatting perfected
 lovely indented
 ```
 
-This works, but it's clearly ugly. When you see it in a piece of code you're trying to navigate, it's more than a little disorienting. You could actually indent the text above, but, if you do that the string returned will also have leading spaces. In some cases, leading spaces can break things in unexpected ways.
+This works, but it's clearly ugly. When you see it in a piece of code you're trying to navigate, it's more than a little disorienting. You could actually indent the text above, but, if you do that the string returned will also have leading spaces. In some cases leading spaces can break things in unexpected ways.
 
 ## Stripped Heredocs
 
@@ -67,7 +67,7 @@ class String
 end
 ```
 
-This counts the minimum number of spaces before all lines of your heredoc, and indents accordingly. You'd use it like so.
+This counts the number of minimum number of spaces before all lines of your heredoc, and indents accordingly. You'd use it like so.
 
 ```ruby
 puts <<-MY_STRING.strip_heredoc

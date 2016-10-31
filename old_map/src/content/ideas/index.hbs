@@ -1,0 +1,12 @@
+---
+title: Index of Ideas
+unlisted: true
+---
+
+This is a place where I list some ideas, along with some intial research. These aren't formal plans, it's more of a place for thrashing. If you have comments on any of the ideas, please let me know, I'd like to make them better.
+
+{{#each pages}}
+{{#unless data.unlisted }}
+- {{conventionalLink this}}
+{{/unless}}
+{{/each}}

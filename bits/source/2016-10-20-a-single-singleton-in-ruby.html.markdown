@@ -81,7 +81,7 @@ class ErrorLogger
 end
 
 error_logger = ErrorLogger.instance
-error_logger.log_an_error('Killing me softly...)
+error_logger.log_an_error('Killing me softly...')
 error_logger.print_log # => ["Killing me softly..."]
 ```
 

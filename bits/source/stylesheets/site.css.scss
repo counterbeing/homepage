@@ -5,7 +5,7 @@
 
 $off-brand: #fff;
 $brand: #f6756f;
-$darker: #62312e;
+$darker: #2A2A2A;
 
 @mixin fade-links {
   a {
@@ -68,4 +68,7 @@ h2 {
   color: $brand;
 }
 
-
+.timestamp { 
+  color: $darker; 
+  font-size: 1rem;
+}

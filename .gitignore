@@ -19,3 +19,5 @@ homepage/build*
 .DS_Store
 .env
 .deploy
+old_map/deploy/*
+old_map/tmp/*

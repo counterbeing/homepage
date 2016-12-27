@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bytes on Bits and Blocks</title>
+    <link>https://www.corylogan.com/bits/bytes/index.xml</link>
+    <description>Recent content in Bytes on Bits and Blocks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Dec 2016 19:51:29 +0000</lastBuildDate>
+    <atom:link href="https://www.corylogan.com/bits/bytes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>What Process Is Hogging My Port On Mac Os</title>
+      <link>https://www.corylogan.com/bits/bytes/what_process_is_hogging_my_port_on_mac_os/</link>
+      <pubDate>Thu, 15 Dec 2016 19:51:29 +0000</pubDate>
+      
+      <guid>https://www.corylogan.com/bits/bytes/what_process_is_hogging_my_port_on_mac_os/</guid>
+      <description>
+
+&lt;h2 id=&#34;address-already-in-use&#34;&gt;Address already in use&lt;/h2&gt;
+
+&lt;p&gt;Damn. Did I leave a server running somewhere? Sometimes you&amp;rsquo;re not sure where you left a server running, or where something is running you never knew about. I&amp;rsquo;m finally writing this down, as I always have to look it up. I found this solution in &lt;a href=&#34;http://stackoverflow.com/a/30029855/250934&#34;&gt;a StackOverflow post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s how to get all of the processes by what port they&amp;rsquo;re using.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo lsof -iTCP -sTCP:LISTEN -n -P
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;as-a-shell-function&#34;&gt;As A Shell Function&lt;/h2&gt;
+
+&lt;p&gt;Looking at it, I realized I would never remember it, given how infrequently I need it. So, I wrote a function. You should be able to pop this into your &lt;code&gt;.bashrc&lt;/code&gt; or &lt;code&gt;.zshrc&lt;/code&gt;, or whatever you&amp;rsquo;re using.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;function whats_using {
+  if [ -z $1 ]; then
+    sudo lsof -iTCP -sTCP:LISTEN -n -P
+  else
+    sudo lsof -iTCP -sTCP:LISTEN -n -P | grep $1
+  fi
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you can search for what&amp;rsquo;s using a port like so, or don&amp;rsquo;t specify a port number to return all results.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;➜  whats_using 8181
+com.docke  4082 cory   20u  IPv4 0xa05b24c922aef1a1      0t0  TCP *:8181 (LISTEN)
+com.docke  4082 cory   21u  IPv6 0xa05b24c91a710329      0t0  TCP [::1]:8181 (LISTEN)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

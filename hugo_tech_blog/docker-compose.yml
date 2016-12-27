@@ -1,0 +1,8 @@
+hugo:
+  image: counterbeing/hugo
+  volumes:
+    - .:/src
+    - ./public/:/public
+  ports:
+    - "1313:1313"
+  restart: always

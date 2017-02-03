@@ -243,7 +243,7 @@ module.exports = function(grunt) {
         // Then we want to check to see if the cache already exists
         if (!grunt.file.exists(flickrCache)){
           // If it doesn't then we collect our data
-          var flickrOptions = {photosetID: yaml['context']['flickr_link'], apiKey: "***REMOVED***"};
+          var flickrOptions = {photosetID: yaml['context']['flickr_link'], apiKey: "0ec67e83e54071dabf7cdb96cb09fabc"};
           flickrGrabber.getPhotos(flickrOptions, flickrCache);
         }
       }

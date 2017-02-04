@@ -2,19 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bytes on Bits and Blocks</title>
-    <link>https://www.corylogan.com/bits/bytes/index.xml</link>
+    <link>https://corylogan.com/bits/bytes/index.xml</link>
     <description>Recent content in Bytes on Bits and Blocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Dec 2016 19:51:29 +0000</lastBuildDate>
-    <atom:link href="https://www.corylogan.com/bits/bytes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Jan 2017 16:45:38 -0800</lastBuildDate>
+    <atom:link href="https://corylogan.com/bits/bytes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>exporting_a_zone_file_from_mediatemple</title>
+      <link>https://corylogan.com/bits/bytes/exporting_a_zone_file_from_mediatemple/</link>
+      <pubDate>Sun, 08 Jan 2017 16:45:38 -0800</pubDate>
+      
+      <guid>https://corylogan.com/bits/bytes/exporting_a_zone_file_from_mediatemple/</guid>
+      <description>&lt;p&gt;I was in the process of moving my DNS from MediaTemple to Route53 and was having trouble making sure I&amp;rsquo;d moved all of the entries. I decided I&amp;rsquo;d just export a zone file to do a comparison in a text editor.&lt;/p&gt;
+
+&lt;p&gt;Surprise! You can&amp;rsquo;t.&lt;/p&gt;
+
+&lt;p&gt;Instead, here&amp;rsquo;s a quick bit of jQuery, which is already available in the MediaTemple control panel. Just navigate to the zone file editor, open your console, and use this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$.each($(&amp;quot;.dns_record&amp;quot;), function(i, el) { 
+  name = $(el).find(&amp;quot;.u-nowrap input&amp;quot;).val()
+  type = $(el).find(&amp;quot;select.dropdown-select&amp;quot;).val()
+  data = $(el).find(&amp;quot;td input.textInput--full[name^=&#39;data&#39;]&amp;quot;).val()
+  console.log(name + &amp;quot;  &amp;quot; + type + &amp;quot;  &amp;quot; + data)
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;From here, it&amp;rsquo;s pretty easy to clean up and convert. Good luck!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>reducing_the_size_of_alpine_docker_images</title>
+      <link>https://corylogan.com/bits/bytes/reducing_the_size_of_alpine_docker_images/</link>
+      <pubDate>Mon, 26 Dec 2016 22:38:02 -0800</pubDate>
+      
+      <guid>https://corylogan.com/bits/bytes/reducing_the_size_of_alpine_docker_images/</guid>
+      <description>
+
+&lt;h2 id=&#34;why-the-heck-is-my-docker-image-so-huge&#34;&gt;Why the heck is my docker image so huge?&lt;/h2&gt;
+
+&lt;p&gt;That&amp;rsquo;s a tough question to answer, especially when you have no idea what&amp;rsquo;s taking up all of the space.&lt;/p&gt;
+
+&lt;p&gt;This is a dirty little one-liner that yields a sorted list of all of the packages on your alpine image by size. It does this by&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Getting the complete list from &lt;code&gt;apk info&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Iterating over the results to ask &lt;code&gt;apk&lt;/code&gt; for its size&lt;/li&gt;
+&lt;li&gt;Removing the blank lines&lt;/li&gt;
+&lt;li&gt;Combining the size lines and the name lines&lt;/li&gt;
+&lt;li&gt;Sorting by size&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;apk info | while read a; do apk info -s $a; done | awk NF | sed &#39;Ns/\n/ /&#39; | sort -k4 -n
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It may be ugly, but now I can make an informed decision about wether or not there are binaries that can be axed.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>What Process Is Hogging My Port On Mac Os</title>
-      <link>https://www.corylogan.com/bits/bytes/what_process_is_hogging_my_port_on_mac_os/</link>
+      <link>https://corylogan.com/bits/bytes/what_process_is_hogging_my_port_on_mac_os/</link>
       <pubDate>Thu, 15 Dec 2016 19:51:29 +0000</pubDate>
       
-      <guid>https://www.corylogan.com/bits/bytes/what_process_is_hogging_my_port_on_mac_os/</guid>
+      <guid>https://corylogan.com/bits/bytes/what_process_is_hogging_my_port_on_mac_os/</guid>
       <description>
 
 &lt;h2 id=&#34;address-already-in-use&#34;&gt;Address already in use&lt;/h2&gt;

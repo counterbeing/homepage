@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Articles on Bits and Blocks</title>
-    <link>https://www.corylogan.com/bits/articles/index.xml</link>
+    <link>https://corylogan.com/bits/articles/index.xml</link>
     <description>Recent content in Articles on Bits and Blocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 13 Dec 2016 18:30:08 -0800</lastBuildDate>
-    <atom:link href="https://www.corylogan.com/bits/articles/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://corylogan.com/bits/articles/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Why Choose Vim</title>
-      <link>https://www.corylogan.com/bits/articles/why_choose_vim/</link>
+      <link>https://corylogan.com/bits/articles/why_choose_vim/</link>
       <pubDate>Tue, 13 Dec 2016 18:30:08 -0800</pubDate>
       
-      <guid>https://www.corylogan.com/bits/articles/why_choose_vim/</guid>
+      <guid>https://corylogan.com/bits/articles/why_choose_vim/</guid>
       <description>
 
 &lt;h2 id=&#34;tldr&#34;&gt;TLDR&lt;/h2&gt;
@@ -47,10 +47,10 @@
     
     <item>
       <title>A Single Singleton in Ruby</title>
-      <link>https://www.corylogan.com/bits/articles/a_single_singleton_in_ruby/</link>
+      <link>https://corylogan.com/bits/articles/a_single_singleton_in_ruby/</link>
       <pubDate>Tue, 13 Dec 2016 18:22:26 -0800</pubDate>
       
-      <guid>https://www.corylogan.com/bits/articles/a_single_singleton_in_ruby/</guid>
+      <guid>https://corylogan.com/bits/articles/a_single_singleton_in_ruby/</guid>
       <description>
 
 &lt;h2 id=&#34;the-singleton-design-pattern&#34;&gt;The singleton design pattern&lt;/h2&gt;
@@ -165,10 +165,10 @@ ErrorLogger.print_log # =&amp;gt; [&amp;quot;Whoops!&amp;quot;]
     
     <item>
       <title>The Mysteries of the Ruby Heredoc</title>
-      <link>https://www.corylogan.com/bits/articles/the_mysteries_of_the_ruby_heredoc/</link>
+      <link>https://corylogan.com/bits/articles/the_mysteries_of_the_ruby_heredoc/</link>
       <pubDate>Fri, 18 Nov 2016 19:28:41 +0200</pubDate>
       
-      <guid>https://www.corylogan.com/bits/articles/the_mysteries_of_the_ruby_heredoc/</guid>
+      <guid>https://corylogan.com/bits/articles/the_mysteries_of_the_ruby_heredoc/</guid>
       <description>
 
 &lt;p&gt;As of writing this, I&amp;rsquo;m running Ruby version 2.3.0. Not all of this, particularly the stripped heredoc, is available in plain ruby before 2.3.0.&lt;/p&gt;

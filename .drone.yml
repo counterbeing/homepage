@@ -15,9 +15,11 @@ pipeline:
     image: alpine
     commands:
       - rm -rf rendered_assets/*
-      - cp homepage/build/ rendered_assets/
-      - cp hugo_tech_blog/public rendered_assets/bits
-      - cp old_map/deploy rendered_assets/map
+      - pwd
+      - ls -alh
+      - cp -R homepage/build/ rendered_assets/
+      - cp -R hugo_tech_blog/public rendered_assets/bits
+      - cp -R old_map/deploy rendered_assets/map
 
   Build Site Image:
     image: plugins/docker

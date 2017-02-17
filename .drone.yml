@@ -11,7 +11,8 @@ pipeline:
     commands:
       - cd hugo_tech_blog
       - hugo 
-  Copy Assetshto Folder:
+
+  Copy Assets to Folder:
     image: alpine
     commands:
       - rm -rf rendered_assets/*
@@ -22,12 +23,12 @@ pipeline:
   Build Site Image:
     image: plugins/docker
     dockerfile: Dockerfile
-    repo: corylogan/personal-homepage
+    repo: corylogan/homepage
     tags:
       - latest
       - ${DRONE_COMMIT_SHA:8}
 
-  # Deploy To Kontena:
-  #   image: kontena/cli
-  #   commands:
-  #     - SSL_IGNORE_ERRORS=true kontena stack deploy homepage
+  Deploy To Kontena:
+    image: kontena/cli
+    commands:
+      - SSL_IGNORE_ERRORS=true kontena stack deploy site

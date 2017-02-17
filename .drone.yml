@@ -11,12 +11,10 @@ pipeline:
     commands:
       - cd hugo_tech_blog
       - hugo 
-  Copy Assets to Folder:
+  Copy Assetshto Folder:
     image: alpine
     commands:
       - rm -rf rendered_assets/*
-      - pwd
-      - ls -alh
       - cp -R homepage/build/ rendered_assets/
       - cp -R hugo_tech_blog/public rendered_assets/bits
       - cp -R old_map/deploy rendered_assets/map

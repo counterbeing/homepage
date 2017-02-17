@@ -4,30 +4,30 @@ pipeline:
     commands:
       - cd homepage
       - bundle exec middleman build
-
-  Render Hugo Tech Blog:
-    image: jojomi/hugo:latest
-    commands:
-      - cd hugo_tech_blog
-      - hugo 
-	
-  Copy Assets to Folder:
-    image: alpine
-    commands:
-      - rm -rf rendered_assets/*
-      - cp homepage/build/ rendered_assets/
-      - cp hugo_tech_blog/public rendered_assets/bits
-      - cp old_map/deploy rendered_assets/map
-	
-  Build Site Image:
-    image: plugins/docker
-    dockerfile: Dockerfile
-    repo: corylogan/personal-homepage
-    tags:
-      - latest
-      - ${DRONE_COMMIT_SHA:8}
-
-  Deploy To Kontena:
-    image: kontena/cli
-    commands:
-      - SSL_IGNORE_ERRORS=true kontena stack deploy homepage
+  #
+  # Render Hugo Tech Blog:
+  #   image: jojomi/hugo:latest
+  #   commands:
+  #     - cd hugo_tech_blog
+  #     - hugo 
+	#
+  # Copy Assets to Folder:
+  #   image: alpine
+  #   commands:
+  #     - rm -rf rendered_assets/*
+  #     - cp homepage/build/ rendered_assets/
+  #     - cp hugo_tech_blog/public rendered_assets/bits
+  #     - cp old_map/deploy rendered_assets/map
+	#
+  # Build Site Image:
+  #   image: plugins/docker
+  #   dockerfile: Dockerfile
+  #   repo: corylogan/personal-homepage
+  #   tags:
+  #     - latest
+  #     - ${DRONE_COMMIT_SHA:8}
+  #
+  # Deploy To Kontena:
+  #   image: kontena/cli
+  #   commands:
+  #     - SSL_IGNORE_ERRORS=true kontena stack deploy homepage

@@ -21,3 +21,4 @@ homepage/build*
 .deploy
 old_map/deploy/*
 old_map/tmp/*
+hugo_tech_blog/public/*

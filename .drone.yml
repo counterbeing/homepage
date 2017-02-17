@@ -1,9 +1,12 @@
 pipeline:
-  Render Homepage:
-    image: tenstartups/middleman
-    commands:
-      - cd homepage
-      - bundle exec middleman build
+  Send Message to Slack:
+    image: plugins/slack
+    channel: webdev
+  # Render Homepage:
+  #   image: tenstartups/middleman
+  #   commands:
+  #     - cd homepage
+  #     - bundle exec middleman build
   #
   # Render Hugo Tech Blog:
   #   image: jojomi/hugo:latest

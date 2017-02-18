@@ -16,7 +16,7 @@ pipeline:
     image: alpine
     commands:
       - rm -rf rendered_assets/*
-      - cp -r homepage/build/ rendered_assets/
+      - cp -r homepage/build/* rendered_assets/
       - cp -r hugo_tech_blog/public rendered_assets/bits
       - cp -r old_map/deploy rendered_assets/map
 

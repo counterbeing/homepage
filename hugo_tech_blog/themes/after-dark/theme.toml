@@ -7,25 +7,37 @@ licenselink = "https://github.com/comfusion/after-dark/blob/master/LICENSE.md"
 description = "A retro dark theme for Hugo"
 homepage = "https://comfusion.github.io/after-dark/"
 tags = [
+  "mobile-first",
   "blog",
   "personal",
-  "minimal",
   "accessible",
+  "minimal",
   "responsive",
   "retro",
-  "dark"
+  "dark",
+  "analytics",
+  "disqus",
+  "open-graph",
+  "schema-org"
 ]
 features = [
-  "html5",
-  "css3",
-  "hack.css",
-  "google analytics",
-  "pagination",
-  "reading time",
-  "word count",
-  "related posts",
-  "section menu",
-  "nojavascript"
+  "Mobile-first Design",
+  "Responsive Design",
+  "Flexbox Layouts",
+  "Google Analytics",
+  "Disqus Commenting",
+  "OpenGraph support",
+  "Schema Structured Data",
+  "Paginated Lists",
+  "Reading Time",
+  "Last Modified time",
+  "Author Byline",
+  "Word Count",
+  "Related Posts",
+  "Section Menu",
+  "Block Templates",
+  "Table of Contents",
+  "SEO Site Verification"
 ]
 min_version = 0.16
 
@@ -86,11 +98,14 @@ min_version = 0.16
 
 ######
 # TODO:
+# - Add noindex meta for pages to not crawl (or custom robots.txt)
 # X Similar posts feature - https://gohugo.io/templates/functions/
 # X Check out the menu stuff in "creating a new theme md"
 # X Confirm RSS is working as expected
 # X Confirm list template works
-# - create archives page (grouped by date)
+# - create archives page (grouped by date or keyword)
+# X Add custom post author support
+# - Add multi-author support
 # X test <!--more--> verify not wraping p in a p (update, index.html, terms, list)
 # X get them Tags and Categories displaying on posts ONLY
 # X prevent pages from showing up with posts on the homepage

@@ -17,7 +17,7 @@ This is a dirty little one-liner that yields a sorted list of all of the package
 - Combining the size lines and the name lines
 - Sorting by size
 
-```
+```shell
 apk info | while read a; do apk info -s $a; done | awk NF | sed 'Ns/\n/ /' | sort -k4 -n
 ```
 

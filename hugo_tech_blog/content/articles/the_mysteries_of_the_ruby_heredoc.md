@@ -3,8 +3,9 @@ date = "2016-11-18T19:28:41+02:00"
 publishdate = "2016-11-18T19:28:41+02:00"
 draft = false
 title = "The Mysteries of the Ruby Heredoc"
-description = "Short description of the article."
+description = "A few tips on the ruby heredoc."
 type = 'post'
+toc = true
 
 +++
 

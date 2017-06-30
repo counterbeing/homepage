@@ -1,0 +1,156 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 2rem; }
+
+h3 {
+  font-size: 1.5rem; }
+
+p {
+  line-height: 1.4rem;
+  margin-bottom: 1.4rem;
+  margin-top: 1.4rem; }
+
+html,
+body {
+  height: 100%;
+  width: 100%; }
+
+main {
+  flex: 1 0 auto; }
+
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: 'Gill Sans Extrabold', Helvetica, sans-serif; }
+  body a {
+    text-decoration: none; }
+  body > .ember-view {
+    height: 100%; }
+
+a {
+  color: #fff; }
+
+.stories-index {
+  width: 15rem; }
+  .stories-index ul {
+    list-style-type: none;
+    width: 100%; }
+  .stories-index li {
+    list-style-type: none;
+    padding: 1rem;
+    vertical-align: middle;
+    width: 100%; }
+    .stories-index li.selected {
+      background-color: #0d0d0d;
+      color: #ffc0cb; }
+
+.story-layout {
+  display: table;
+  height: 100%;
+  width: 100%; }
+  .story-layout .stories-index {
+    background-color: #1a1a1a;
+    display: table-cell;
+    height: 100%; }
+  .story-layout .story-body {
+    display: table-cell; }
+
+.story-body {
+  padding: 3rem; }
+
+.box {
+  display: flex;
+  flex-flow: column;
+  height: 100%; }
+  .box .row.header {
+    flex: 0 1 auto; }
+  .box .row.content {
+    flex: 1; }
+  .box .row.footer {
+    flex: 0 1 40px; }
+
+.photo-inspector {
+  float: right;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50%; }
+  .photo-inspector .metadata {
+    background-color: rgba(51, 51, 51, 0.7);
+    bottom: 0;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; }
+  .photo-inspector .leaflet-container {
+    height: 100vh;
+    width: 100%; }
+
+.photo-grid {
+  width: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: .5vw; }
+  .photo-grid .photo-display {
+    flex: auto;
+    height: 250px;
+    margin: .5vw; }
+  .photo-grid img,
+  .photo-grid figure {
+    height: 100%;
+    width: auto; }
+
+@media screen and (max-width: 400px) {
+  .photo-grid {
+    padding: 0; }
+    .photo-grid div {
+      margin: 0; } }
+
+/*# sourceMappingURL=europe-trip-blog.css.map */

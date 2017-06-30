@@ -1,0 +1,28 @@
+{
+	"data": [
+		{
+			"type": "story",
+			"id": "2017_04_06_arrival_in_london",
+			"attributes": {
+				"title": "I Made It",
+				"date": "2017-04-06"
+			}
+		},
+		{
+			"type": "story",
+			"id": "2017_04_09_sunday_trip_to_margate",
+			"attributes": {
+				"title": "Town by the Sea",
+				"date": "2017-04-06"
+			}
+		},
+		{
+			"type": "story",
+			"id": "2017_05_08_climbing_in_kalymnos",
+			"attributes": {
+				"title": "Climbing in Kalymnos",
+				"date": "2017-04-06"
+			}
+		}
+	]
+}

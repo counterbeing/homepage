@@ -6,11 +6,18 @@ pipeline:
       - bundle install
       - middleman build
 
+  # Build Europe Blog:
+  #   image: tomasbasham/ember:2.13.2
+  #   commands:
+  #     - cd eurotrip
+  #     - npm install
+  #     - ember build
+
   Render Hugo Tech Blog:
     image: jojomi/hugo:latest
     commands:
       - cd hugo_tech_blog
-      - hugo 
+      - hugo
 
   Copy Assets to Folder:
     image: alpine
@@ -19,6 +26,7 @@ pipeline:
       - cp -r homepage/build/* rendered_assets/
       - cp -r hugo_tech_blog/public rendered_assets/bits
       - cp -r old_map/deploy rendered_assets/map
+      - cp -r eurotrip rendered_assets/euro
 
   Build Site Image:
     image: plugins/docker

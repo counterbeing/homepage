@@ -3,7 +3,7 @@ pipeline:
     image: tenstartups/middleman
     commands:
       - cd homepage
-      - bundle install
+      - bundle install --quiet
       - middleman build
 
   Clone Europe Blog:
@@ -48,4 +48,4 @@ pipeline:
     image: kontena/cli
     secrets: [ KONTENA_GRID, KONTENA_TOKEN, KONTENA_URL ]
     commands:
-      - SSL_IGNORE_ERRORS=true kontena stack deploy homepage
+      - DEBUG=true SSL_IGNORE_ERRORS=true kontena stack deploy homepage

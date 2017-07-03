@@ -6,12 +6,18 @@ pipeline:
       - bundle install
       - middleman build
 
-  # Build Europe Blog:
-  #   image: tomasbasham/ember:2.13.2
-  #   commands:
-  #     - cd eurotrip
-  #     - npm install
-  #     - ember build
+  Clone Europe Blog:
+    image: indiehosters/git
+    commands:
+      - git clone https://github.com/counterbeing/europe-trip-blog.git
+
+  Build Europe Blog:
+    image: node:8.1.2
+    commands:
+      - cd europe-trip-blog
+      - npm install -g ember-cli --silent
+      - npm install --silent
+      - ember build --environment="production"
 
   Render Hugo Tech Blog:
     image: jojomi/hugo:latest
@@ -27,6 +33,7 @@ pipeline:
       - cp -r hugo_tech_blog/public rendered_assets/bits
       - cp -r old_map/deploy rendered_assets/map
       - cp -r eurotrip rendered_assets/euro
+      - cp -r europe-trip-blog/dist rendered_assets/europe-trip-blog
 
   Build Site Image:
     image: plugins/docker

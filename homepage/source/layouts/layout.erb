@@ -3,7 +3,7 @@
   <head>
     <title><%= current_page.data.title %> | Cory Logan</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Cory Logan is a traveling developer. Should you be friends with Cory? Or do you need help with a web development project?" />    
+    <meta name="description" content="Cory Logan is a traveling developer. Should you be friends with Cory? Or do you need help with a web development project?" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,800' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
         <%= partial(:stacked_icon, :locals => { icon: 'fa-twitter', link: 'https://twitter.com/counterbeing'}) %>
         <%= partial(:stacked_icon, :locals => { icon: 'fa-github', link: 'https://github.com/counterbeing'}) %>
         <%= partial(:stacked_icon, :locals => { icon: 'fa-stack-exchange', link: 'http://stackoverflow.com/users/250934/counterbeing'}) %>
-        
+
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
@@ -51,11 +51,15 @@
 
     <%= yield %>
 
-    <div class="container">
-      <footer class="row">
+    <footer>
+      <div class="container">
+      <div class="row">
         <div class="col-md-6">
-          <p>By Cory Logan</p>
-        </div>
+          <h3>More Stuff</h3>
+          <ul>
+            <li><a href='/bits'>Tech Blog</a><br> A place I make some notes about technology.</li>
+            <li><a href='/map'>South America Trip Blog</a><br> I did a big motorcycle tour in 2014, all the pictures and stories are here.</li>
+          </div>
       </footer>
     </div>
 

@@ -6,7 +6,7 @@ ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${H
 
 RUN mkdir -p /usr/local/sbin && mv /tmp/hugo /usr/local/sbin/hugo
 RUN apk add --no-cache ca-certificates
-RUN apk add --no-cache elinks
+RUN apk add --no-cache elinks py-pygments
 
 WORKDIR /src
 

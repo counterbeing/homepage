@@ -11,6 +11,7 @@ homepage = "https://www.corylogan.com"
 googleAnalytics = "UA-19114773-9"
 min_version = 0.24
 SectionPagesMenu = "main"
+PygmentsCodeFences = true
 
 [author]
   name = "Cory Logan"

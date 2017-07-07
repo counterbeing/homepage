@@ -20,7 +20,7 @@ pipeline:
       - ember build --environment="production"
 
   Render Hugo Tech Blog:
-    image: jojomi/hugo:latest
+    image: corylogan/hugo-with-elinks:latest
     commands:
       - cd hugo_tech_blog
       - hugo

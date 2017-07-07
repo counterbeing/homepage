@@ -22,3 +22,4 @@ homepage/build*
 old_map/deploy/*
 old_map/tmp/*
 hugo_tech_blog/public/*
+rendered_assets/

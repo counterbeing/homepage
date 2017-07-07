@@ -1,8 +1,10 @@
 hugo:
-  image: counterbeing/hugo
+  image: jojomi/hugo:latest
   volumes:
-    - .:/src
-    - ./public/:/public
-  ports:
-    - "1313:1313"
+    - ./src/:/src
+    - ./output/:/output
+  environment:
+    - HUGO_REFRESH_TIME=3600
+    - HUGO_THEME=mytheme
+    - HUGO_BASEURL=https://www.corylogan.com/bits
   restart: always

@@ -99,7 +99,7 @@ Enough with the warnings. Here's the use case that got me thinking about it. Rec
 
 Take a CSV for example, but, also imagine it's much wider.
 
-```csv
+```
 first_name,last_name,favorite_hobby,favorite_color,favorite_food,favorite_kind_of_motorcycle
 Cory,Logan,climbing,red,pizza,drz400
 Paul,Baker,reading,blue,cheese,klr650

@@ -114,15 +114,14 @@ header {
 }
 
 
+ul{ padding: 0; }
+li{ padding: .5em 0; }
 
 footer {
   background-color: $dark-purple;
   color: $purple-contrast;
   margin-top: 2em;
-  padding: 2em 0em;
-
-  ul{ padding: 0; }
-  li{ padding: .5em 0; }
+  padding: 2em 0;
 
   h3 { color: $purple-bold-shapes; }
   a { color: $purple-bold-shapes;}
@@ -130,7 +129,7 @@ footer {
 
 .social-link {
   color: $bg-color;
-  transition: color 0.75s;
+  transition: color .75s;
 }
 
 .circular {

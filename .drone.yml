@@ -34,6 +34,7 @@ pipeline:
       - cp -r old_map/deploy rendered_assets/map
       - cp -r eurotrip rendered_assets/euro
       - cp -r europe-trip-blog/dist rendered_assets/europe-trip-blog
+      - cp -r static/* rendered_assets/
 
   Build Sitemap:
     image: node:8.1.2

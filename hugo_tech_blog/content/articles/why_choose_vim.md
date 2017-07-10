@@ -4,7 +4,7 @@ date = "2016-12-13T18:30:08-08:00"
 title = "Why Choose Vim"
 type = "post"
 toc = true
-
+tags = ["tools", "vim"]
 +++
 
 ## TLDR
@@ -20,7 +20,7 @@ Vim also has it's own set of advantages. It's very fast at large search and repl
 
 ## What does it look like?
 
-It actually looks pretty modern!  
+It actually looks pretty modern!
 
 ![Vim Editor](/bits/images/vim-screenshot.png)
 

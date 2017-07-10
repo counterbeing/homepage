@@ -2,10 +2,10 @@
 title = "Saving Time With Tmux"
 description = "How I use tmux in my workflow to make my life better."
 date = 2017-07-10T13:45:28+02:00
-draft = true
+draft = false
 toc = true
 categories = ["technology"]
-tags = ["tmux", "terminal"]
+tags = ["tmux", "terminal", "tools"]
 images = [ ] # overrides the site-wide open graph image
 +++
 

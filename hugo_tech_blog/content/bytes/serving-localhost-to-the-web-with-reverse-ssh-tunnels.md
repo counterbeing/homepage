@@ -4,7 +4,7 @@ description = "So, you have a webpage on your computer you want to show to a rem
 date = 2017-07-10T15:12:03+02:00
 draft = false
 categories = ["technology"]
-tags = ["ssh"]
+tags = ["ssh", "terminal"]
 images = [ "" ] # overrides the site-wide open graph image
 +++
 

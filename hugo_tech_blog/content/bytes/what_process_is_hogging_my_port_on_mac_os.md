@@ -3,7 +3,10 @@ description = ""
 date = "2016-12-15T19:51:29Z"
 title = "What Process Is Hogging My Port On Mac Os"
 type = "post"
-
+draft = false
+categories = ["technology"]
+tags = ["terminal", "network"]
+images = [ "" ] # overrides the site-wide open graph image
 +++
 
 ## Address already in use

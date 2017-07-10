@@ -4,7 +4,8 @@ title = "A Single Singleton in Ruby"
 description = "What is a singleton anyway?"
 type = 'post'
 toc = true
-
+tags = ["ruby"]
+images = [ ] # overrides the site-wide open graph image
 +++
 
 ## The singleton design pattern

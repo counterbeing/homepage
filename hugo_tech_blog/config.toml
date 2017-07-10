@@ -2,6 +2,7 @@
 # See https://github.com/spf13/hugoThemes#themetoml for an example
 
 baseurl = "https://www.corylogan.com/bits"
+author = "Cory Logan"
 languageCode = "en-us"
 title = "Bits and Blocks"
 theme = "after-dark"

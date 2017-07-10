@@ -5,6 +5,7 @@ date = 2017-07-10T15:12:03+02:00
 draft = false
 categories = ["technology"]
 tags = ["ssh", "terminal"]
+type = "post"
 images = [ "" ] # overrides the site-wide open graph image
 +++
 

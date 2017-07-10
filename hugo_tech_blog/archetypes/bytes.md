@@ -1,10 +1,11 @@
 +++
 title = "{{ replace .TranslationBaseName "-" " " | title }}"
-description = "Thank you for choosing After Dark."
+description = ""
 date = {{ .Date }}
+toc = false
+type = 'post'
+categories = []
+tags = []
+images = [] # overrides the site-wide open graph image
 draft = true
-toc = true
-categories = ["technology"]
-tags = ["hello", "world"]
-images = [ "" ] # overrides the site-wide open graph image
 +++

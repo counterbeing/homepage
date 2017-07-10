@@ -7,7 +7,6 @@ description = "A few tips on the ruby heredoc."
 type = "post"
 tags = ["ruby"]
 toc = true
-
 +++
 
 

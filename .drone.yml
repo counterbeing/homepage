@@ -35,6 +35,13 @@ pipeline:
       - cp -r eurotrip rendered_assets/euro
       - cp -r europe-trip-blog/dist rendered_assets/europe-trip-blog
 
+  Build Sitemap:
+    image: node:8.1.2
+    commands:
+      - cd rendered_assets
+      - npm install -g sitemap-static --silent
+      - sitemap-static --prefix=https://www.corylogan.com > ./sitemap.xml 
+
   Build Site Image:
     image: plugins/docker
     dockerfile: Dockerfile

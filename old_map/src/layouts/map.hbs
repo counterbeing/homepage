@@ -1,24 +1,24 @@
-<!DOCTYPE html> 
-<html  lang ="en" > 
-  <head > 
-    <meta  charset ="UTF-8" > 
-    <title > {{city }}, {{country}} | Cory Logan's Americas Motorcycle Tour </title > 
+<!DOCTYPE html>
+<html  lang ="en" >
+  <head >
+    <meta  charset ="UTF-8" >
+    <title > {{city }}, {{country}} | Cory Logan's Americas Motorcycle Tour </title >
       <script>
-        window.location = "/" + "#{{postDirName page}}";
+        window.location = "/map/" + "#{{postDirName page}}";
       </script>
 
       <meta property="og:title" content="Cory Logan - Moto Travel Map">
       {{#if description}}<meta property="og:description" content="{{description}}">{{/if}}
       {{#if image}}<meta property="og:image" content="{{image}}">{{/if}}
 
-      </head > 
-      <body > 
+      </head >
+      <body >
         <div id="content">
           <div class="map-nav">
             <a href="#{{prevPost this}}" title="previous post" class="button scripty">&lt; Previous</a>
             <a href="#{{nextPost this}}" title="next post" class="button scripty">Next &gt;</a>
             <a href="/index.html" title="homepage" class="button">Homepage</a>
-          </div> 
+          </div>
           <header>
             <h2>{{city}}, {{country}}</h2>
             <h3>{{formatDate date}}</h3>
@@ -26,7 +26,7 @@
 
           <section class="text">
             {{#markdown}}
-            {{> body  }} 
+            {{> body  }}
             {{/markdown}}
           </section>
 
@@ -41,12 +41,11 @@
             <a href="#{{prevPost this}}" title="previous post" class="button scripty">&lt; Previous</a>
             <a href="#{{nextPost this}}" title="next post" class="button scripty">Next &gt;</a>
             <a href="/index.html" title="homepage" class="button">Homepage</a>
-          </div> 
+          </div>
           <footer>
             by Cory Logan
           </footer>
 
         </div>
-        </body > 
-        </html > 
-
+        </body >
+        </html >

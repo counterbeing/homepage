@@ -3,6 +3,7 @@ description = ""
 date = "2016-12-13T18:30:08-08:00"
 title = "Why Choose Vim"
 type = "post"
+toc = true
 
 +++
 

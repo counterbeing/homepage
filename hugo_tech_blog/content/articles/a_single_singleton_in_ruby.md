@@ -1,8 +1,9 @@
 +++
-description = ""
 date = "2016-12-13T18:22:26-08:00"
 title = "A Single Singleton in Ruby"
+description = "What is a singleton anyway?"
 type = 'post'
+toc = true
 
 +++
 

@@ -1,11 +1,11 @@
 +++
 date = "2016-12-26T22:38:02-08:00"
-title = "reducing_the_size_of_alpine_docker_images"
+title = "Reducing The Size Of Alpine Docker Images"
 description = ""
 
 +++
 
-## Why the heck is my docker image so huge?
+## Why the heck is my alpine docker image so huge?
 
 That's a tough question to answer, especially when you have no idea what's taking up all of the space.
 

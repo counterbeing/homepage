@@ -55,4 +55,4 @@ pipeline:
     image: kontena/cli
     secrets: [ KONTENA_GRID, KONTENA_TOKEN, KONTENA_URL ]
     commands:
-      - DEBUG=true SSL_IGNORE_ERRORS=true kontena stack deploy homepage
+      - SSL_IGNORE_ERRORS=true kontena stack deploy homepage

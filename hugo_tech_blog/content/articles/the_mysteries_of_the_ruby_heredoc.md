@@ -120,6 +120,8 @@ csv_string = <<-CSV.csv_doc
 CSV
 ```
 
+It's worth noting what's actually happening here, as I'd never seen the syntax for calling a method on the result of a heredoc before. The `<<-CSV` part, is just your regular heredoc, it's saying that the end of the string is at the next occurrence of the text `CSV`, which you will find at the end. Then, the method `csv_doc` is called on the resulting instance of `String`.
+
 This formatting is all about being able to read it in the context of code or a test. In order to achieve this formatting, this is where the monkey patch comes in.
 
 ```ruby

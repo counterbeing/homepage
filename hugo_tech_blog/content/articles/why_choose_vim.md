@@ -13,10 +13,14 @@ Most of all, you need a good editor, that you are familiar with.
 
 ## Why Vim Works For Me
 
-Different jobs require different tools
-
+Different jobs require different tools.
 
 Vim also has it's own set of advantages. It's very fast at large search and replace operations. It's infinitely extensible, with plugins that integrate with git, automatically format tables, check syntax. It can be operated entirely over SSH. It's easily customized. It's ubiquitous. It's free. It has a great community of people.
+
+## What does it look like?
+
+It actually looks pretty modern!
+![Vim Editor](/bits/images/vim-screenshot.png)
 
 
 ## A Few Caveats
@@ -24,10 +28,16 @@ Vim also has it's own set of advantages. It's very fast at large search and repl
 - Customization is almost requisite
 - Not everyone knows how to use VIM, this can be and impediment to working with someone else at your computer.
 
-
 I actually keep a couple of GUI editors around as I find that have uses for them. There are some tasks that mice are just really good at. TextWrangler works well with really large files. Sometimes I might just it to look at a gigantic CSV alongside the code that's being used to manipulate it.
-
 
 ## Better, Faster, Stronger
 
-Vim is brilliant in how extensible and malleable it is.
+Vim is brilliant in how extensible and malleable it is. You can change it by simply installing a new plugin. The setup can be entirely scripted.
+
+As an editor, Vi has really led the way on a great many conventions. Vim came after Vi and [offers a superset of features](https://askubuntu.com/a/418413). Having different modes of editing, and keyboard navigation, are some of the most fundamental parts. It wasn't just that it was early to introduce these features, but that they've been perfected over many years.
+
+Vim has always been light and nimble. It's fast to boot (unless you load it down with tons of plugins)
+
+
+
+If you want to give it a go, [you can try out my configuration found on github](https://github.com/counterbeing/Vim-Configuration).

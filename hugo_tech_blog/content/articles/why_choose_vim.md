@@ -19,9 +19,9 @@ Vim also has it's own set of advantages. It's very fast at large search and repl
 
 ## What does it look like?
 
-It actually looks pretty modern!
-![Vim Editor](/bits/images/vim-screenshot.png)
+It actually looks pretty modern!  
 
+![Vim Editor](/bits/images/vim-screenshot.png)
 
 ## A Few Caveats
 - Steep learning curve.
@@ -38,6 +38,12 @@ As an editor, Vi has really led the way on a great many conventions. Vim came af
 
 Vim has always been light and nimble. It's fast to boot (unless you load it down with tons of plugins)
 
+## Portability
+Vim comes standard on all modern builds of Linux and Mac OS. You can jump right into it. It's really helpful to be able to navigate a bare bones installation of Vim, even if you don't do it as well as with a customized version.
 
+Another huge piece of portability, is remote access. Vim works marvelously over an `ssh` connection. I can do remote work on a server far away, as though it were local. This is really great for travel.
 
 If you want to give it a go, [you can try out my configuration found on github](https://github.com/counterbeing/Vim-Configuration).
+
+## I Frequently Use Other Editors
+Vim is a tool. It's very useful to know. But sometimes, I actually prefer to work in a different application. My other favorite editor at the moment is Atom, and I'm using it right now to with this entry. It has great markdown support and integrates with system spell checking. At the end of the day, Vim has a load of features and advantages that can help you work faster. But, you must always use what works for you!

@@ -2,7 +2,8 @@
 date = "2016-12-26T22:38:02-08:00"
 title = "Reducing The Size Of Alpine Docker Images"
 description = ""
-
+pubished = true
+type = "post"
 +++
 
 ## Why the heck is my alpine docker image so huge?

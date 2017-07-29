@@ -6,15 +6,24 @@ pipeline:
       - bundle install --quiet
       - middleman build
 
-  Clone Europe Blog:
+  Clone Blogs:
     image: indiehosters/git
     commands:
       - git clone https://github.com/counterbeing/europe-trip-blog.git
+      - git clone https://github.com/counterbeing/south-america-blog.git
 
   Build Europe Blog:
     image: node:8.1.2
     commands:
       - cd europe-trip-blog
+      - npm install -g ember-cli --silent
+      - npm install --silent
+      - ember build --environment="production"
+
+  Build South America Blog:
+    image: node:8.1.2
+    commands:
+      - cd south-america-blog
       - npm install -g ember-cli --silent
       - npm install --silent
       - ember build --environment="production"
@@ -34,6 +43,7 @@ pipeline:
       - cp -r old_map/deploy rendered_assets/map
       - cp -r eurotrip rendered_assets/euro
       - cp -r europe-trip-blog/dist rendered_assets/europe-trip-blog
+      - cp -r south-america-blog/dist rendered_assets/sa
       - cp -r static/* rendered_assets/
 
   Build Sitemap:

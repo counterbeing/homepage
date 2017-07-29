@@ -26,7 +26,7 @@ pipeline:
       - cd south-america-blog
       - npm install -g ember-cli --silent
       - npm install --silent
-      - ember build --environment="production"
+      - ember build --prod
 
   Render Hugo Tech Blog:
     image: corylogan/hugo-with-elinks:latest

@@ -68,7 +68,7 @@ pipeline:
     commands:
       - SSL_IGNORE_ERRORS=true kontena stack deploy homepage
 
-  Submit sitemap to google:
-    image: appropriate/curl
-    commands:
-      - curl http://google.com/ping?sitemap=https://www.corylogan.com/sitemap.xml
+  # Submit sitemap to google:
+  #   image: appropriate/curl
+  #   commands:
+  #     - curl http://google.com/ping?sitemap=https://www.corylogan.com/sitemap.xml

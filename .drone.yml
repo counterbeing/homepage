@@ -40,7 +40,6 @@ pipeline:
       - rm -rf rendered_assets/*
       - cp -r homepage/build/* rendered_assets/
       - cp -r hugo_tech_blog/public rendered_assets/bits
-      - cp -r old_map/deploy rendered_assets/map
       - cp -r eurotrip rendered_assets/euro
       - cp -r europe-trip-blog/dist rendered_assets/europe-trip-blog
       - cp -r south-america-blog/dist rendered_assets/sa

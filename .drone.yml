@@ -48,8 +48,9 @@ pipeline:
     image: node:8.1.2
     commands:
       - cd rendered_assets
-      - npm install -g sitemap-static --silent
-      - sitemap-static --prefix=https://www.corylogan.com > ./sitemap.xml 
+      - npm install -g sitemap-static minimal-sitemap --silent
+      - sitemap-static --prefix=https://www.corylogan.com > ./partial.xml 
+      - combine_sitemaps ./partial.xml ./sa/sitemap.xml > ./sitemap.xml  
 
   Build Site Image:
     image: plugins/docker

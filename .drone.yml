@@ -17,16 +17,16 @@ pipeline:
     commands:
       - cd europe-trip-blog
       - npm --version
-      - npm install -g ember-cli
-      - npm install
+      - npm install -g ember-cli --silent
+      - npm install --silent
       - ember build --environment="production"
 
   Build South America Blog:
     image: node:6.11
     commands:
       - cd south-america-blog
-      - npm install -g ember-cli
-      - npm install
+      - npm install -g ember-cli --silent
+      - npm install --silent
       - ember build --prod
 
   Render Hugo Tech Blog:

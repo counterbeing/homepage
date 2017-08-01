@@ -16,7 +16,7 @@ pipeline:
     image: node:8.1.2
     commands:
       - cd europe-trip-blog
-      - npm install -g ember-cli --silent
+      - npm install -g ember-cli@2.14.1 --silent
       - npm install --silent
       - ember build --environment="production"
 

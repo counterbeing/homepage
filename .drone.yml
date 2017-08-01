@@ -13,7 +13,7 @@ pipeline:
       - git clone https://github.com/counterbeing/south-america-blog.git
 
   Build Europe Blog:
-    image: node:6.11
+    image: node:8.1.2
     commands:
       - cd europe-trip-blog
       - npm install -g ember-cli --silent

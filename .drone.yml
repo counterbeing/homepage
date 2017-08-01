@@ -16,6 +16,7 @@ pipeline:
     image: node:6.11
     commands:
       - cd europe-trip-blog
+      - npm install -g npm --silent
       - npm --version
       - npm install -g ember-cli --silent
       - npm install --silent

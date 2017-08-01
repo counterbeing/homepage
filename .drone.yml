@@ -13,7 +13,7 @@ pipeline:
       - git clone https://github.com/counterbeing/south-america-blog.git
 
   Build Europe Blog:
-    image: node:6.11.2
+    image: node:6.11
     commands:
       - cd europe-trip-blog
       - npm install -g ember-cli --silent
@@ -21,7 +21,7 @@ pipeline:
       - ember build --environment="production"
 
   Build South America Blog:
-    image: node:6.11.2
+    image: node:6.11
     commands:
       - cd south-america-blog
       - npm install -g ember-cli --silent
@@ -45,7 +45,7 @@ pipeline:
       - cp -r static/* rendered_assets/
 
   Build Sitemap:
-    image: node:6.11.2
+    image: node:6.11
     commands:
       - cd rendered_assets
       - npm install -g sitemap-static minimal-sitemap --silent

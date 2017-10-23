@@ -1,6 +1,7 @@
 pipeline:
   Render Homepage:
     image: corylogan/middleman-docker:latest
+    pull: true
     commands:
       - cd homepage
       - bundle install --quiet

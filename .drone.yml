@@ -25,8 +25,9 @@ pipeline:
     image: node:6.11
     commands:
       - cd south-america-blog
-      - npm install -g ember-cli --silent
-      - npm install
+      # - npm install -g ember-cli --silent
+      - yarn global add ember-cli
+      - yarn
       - ember build --prod
 
   Render Hugo Tech Blog:

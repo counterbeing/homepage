@@ -45,7 +45,7 @@ pipeline:
       - cp -r hugo_tech_blog/public rendered_assets/bits
       # - cp -r europe-trip-blog/dist rendered_assets/eu
       # - cp -r south-america-blog/dist rendered_assets/sa
-      - cp -r static/* ./
+      - cp -r static/* ./rendered_assets/
       # - mv rendered_assets/* to somewhere
 
 

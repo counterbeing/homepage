@@ -97,3 +97,5 @@ pipeline:
   #   image: appropriate/curl
   #   commands:
   #     - curl http://google.com/ping?sitemap=https://www.corylogan.com/sitemap.xml
+branches:
+  - master

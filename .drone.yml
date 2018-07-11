@@ -60,7 +60,7 @@ pipeline:
       - git status
       - git diff
       - git checkout --track origin/gh-pages
-      - mv rendered_assets/* ./
+      - cp rendered_assets/* ./ && rm -rf rendered_assets
       - echo 'ran' >> README.md
       - git add .
       - git commit -am "build $(date +'%Y/%m/%d %H:%M:%S:%3N')"

@@ -1,11 +1,11 @@
 pipeline:
-  Render Homepage:
-    image: corylogan/middleman-docker:latest
-    pull: true
-    commands:
-      - cd homepage
-      - bundle install --quiet
-      - middleman build
+  # Render Homepage:
+  #   image: corylogan/middleman-docker:latest
+  #   pull: true
+  #   commands:
+  #     - cd homepage
+  #     - bundle install --quiet
+  #     - middleman build
 
   # Clone Blogs:
   #   image: indiehosters/git
@@ -39,16 +39,16 @@ pipeline:
   #     - cd hugo_tech_blog
   #     - hugo
 
-  Copy Assets to Folder:
-    image: alpine
-    commands:
-      # - cp -r homepage/build/* rendered_assets/
-      # - cp -r hugo_tech_blog/public rendered_assets/bits
-      # - cp -r europe-trip-blog/dist rendered_assets/eu
-      # - cp -r south-america-blog/dist rendered_assets/sa
-      - cp -r static/* ./
-      - rm -rf ./static
-      # - mv rendered_assets/* to somewhere
+  # Copy Assets to Folder:
+  #   image: alpine
+  #   commands:
+  #     # - cp -r homepage/build/* rendered_assets/
+  #     # - cp -r hugo_tech_blog/public rendered_assets/bits
+  #     # - cp -r europe-trip-blog/dist rendered_assets/eu
+  #     # - cp -r south-america-blog/dist rendered_assets/sa
+  #     - cp -r static/* ./
+  #     - rm -rf ./static
+  #     # - mv rendered_assets/* to somewhere
 
 
   Push Changes Blogs:
@@ -61,6 +61,7 @@ pipeline:
       # - rm tempfile
       # - ssh-add -l
       - echo 'ran' >> README.md
+      - git remote -v
       - git checkout --track origin/gh-pages
       - git add .
       - git commit -am 'build `date +"%d-%m-%Y"`'

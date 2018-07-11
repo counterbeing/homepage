@@ -1,0 +1,10 @@
+{
+  "assets": {
+    "assets/assetMap.json": "assets/assetMap.json",
+    "assets/south-america-blog.css": "assets/south-america-blog-70cdf52bc339cd4fbc6616a7e6e11180.css",
+    "assets/south-america-blog.js": "assets/south-america-blog-d7d6c7390d5e78e1071724499422214e.js",
+    "assets/vendor.css": "assets/vendor-d3aa84b783735f00b7be359e81298bf2.css",
+    "assets/vendor.js": "assets/vendor-592f9f072f9332ab1e1f95f296f30c38.js"
+  },
+  "prepend": ""
+}

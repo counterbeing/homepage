@@ -48,8 +48,6 @@ pipeline:
       - cp -r south-america-blog/dist rendered_assets/sa
       - rm -rf south-america-blog
       - cp -r static/* ./rendered_assets/
-      # - mv rendered_assets/* to somewhere
-
 
   Commit:
     image: indiehosters/git
@@ -57,10 +55,8 @@ pipeline:
       - git config --global user.email "ci@drone.flirtmoji.co"
       - git config --global user.name "Drone Server"
       - git fetch origin
-      - git status
-      - git diff
       - git checkout --track origin/gh-pages
-      - cp rendered_assets/* ./ && rm -rf rendered_assets
+      - cp -r rendered_assets/* ./ && rm -rf rendered_assets
       - echo 'ran' >> README.md
       - git add .
       - git commit -am "build $(date +'%Y/%m/%d %H:%M:%S:%3N')"

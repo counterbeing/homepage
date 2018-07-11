@@ -46,7 +46,6 @@ pipeline:
       # - cp -r europe-trip-blog/dist rendered_assets/eu
       # - cp -r south-america-blog/dist rendered_assets/sa
       - cp -r static/* ./
-      - rm -rf ./static
       # - mv rendered_assets/* to somewhere
 
 

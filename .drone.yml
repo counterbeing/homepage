@@ -51,7 +51,7 @@ pipeline:
   #     # - mv rendered_assets/* to somewhere
 
 
-  Push Changes Blogs:
+  Commit:
     image: indiehosters/git
     commands:
       - echo $TEST_SECRET
@@ -67,7 +67,16 @@ pipeline:
       - echo 'ran' >> README.md
       - git add .
       - git commit -am 'build `date +"%d-%m-%Y"`'
-      - git push
+      # - git push
+
+  Git Push:
+    image: appleboy/drone-git-push
+    remote: git@github.com:counterbeing/homepage.git
+    force: false
+    commit: true
+    branch: gh-pages
+    local_ref: gh-pages
+
 
   # Build Sitemap:
   #   image: node:8.1.2

@@ -61,7 +61,7 @@ pipeline:
       # - rm tempfile
       # - ssh-add -l
       - echo 'ran' >> README.md
-      - git remote -v
+      - git fetch origin
       - git checkout --track origin/gh-pages
       - git add .
       - git commit -am 'build `date +"%d-%m-%Y"`'

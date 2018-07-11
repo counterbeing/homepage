@@ -59,7 +59,7 @@ pipeline:
       # - echo $GITHUB_PRIVATE_KEY >> tempfile && chmod 0600 tempfile
       # - ssh-add tempfile
       # - rm tempfile
-      - ssh-add -l
+      # - ssh-add -l
       - echo 'ran' >> README.md
       - git checkout --track origin/gh-pages
       - git add .

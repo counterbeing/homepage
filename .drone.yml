@@ -7,13 +7,10 @@ pipeline:
       - bundle install --quiet
       - middleman build
 
-  Clone Blogs:
-    image: indiehosters/git
-    commands:
-      - echo "$TEST_SECRET"
-      - eval $(ssh-agent -s)
-      - ssh-add <(echo "$GITHUB_PRIVATE_KEY")
-      - ssh-add -l
+  # Clone Blogs:
+  #   image: indiehosters/git
+  #   commands:
+
       # - git clone https://github.com/counterbeing/europe-trip-blog.git
       # - git clone https://github.com/counterbeing/south-america-blog.git
 
@@ -57,6 +54,12 @@ pipeline:
   Push Changes Blogs:
     image: indiehosters/git
     commands:
+      - echo $TEST_SECRET
+      - eval $(ssh-agent -s)
+      - echo $GITHUB_PRIVATE_KEY >> tempfile
+      - ssh-add tempfile
+      - rm tempfile
+      - ssh-add -l
       - echo 'ran' >> README.md
       - git checkout --track origin/gh-pages
       - git add .

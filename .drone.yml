@@ -54,19 +54,13 @@ pipeline:
   Commit:
     image: indiehosters/git
     commands:
-      - echo $TEST_SECRET
-      # - eval $(ssh-agent -s)
-      # - echo $GITHUB_PRIVATE_KEY >> tempfile && chmod 0600 tempfile
-      # - ssh-add tempfile
-      # - rm tempfile
-      # - ssh-add -l
       - git config --global user.email "ci@drone.flirtmoji.co"
       - git config --global user.name "Drone Server"
       - git fetch origin
       - git checkout --track origin/gh-pages
       - echo 'ran' >> README.md
       - git add .
-      - git commit -am 'build $(date "+%a %M:%H %h %d %Y")'
+      - git commit -am 'build $$(date "+%a %M:%H %h %d %Y")'
       # - git push
 
   Git Push:

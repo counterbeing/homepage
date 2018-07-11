@@ -60,9 +60,9 @@ pipeline:
       # - ssh-add tempfile
       # - rm tempfile
       # - ssh-add -l
-      - echo 'ran' >> README.md
       - git fetch origin
       - git checkout --track origin/gh-pages
+      - echo 'ran' >> README.md
       - git add .
       - git commit -am 'build `date +"%d-%m-%Y"`'
       - git push

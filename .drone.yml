@@ -55,10 +55,10 @@ pipeline:
     image: indiehosters/git
     commands:
       - echo $TEST_SECRET
-      - eval $(ssh-agent -s)
-      - echo $GITHUB_PRIVATE_KEY >> tempfile && chmod 0600 tempfile
-      - ssh-add tempfile
-      - rm tempfile
+      # - eval $(ssh-agent -s)
+      # - echo $GITHUB_PRIVATE_KEY >> tempfile && chmod 0600 tempfile
+      # - ssh-add tempfile
+      # - rm tempfile
       - ssh-add -l
       - echo 'ran' >> README.md
       - git checkout --track origin/gh-pages

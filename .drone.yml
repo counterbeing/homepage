@@ -60,7 +60,7 @@ pipeline:
       - git checkout --track origin/gh-pages
       - echo 'ran' >> README.md
       - git add .
-      - git commit -am 'build `date +"%d-%m-%Y"`'
+      - git commit -am "build $(date '+%a %M:%H %h %d %Y')"
 
   Git Push:
     image: appleboy/drone-git-push

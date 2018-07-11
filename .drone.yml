@@ -66,14 +66,13 @@ pipeline:
       - git checkout --track origin/gh-pages
       - echo 'ran' >> README.md
       - git add .
-      - git commit -am 'build `date +"%d-%m-%Y"`'
+      - git commit -am 'build $(date "+%a %M:%H %h %d %Y")'
       # - git push
 
   Git Push:
     image: appleboy/drone-git-push
     remote: git@github.com:counterbeing/homepage.git
     force: false
-    commit: true
     branch: gh-pages
     local_ref: gh-pages
     secrets: [ GIT_PUSH_SSH_KEY ]

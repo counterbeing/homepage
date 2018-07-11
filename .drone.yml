@@ -1,18 +1,17 @@
 pipeline:
-  # Render Homepage:
-  #   image: corylogan/middleman-docker:latest
-  #   pull: true
-  #   commands:
-  #     - cd homepage
-  #     - bundle install --quiet
-  #     - middleman build
+  Render Homepage:
+    image: corylogan/middleman-docker:latest
+    pull: true
+    commands:
+      - cd homepage
+      - bundle install --quiet
+      - middleman build
 
-  # Clone Blogs:
-  #   image: indiehosters/git
-  #   commands:
-
-      # - git clone https://github.com/counterbeing/europe-trip-blog.git
-      # - git clone https://github.com/counterbeing/south-america-blog.git
+  Clone Blogs:
+    image: indiehosters/git
+    commands:
+      - git clone https://github.com/counterbeing/europe-trip-blog.git
+      - git clone https://github.com/counterbeing/south-america-blog.git
 
   # Build Europe Blog:
   #   image: node:8.1.2
@@ -33,22 +32,22 @@ pipeline:
   #     - yarn
   #     - ember build --prod
 
-  # Render Hugo Tech Blog:
-  #   image: corylogan/hugo-with-elinks:latest
-  #   commands:
-  #     - cd hugo_tech_blog
-  #     - hugo
+  Render Hugo Tech Blog:
+    image: corylogan/hugo-with-elinks:latest
+    commands:
+      - cd hugo_tech_blog
+      - hugo
 
-  # Copy Assets to Folder:
-  #   image: alpine
-  #   commands:
-  #     # - cp -r homepage/build/* rendered_assets/
-  #     # - cp -r hugo_tech_blog/public rendered_assets/bits
-  #     # - cp -r europe-trip-blog/dist rendered_assets/eu
-  #     # - cp -r south-america-blog/dist rendered_assets/sa
-  #     - cp -r static/* ./
-  #     - rm -rf ./static
-  #     # - mv rendered_assets/* to somewhere
+  Copy Assets to Folder:
+    image: alpine
+    commands:
+      - cp -r homepage/build/* rendered_assets/
+      - cp -r hugo_tech_blog/public rendered_assets/bits
+      # - cp -r europe-trip-blog/dist rendered_assets/eu
+      # - cp -r south-america-blog/dist rendered_assets/sa
+      - cp -r static/* ./
+      - rm -rf ./static
+      # - mv rendered_assets/* to somewhere
 
 
   Commit:
@@ -58,6 +57,7 @@ pipeline:
       - git config --global user.name "Drone Server"
       - git fetch origin
       - git checkout --track origin/gh-pages
+      - mv rendered_assets/* ./
       - echo 'ran' >> README.md
       - git add .
       - git commit -am "build $(date +'%Y/%m/%d %H:%M:%S:%3N')"

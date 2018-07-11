@@ -10,6 +10,8 @@ pipeline:
   Clone Blogs:
     image: indiehosters/git
     commands:
+      - echo "$TEST_SECRET"
+      - eval $(ssh-agent -s)
       - ssh-add <(echo "$GITHUB_PRIVATE_KEY")
       - ssh-add -l
       # - git clone https://github.com/counterbeing/europe-trip-blog.git
@@ -43,18 +45,19 @@ pipeline:
   Copy Assets to Folder:
     image: alpine
     commands:
-      - cp -r homepage/build/* rendered_assets/
+      # - cp -r homepage/build/* rendered_assets/
       # - cp -r hugo_tech_blog/public rendered_assets/bits
       # - cp -r europe-trip-blog/dist rendered_assets/eu
       # - cp -r south-america-blog/dist rendered_assets/sa
       - cp -r static/* ./
       - rm -rf ./static
-      # - mv rendered_assets/* to somewhere 
+      # - mv rendered_assets/* to somewhere
 
 
   Push Changes Blogs:
     image: indiehosters/git
     commands:
+      - echo 'ran' >> README.md
       - git checkout --track origin/gh-pages
       - git add .
       - git commit -am 'build `date +"%d-%m-%Y"`'

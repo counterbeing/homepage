@@ -12,7 +12,6 @@ pipeline:
     commands:
       - ssh-add <(echo "$GITHUB_PRIVATE_KEY")
       - ssh-add -l
-      - git checkout --track origin/rendered
       # - git clone https://github.com/counterbeing/europe-trip-blog.git
       # - git clone https://github.com/counterbeing/south-america-blog.git
 
@@ -44,21 +43,22 @@ pipeline:
   Copy Assets to Folder:
     image: alpine
     commands:
-      - rm -rf rendered_assets/*
       - cp -r homepage/build/* rendered_assets/
       # - cp -r hugo_tech_blog/public rendered_assets/bits
       # - cp -r europe-trip-blog/dist rendered_assets/eu
       # - cp -r south-america-blog/dist rendered_assets/sa
-      - mkdir -p docs
-      - cp -r static/* docs/
+      - cp -r static/* ./
+      - rm -rf ./static
+      # - mv rendered_assets/* to somewhere 
 
 
   Push Changes Blogs:
     image: indiehosters/git
     commands:
-      - git checkout --track origin/rendered
-
-
+      - git checkout --track origin/gh-pages
+      - git add .
+      - git commit -am 'build `date +"%d-%m-%Y"`'
+      - git push
 
   # Build Sitemap:
   #   image: node:8.1.2

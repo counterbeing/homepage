@@ -76,6 +76,7 @@ pipeline:
     commit: true
     branch: gh-pages
     local_ref: gh-pages
+    secrets: [ GIT_PUSH_SSH_KEY ]
 
 
   # Build Sitemap:

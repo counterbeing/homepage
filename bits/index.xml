@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bits and Blocks</title>
+    <link>https://www.corylogan.com/bits/</link>
+    <description>Recent content on Bits and Blocks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Jul 2017 15:12:03 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.corylogan.com/bits/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Serving Localhost to the Web with Reverse Ssh Tunnels</title>
+      <link>https://www.corylogan.com/bits/bytes/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</link>
+      <pubDate>Mon, 10 Jul 2017 15:12:03 +0200</pubDate>
+      
+      <guid>https://www.corylogan.com/bits/bytes/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</guid>
+      <description>Note: If you don&amp;rsquo;t have a server already, check my last tip.
+This topic is always a little tricky, so, here&amp;rsquo;s the basic thing to know, as this is the most frequent use case.
+Suppose you have a development rails server running on your local computer. You can access this server via curl http://localhost:3000. Which is to say, it&amp;rsquo;s running on your localhost, on port 3000. You want your client to see it, to give you feedback, but they&amp;rsquo;re nowhere near you, and you just want a quick way to show it to them.</description>
+    </item>
+    
+    <item>
+      <title>Saving Time With Tmux</title>
+      <link>https://www.corylogan.com/bits/articles/saving-time-with-tmux/</link>
+      <pubDate>Mon, 10 Jul 2017 13:45:28 +0200</pubDate>
+      
+      <guid>https://www.corylogan.com/bits/articles/saving-time-with-tmux/</guid>
+      <description>What is a terminal multiplexer, and why do I care? When you split up a terminal screen into sub-terminals, that&amp;rsquo;s called terminal multiplexing. This is nothing new, GNU Screen has been around since 1987. Tmux is just screen&amp;rsquo;s younger, nubile cousin. I&amp;rsquo;m about to explain how this simple technology can:
+ Keep you organized. Lower the bar to get to work. Save you time. Enable teamwork.  Here&amp;rsquo;s a quick demonstration:</description>
+    </item>
+    
+    <item>
+      <title>Exporting A Zone File From Mediatemple</title>
+      <link>https://www.corylogan.com/bits/bytes/exporting_a_zone_file_from_mediatemple/</link>
+      <pubDate>Sun, 08 Jan 2017 16:45:38 -0800</pubDate>
+      
+      <guid>https://www.corylogan.com/bits/bytes/exporting_a_zone_file_from_mediatemple/</guid>
+      <description>I was in the process of moving my DNS from MediaTemple to Route53 and was having trouble making sure I&amp;rsquo;d moved all of the entries. I decided I&amp;rsquo;d just export a zone file to do a comparison in a text editor.
+Surprise! You can&amp;rsquo;t.
+Instead, here&amp;rsquo;s a quick bit of jQuery, which is already available in the MediaTemple control panel. Just navigate to the zone file editor, open your console, and use this:</description>
+    </item>
+    
+    <item>
+      <title>Reducing The Size Of Alpine Docker Images</title>
+      <link>https://www.corylogan.com/bits/bytes/reducing_the_size_of_alpine_docker_images/</link>
+      <pubDate>Mon, 26 Dec 2016 22:38:02 -0800</pubDate>
+      
+      <guid>https://www.corylogan.com/bits/bytes/reducing_the_size_of_alpine_docker_images/</guid>
+      <description>Why the heck is my alpine docker image so huge? That&amp;rsquo;s a tough question to answer, especially when you have no idea what&amp;rsquo;s taking up all of the space.
+This is a dirty little one-liner that yields a sorted list of all of the packages on your alpine image by size. It does this by
+ Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size  apk info | while read a; do apk info -s $a; done | awk NF | sed &amp;#39;Ns/\n/ /&amp;#39; | sort -k4 -n  It may be ugly, but now I can make an informed decision about wether or not there are binaries that can be axed.</description>
+    </item>
+    
+    <item>
+      <title>What Process Is Hogging My Port On Mac Os</title>
+      <link>https://www.corylogan.com/bits/bytes/what_process_is_hogging_my_port_on_mac_os/</link>
+      <pubDate>Thu, 15 Dec 2016 19:51:29 +0000</pubDate>
+      
+      <guid>https://www.corylogan.com/bits/bytes/what_process_is_hogging_my_port_on_mac_os/</guid>
+      <description>Address already in use Damn. Did I leave a server running somewhere? Sometimes you&amp;rsquo;re not sure where you left a server running, or where something is running you never knew about. I&amp;rsquo;m finally writing this down, as I always have to look it up. I found this solution in a StackOverflow post.
+Here&amp;rsquo;s how to get all of the processes by what port they&amp;rsquo;re using.
+sudo lsof -iTCP -sTCP:LISTEN -n -P  As A Shell Function Looking at it, I realized I would never remember it, given how infrequently I need it.</description>
+    </item>
+    
+    <item>
+      <title>Why Choose Vim</title>
+      <link>https://www.corylogan.com/bits/articles/why_choose_vim/</link>
+      <pubDate>Tue, 13 Dec 2016 18:30:08 -0800</pubDate>
+      
+      <guid>https://www.corylogan.com/bits/articles/why_choose_vim/</guid>
+      <description>TLDR Choosing a text editor is a very personal decision. You grow with your editor, as your editor grows with you. As I use my text editor more and more over the years, I&amp;rsquo;m constantly constantly learning new techniques for working more efficiently. Some of them stick, others are forgotten. I find that sequences and shortcuts that I most use stay. But just as importantly VIM accommodates my changing needs through configuration, plugin, or otherwise.</description>
+    </item>
+    
+    <item>
+      <title>A Single Singleton in Ruby</title>
+      <link>https://www.corylogan.com/bits/articles/a_single_singleton_in_ruby/</link>
+      <pubDate>Tue, 13 Dec 2016 18:22:26 -0800</pubDate>
+      
+      <guid>https://www.corylogan.com/bits/articles/a_single_singleton_in_ruby/</guid>
+      <description>The singleton design pattern I&amp;rsquo;m relatively new the the concept of the singleton, even though I&amp;rsquo;ve been programming for a number of years. I&amp;rsquo;ve run into several instances in which I new that this was exactly what I needed, but did not have a name for it. Here, I&amp;rsquo;m going to try to explain it to myself a year ago. There are a few questions I&amp;rsquo;ll try to address.</description>
+    </item>
+    
+    <item>
+      <title>The Mysteries of the Ruby Heredoc</title>
+      <link>https://www.corylogan.com/bits/articles/the_mysteries_of_the_ruby_heredoc/</link>
+      <pubDate>Fri, 18 Nov 2016 19:28:41 +0200</pubDate>
+      
+      <guid>https://www.corylogan.com/bits/articles/the_mysteries_of_the_ruby_heredoc/</guid>
+      <description>As of writing this, I&amp;rsquo;m running Ruby version 2.3.0. Not all of this, particularly the stripped heredoc, is available in plain ruby before 2.3.0.
+Heredoc Basics So, you need a string that&amp;rsquo;s longer than a line, and you&amp;rsquo;re sick of quotes and backslashes? And you might like to retain formatting? You want string interpolation too? Enter, heredoc.
+Here&amp;rsquo;s your basic, run of the mill, heredoc. You&amp;rsquo;ll notice we use the &amp;lt;&amp;lt;- operator, and our safe-word, which we will use to end the heredoc.</description>
+    </item>
+    
+  </channel>
+</rss>

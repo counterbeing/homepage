@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ruby on Bits and Blocks</title>
+    <link>https://www.corylogan.com/bits/tags/ruby/</link>
+    <description>Recent content in Ruby on Bits and Blocks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Dec 2016 18:22:26 -0800</lastBuildDate>
+    
+	<atom:link href="https://www.corylogan.com/bits/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Single Singleton in Ruby</title>
+      <link>https://www.corylogan.com/bits/articles/a_single_singleton_in_ruby/</link>
+      <pubDate>Tue, 13 Dec 2016 18:22:26 -0800</pubDate>
+      
+      <guid>https://www.corylogan.com/bits/articles/a_single_singleton_in_ruby/</guid>
+      <description>The singleton design pattern I&amp;rsquo;m relatively new the the concept of the singleton, even though I&amp;rsquo;ve been programming for a number of years. I&amp;rsquo;ve run into several instances in which I new that this was exactly what I needed, but did not have a name for it. Here, I&amp;rsquo;m going to try to explain it to myself a year ago. There are a few questions I&amp;rsquo;ll try to address.</description>
+    </item>
+    
+    <item>
+      <title>The Mysteries of the Ruby Heredoc</title>
+      <link>https://www.corylogan.com/bits/articles/the_mysteries_of_the_ruby_heredoc/</link>
+      <pubDate>Fri, 18 Nov 2016 19:28:41 +0200</pubDate>
+      
+      <guid>https://www.corylogan.com/bits/articles/the_mysteries_of_the_ruby_heredoc/</guid>
+      <description>As of writing this, I&amp;rsquo;m running Ruby version 2.3.0. Not all of this, particularly the stripped heredoc, is available in plain ruby before 2.3.0.
+Heredoc Basics So, you need a string that&amp;rsquo;s longer than a line, and you&amp;rsquo;re sick of quotes and backslashes? And you might like to retain formatting? You want string interpolation too? Enter, heredoc.
+Here&amp;rsquo;s your basic, run of the mill, heredoc. You&amp;rsquo;ll notice we use the &amp;lt;&amp;lt;- operator, and our safe-word, which we will use to end the heredoc.</description>
+    </item>
+    
+  </channel>
+</rss>

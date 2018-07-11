@@ -13,24 +13,24 @@ pipeline:
       - git clone https://github.com/counterbeing/europe-trip-blog.git
       - git clone https://github.com/counterbeing/south-america-blog.git
 
-  # Build Europe Blog:
-  #   image: node:8.1.2
-  #   commands:
-  #     - cd europe-trip-blog
-  #     # - npm install -g ember-cli@2.14.1 --silent
-  #     # - npm install --silent
-  #     - yarn global add ember-cli@2.14.1 --silent
-  #     - yarn --silent
-  #     - ember build --environment="production"
+  Build Europe Blog:
+    image: node:8.1.2
+    commands:
+      - cd europe-trip-blog
+      # - npm install -g ember-cli@2.14.1 --silent
+      # - npm install --silent
+      - yarn global add ember-cli@2.14.1 --silent
+      - yarn --silent
+      - ember build --environment="production"
 
-  # Build South America Blog:
-  #   image: node:6.11
-  #   commands:
-  #     - cd south-america-blog
-  #     # - npm install -g ember-cli --silent
-  #     - yarn global add ember-cli
-  #     - yarn
-  #     - ember build --prod
+  Build South America Blog:
+    image: node:6.11
+    commands:
+      - cd south-america-blog
+      # - npm install -g ember-cli --silent
+      - yarn global add ember-cli
+      - yarn
+      - ember build --prod
 
   Render Hugo Tech Blog:
     image: corylogan/hugo-with-elinks:latest
@@ -43,8 +43,10 @@ pipeline:
     commands:
       - cp -r homepage/build/* rendered_assets/
       - cp -r hugo_tech_blog/public rendered_assets/bits
-      # - cp -r europe-trip-blog/dist rendered_assets/eu
-      # - cp -r south-america-blog/dist rendered_assets/sa
+      - cp -r europe-trip-blog/dist rendered_assets/eu
+      - rm -rf europe-trip-blog
+      - cp -r south-america-blog/dist rendered_assets/sa
+      - rm -rf south-america-blog
       - cp -r static/* ./rendered_assets/
       # - mv rendered_assets/* to somewhere
 

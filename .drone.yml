@@ -60,6 +60,8 @@ pipeline:
       # - ssh-add tempfile
       # - rm tempfile
       # - ssh-add -l
+      - git config --global user.email "ci@drone.flirtmoji.co"
+      - git config --global user.name "Drone Server"
       - git fetch origin
       - git checkout --track origin/gh-pages
       - echo 'ran' >> README.md

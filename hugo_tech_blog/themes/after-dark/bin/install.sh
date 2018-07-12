@@ -1,12 +1,14 @@
-#!/usr/bin/env bash
-
-# 
+#!/bin/bash
+#
 # The suspicious-looking install script for After Dark.
-# https://themes.gohugo.io/after-dark/
-# 
-# Copyright (c) 2016-2017  Josh Habdas <josh@habd.as> (https://habd.as)
-# Licensed under WTFPL. You just DO WHAT THE FUCK YOU WANT TO.
-# 
+# View the theme at <https://themes.gohugo.io/after-dark/>.
+#
+# Copyright (C) 2016–2018 Josh Habdas <jhabdas@protonmail.com>
+#
+# This work is free. You can redistribute it and/or modify it under the
+# terms of the Do What The Fuck You Want To Public License, Version 2,
+# as published by Sam Hocevar. See the COPYING file for more details.
+#
 
 # Exit early on failure
 set -e
@@ -24,17 +26,22 @@ else
   hugo new site $1 && cd $_
 fi
 
-echo "\nInstalling After Dark ..."
+echo "Installing After Dark ..."
 
 # Clone repo
-(cd themes; git clone -q --depth 1 https://github.com/comfusion/after-dark || { echo "cloning failed :/"; exit 1; })
+(cd themes; git clone -q --depth 1 https://git.habd.as/comfusion/after-dark || { echo "cloning failed :/"; exit 1; })
 
 # Copy archetypes
 cp themes/after-dark/archetypes/* ./archetypes
 
+# Ignore generated files from source control
+touch .gitignore
+echo "public
+resources" >> .gitignore
+
 # Add pretty config file with inline documentation
 tee $HUGO_CONFIG_PATH > /dev/null <<TOML
-baseurl = "https://c74ce35e.ngrok.io" # Controls base URL
+baseurl = "https://c74ce35e.ngrok.io/" # Controls base URL
 languageCode = "en-US" # Controls site language
 title = "After Dark" # Homepage title and page title suffix
 paginate = 11 # Number of posts to show before paginating
@@ -54,7 +61,7 @@ footnoteReturnLinkContents = "↩" # Provides a nicer footnote return link
   show_menu = false # Optional, set true to enable section menu
   powered_by = true # Optional, set false to disable credits
   images = [
-    "https://source.unsplash.com/category/technology/1600x900"
+    "https://source.unsplash.com/category/technology/2000x1322"
   ] # Suggested, controls default Open Graph images
   theme_variant = "" # Optional, for use to overriding default theme
 TOML
@@ -77,9 +84,10 @@ if [[ "elinks" != "" ]]; then
   elinks http://0.0.0.0:1337/
 fi
 
-echo "Installation complete! Your new After Dark site is created in $SITE_SOURCE_PATH."
-echo "\nSite is currently running at http://0.0.0.0:1337/"
+echo "Installation complete!"
+echo "Your new After Dark site is created in $SITE_SOURCE_PATH."
+echo "Site is currently running at http://0.0.0.0:1337/"
 echo "To stop it run \"kill \$(lsof -nt -i4TCP:1337)\"."
-echo "\nThank you for choosing After Dark."
+echo "Thank you for choosing After Dark."
 
 exit 0

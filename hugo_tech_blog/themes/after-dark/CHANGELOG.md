@@ -2,6 +2,277 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.0.0"></a>
+# [4.0.0](https://git.habd.as/comfusion/after-dark/compare/v3.10.1...v4.0.0) (2018-07-09)
+
+
+
+<a name="3.10.1"></a>
+## [3.10.1](https://git.habd.as/comfusion/after-dark/compare/v3.10.0...v3.10.1) (2018-07-09)
+
+
+
+<a name="3.10.0"></a>
+# [3.10.0](https://github.com/comfusion/after-dark/compare/v3.9.1...v3.10.0) (2018-06-18)
+
+
+### Bug Fixes
+
+* **$layouts:** resolve search layout header display ([9eee69c](https://github.com/comfusion/after-dark/commit/9eee69c)), closes [#104](https://github.com/comfusion/after-dark/issues/104)
+
+
+### Features
+
+* **$layout:** add telegram iv support ([4d520f9](https://github.com/comfusion/after-dark/commit/4d520f9)), closes [#113](https://github.com/comfusion/after-dark/issues/113)
+
+
+
+<a name="3.9.2"></a>
+## [3.9.2](https://github.com/comfusion/after-dark/compare/v3.9.1...v3.9.2) (2018-06-09)
+
+
+### Bug Fixes
+
+* **$layouts:** resolve search layout header display ([9eee69c](https://github.com/comfusion/after-dark/commit/9eee69c)), closes [#104](https://github.com/comfusion/after-dark/issues/104)
+
+
+
+<a name="3.9.1"></a>
+## [3.9.1](https://github.com/comfusion/after-dark/compare/v3.9.0...v3.9.1) (2018-05-13)
+
+
+### Bug Fixes
+
+* **$layouts:** hide search app when noscript ([c3bcff0](https://github.com/comfusion/after-dark/commit/c3bcff0))
+
+
+
+<a name="3.9.0"></a>
+# [3.9.0](https://github.com/comfusion/after-dark/compare/v3.8.4...v3.9.0) (2018-05-03)
+
+
+### Features
+
+* **$layouts:** allow customization of referrer policy and add privacy-focused default ([5759a30](https://github.com/comfusion/after-dark/commit/5759a30)), closes [#96](https://github.com/comfusion/after-dark/issues/96)
+
+
+
+<a name="3.8.4"></a>
+## [3.8.4](https://github.com/comfusion/after-dark/compare/v3.8.3...v3.8.4) (2018-05-01)
+
+
+### Bug Fixes
+
+* **$layouts:** prevent js error on search form submit ([0dce741](https://github.com/comfusion/after-dark/commit/0dce741)), closes [#94](https://github.com/comfusion/after-dark/issues/94)
+
+
+
+<a name="3.8.3"></a>
+## [3.8.3](https://github.com/comfusion/after-dark/compare/v3.8.2...v3.8.3) (2018-04-16)
+
+
+### Bug Fixes
+
+* **$layouts:** improve search input focus and usability ([e94f6df](https://github.com/comfusion/after-dark/commit/e94f6df)), closes [#91](https://github.com/comfusion/after-dark/issues/91)
+
+
+
+<a name="3.8.2"></a>
+## [3.8.2](https://github.com/comfusion/after-dark/compare/v3.8.1...v3.8.2) (2018-04-16)
+
+
+### Bug Fixes
+
+* **$layouts:** disable ua input styling safari mobile ([f7c81f4](https://github.com/comfusion/after-dark/commit/f7c81f4))
+* **$layouts:** prevent auto-zoom on safari mobile ([81c3f39](https://github.com/comfusion/after-dark/commit/81c3f39))
+
+
+
+<a name="3.8.1"></a>
+## [3.8.1](https://github.com/comfusion/after-dark/compare/v3.8.0...v3.8.1) (2018-04-15)
+
+
+### Bug Fixes
+
+* **$layouts:** remove duplicate descriptor from post image srcset ([0295370](https://github.com/comfusion/after-dark/commit/0295370))
+
+
+
+<a name="3.8.0"></a>
+# [3.8.0](https://github.com/comfusion/after-dark/compare/v3.7.0...v3.8.0) (2018-04-15)
+
+
+### Features
+
+* **$layouts:** add fuzzy search ([93d2a29](https://github.com/comfusion/after-dark/commit/93d2a29)), closes [#83](https://github.com/comfusion/after-dark/issues/83)
+
+
+
+<a name="3.7.0"></a>
+# [3.7.0](https://github.com/comfusion/after-dark/compare/v3.6.0...v3.7.0) (2018-03-25)
+
+
+### Features
+
+* **$layouts:** add post images ([06457bc](https://github.com/comfusion/after-dark/commit/06457bc))
+
+
+
+<a name="3.6.0"></a>
+# [3.6.0](https://github.com/comfusion/after-dark/compare/v3.5.1...v3.6.0) (2018-03-22)
+
+
+### Bug Fixes
+
+* **$style:** add more whitespace on list pages and darken muted text ([646e98b](https://github.com/comfusion/after-dark/commit/646e98b))
+
+
+### Features
+
+* **$layouts:** add twitter cards ([6562e80](https://github.com/comfusion/after-dark/commit/6562e80)), closes [#76](https://github.com/comfusion/after-dark/issues/76)
+
+
+
+<a name="3.5.1"></a>
+## [3.5.1](https://github.com/comfusion/after-dark/compare/v3.5.0...v3.5.1) (2018-01-17)
+
+
+### Bug Fixes
+
+* **$style:** fix a whitespace issue near the readmore link ([dee3530](https://github.com/comfusion/after-dark/commit/dee3530)), closes [#70](https://github.com/comfusion/after-dark/issues/70)
+
+
+
+<a name="3.5.0"></a>
+# [3.5.0](https://github.com/comfusion/after-dark/compare/v3.4.0...v3.5.0) (2017-11-08)
+
+
+### Features
+
+* **$shortcodes:** add youtube without cookies ([613e545](https://github.com/comfusion/after-dark/commit/613e545)), closes [#62](https://github.com/comfusion/after-dark/issues/62)
+
+
+
+<a name="3.4.0"></a>
+# [3.4.0](https://github.com/comfusion/after-dark/compare/v3.3.0...v3.4.0) (2017-10-27)
+
+
+### Features
+
+* **$shortcode:** add coub shortcode for gifs with sound ([0267d5b](https://github.com/comfusion/after-dark/commit/0267d5b)), closes [#63](https://github.com/comfusion/after-dark/issues/63)
+
+
+
+<a name="3.3.0"></a>
+# [3.3.0](https://github.com/comfusion/after-dark/compare/v3.2.0...v3.3.0) (2017-10-13)
+
+
+### Features
+
+* **$layouts:** hide related content reading time on small screen ([480d57a](https://github.com/comfusion/after-dark/commit/480d57a))
+* **$partials:** add pubdate structured data to post byline ([a3bcb0c](https://github.com/comfusion/after-dark/commit/a3bcb0c))
+
+
+
+<a name="3.2.0"></a>
+# [3.2.0](https://github.com/comfusion/after-dark/compare/v3.1.1...v3.2.0) (2017-10-06)
+
+
+### Bug Fixes
+
+* **$shortcodes:** fix issue with external link appearance ([afcc8e6](https://github.com/comfusion/after-dark/commit/afcc8e6))
+
+
+### Features
+
+* **$layout:** add base element to base layout ([bf25c67](https://github.com/comfusion/after-dark/commit/bf25c67)), closes [#60](https://github.com/comfusion/after-dark/issues/60)
+* **$shortcode:** style cite element inside block quotation ([65a4278](https://github.com/comfusion/after-dark/commit/65a4278))
+* **$shortcodes:** add frame targeting to custom figure shortcode ([a66b076](https://github.com/comfusion/after-dark/commit/a66b076))
+* **$shortcodes:** enable target and method control for button/buttongroup ([f705d19](https://github.com/comfusion/after-dark/commit/f705d19)), closes [#56](https://github.com/comfusion/after-dark/issues/56)
+* **$shortcodes:** make button shortcode clickable ([1bc643f](https://github.com/comfusion/after-dark/commit/1bc643f)), closes [#40](https://github.com/comfusion/after-dark/issues/40)
+
+
+### Reverts
+
+* **$layout:** add base element to base layout ([769e2d9](https://github.com/comfusion/after-dark/commit/769e2d9))
+
+
+
+<a name="3.1.1"></a>
+## [3.1.1](https://github.com/comfusion/after-dark/compare/v3.1.0...v3.1.1) (2017-09-13)
+
+
+### Bug Fixes
+
+* **$layouts:** fix error calling partial in related content ([8a6253d](https://github.com/comfusion/after-dark/commit/8a6253d)), closes [#55](https://github.com/comfusion/after-dark/issues/55)
+
+
+
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/comfusion/after-dark/compare/v3.0.0...v3.1.0) (2017-09-13)
+
+
+### Features
+
+* **$layouts:** use related content feature introduced in hugo@0.27 ([f0474f4](https://github.com/comfusion/after-dark/commit/f0474f4)), closes [#54](https://github.com/comfusion/after-dark/issues/54)
+
+
+
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/comfusion/after-dark/compare/v2.1.1...v3.0.0) (2017-09-13)
+
+
+### Features
+
+* **$archetypes:** turn archetypes into go templates ([5ed2d9f](https://github.com/comfusion/after-dark/commit/5ed2d9f))
+
+### BREAKING CHANGES
+
+* **$archetypes:** Minimum Hugo version set 0.24, 0.16 - 0.23 must modify archetypes
+
+to upgrade add `date` and `title` to custom archetypes. if using a version of hugo prior to 0.24 the custom templates should remove `title` and `date` and not use go templating logic in the archetype files
+
+
+
+<a name="2.1.1"></a>
+## [2.1.1](https://github.com/comfusion/after-dark/compare/v2.1.0...v2.1.1) (2017-09-11)
+
+
+### Bug Fixes
+
+* **$layouts:** move stylesheets back to partials, reorganize files ([b93b4a7](https://github.com/comfusion/after-dark/commit/b93b4a7)), closes [#50](https://github.com/comfusion/after-dark/issues/50)
+
+
+
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/comfusion/after-dark/compare/v2.0.0...v2.1.0) (2017-09-09)
+
+
+### Bug Fixes
+
+* **$images:** improve bpg image support ([7681dde](https://github.com/comfusion/after-dark/commit/7681dde)), closes [#48](https://github.com/comfusion/after-dark/issues/48)
+
+
+### Features
+
+* **$layout:** Add support for external stylesheets ([9abe627](https://github.com/comfusion/after-dark/commit/9abe627)), closes [#49](https://github.com/comfusion/after-dark/issues/49)
+
+
+
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/comfusion/after-dark/compare/v1.8.4...v2.0.0) (2017-09-08)
+
+
+### Features
+
+* **$theme:** add support for bpg image format ([49204d0](https://github.com/comfusion/after-dark/commit/49204d0))
+
+### BREAKING CHANGES
+
+* **$build:** inline css using readFile template function ([3787d10](https://github.com/comfusion/after-dark/commit/3787d10))
+
+to upgrade skip this release and move directly to 2.1.1 or a later release
+
 <a name="1.8.4"></a>
 ## [1.8.4](https://github.com/comfusion/after-dark/compare/v1.8.3...v1.8.4) (2017-06-27)
 

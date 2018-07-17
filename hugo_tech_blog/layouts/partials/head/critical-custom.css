@@ -17,3 +17,11 @@ article img {
 .dark code {
   color: #ff2e88;
 }
+
+/* body {
+  background-color: red !important;
+} */
+
+[itemprop="articleBody"] img {
+    width: 100%;
+}

@@ -22,7 +22,6 @@ I know that [GitHub Pages](https://pages.github.com/) are nothing new, but I onl
 ### My default configuration
 
 You just have to set up the DNS.
-![github-pages-control-panel](images/github-pages-control-panel.png)
 
 1. Create a CNAME record from your `www` subdomain to `your-username.github.io`
 2. Create an A record to each of the following from your apex domains
@@ -31,9 +30,10 @@ You just have to set up the DNS.
   - 185.199.110.153
   - 185.199.111.153
 3. Once your DNS has propagated, visit the settings on your repo, add either your www or apex domain as your custom domain:
+![github-pages-control-panel](images/github-pages-control-panel.png)
 4. Once GitHub has gotten a cert from LetsEncrypt, the option to enforce HTTPS will be available to you.
 5. Now all you have to do is set up an `index.html` file on the `gh-pages` branch (if you selected that option), or on the master in the docs folder (if you chose this route). This will probably depend on how you choose to build your site, what’s convenient.
 
 I use a build server that builds all of my blogs as static sites, and then adds them to my `gh-pages` branch and pushes to git after I make any change to any of them, that’s beyond the scope of this article, but it’s something to think about.
 
-GitHub pages seem perfect for small businesses, personal blogs, or software docs. More complete documentation can be found [on GitHub](https://pages.github.com/). These are just the settings I generally go with, as I think they’re great defaults.
+GitHub pages seem perfect for small businesses, personal blogs, or software docs. More complete documentation can be found [on GitHub](https://help.github.com/articles/setting-up-an-apex-domain/). These are just the settings I generally go with, as I think they’re great defaults.

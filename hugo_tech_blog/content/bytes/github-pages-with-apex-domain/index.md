@@ -5,9 +5,6 @@ description = "www and apex domains pointing to github pages"
 published = true
 type = "post"
 
-[[resources]]
-  src = "images/github-pages-control-panel.png"
-  name = "Github Pages Control Panel"
 +++
 
 ### Saving time and money with GitHub Pages
@@ -30,7 +27,7 @@ You just have to set up the DNS.
   - 185.199.110.153
   - 185.199.111.153
 3. Once your DNS has propagated, visit the settings on your repo, add either your www or apex domain as your custom domain:
-![github-pages-control-panel](images/github-pages-control-panel.png)
+{{< figure src="images/github-pages-control-panel.png" caption="GitHub Pages Control Panel" >}}
 4. Once GitHub has gotten a cert from LetsEncrypt, the option to enforce HTTPS will be available to you.
 5. Now all you have to do is set up an `index.html` file on the `gh-pages` branch (if you selected that option), or on the master in the docs folder (if you chose this route). This will probably depend on how you choose to build your site, what’s convenient.
 

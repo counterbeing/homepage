@@ -19,7 +19,7 @@
       <guid>https://www.corylogan.com/bits/bytes/what_process_is_hogging_my_port_on_mac_os/</guid>
       <description>Address already in use Damn. Did I leave a server running somewhere? Sometimes you&amp;rsquo;re not sure where you left a server running, or where something is running you never knew about. I&amp;rsquo;m finally writing this down, as I always have to look it up. I found this solution in a StackOverflow post.
 Here&amp;rsquo;s how to get all of the processes by what port they&amp;rsquo;re using.
-sudo lsof -iTCP -sTCP:LISTEN -n -P  As A Shell Function Looking at it, I realized I would never remember it, given how infrequently I need it.</description>
+sudo lsof -iTCP -sTCP:LISTEN -n -P As A Shell Function Looking at it, I realized I would never remember it, given how infrequently I need it.</description>
     </item>
     
   </channel>

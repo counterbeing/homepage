@@ -6,10 +6,20 @@
     <description>Recent content in Bytes on Bits and Blocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Jul 2017 15:12:03 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 12 Jul 2018 11:56:11 -0700</lastBuildDate>
     
 	<atom:link href="https://www.corylogan.com/bits/bytes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Github Pages With Apex Domain</title>
+      <link>https://www.corylogan.com/bits/bytes/github-pages-with-apex-domain/</link>
+      <pubDate>Thu, 12 Jul 2018 11:56:11 -0700</pubDate>
+      
+      <guid>https://www.corylogan.com/bits/bytes/github-pages-with-apex-domain/</guid>
+      <description>Saving time and money with GitHub Pages I know that GitHub Pages are nothing new, but I only recently realized how versatile they are. You can host any static content you want there for free, and I’ve recently started using it for my blogs. Major benefits of using GitHub Pages as I see it:
+ Free hosting for simple pages Deployment is as easy as a git push SSL certs are a one time checkbox It handles redirecting to the www subdomain, or to the apex domain without no real configuration  My default configuration You just have to set up the DNS.</description>
+    </item>
     
     <item>
       <title>Serving Localhost to the Web with Reverse Ssh Tunnels</title>
@@ -41,7 +51,7 @@ Instead, here&amp;rsquo;s a quick bit of jQuery, which is already available in t
       <guid>https://www.corylogan.com/bits/bytes/reducing_the_size_of_alpine_docker_images/</guid>
       <description>Why the heck is my alpine docker image so huge? That&amp;rsquo;s a tough question to answer, especially when you have no idea what&amp;rsquo;s taking up all of the space.
 This is a dirty little one-liner that yields a sorted list of all of the packages on your alpine image by size. It does this by
- Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size  apk info | while read a; do apk info -s $a; done | awk NF | sed &amp;#39;Ns/\n/ /&amp;#39; | sort -k4 -n  It may be ugly, but now I can make an informed decision about wether or not there are binaries that can be axed.</description>
+ Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size  apk info | while read a; do apk info -s $a; done | awk NF | sed &amp;#39;Ns/\n/ /&amp;#39; | sort -k4 -n It may be ugly, but now I can make an informed decision about wether or not there are binaries that can be axed.</description>
     </item>
     
     <item>
@@ -52,7 +62,7 @@ This is a dirty little one-liner that yields a sorted list of all of the package
       <guid>https://www.corylogan.com/bits/bytes/what_process_is_hogging_my_port_on_mac_os/</guid>
       <description>Address already in use Damn. Did I leave a server running somewhere? Sometimes you&amp;rsquo;re not sure where you left a server running, or where something is running you never knew about. I&amp;rsquo;m finally writing this down, as I always have to look it up. I found this solution in a StackOverflow post.
 Here&amp;rsquo;s how to get all of the processes by what port they&amp;rsquo;re using.
-sudo lsof -iTCP -sTCP:LISTEN -n -P  As A Shell Function Looking at it, I realized I would never remember it, given how infrequently I need it.</description>
+sudo lsof -iTCP -sTCP:LISTEN -n -P As A Shell Function Looking at it, I realized I would never remember it, given how infrequently I need it.</description>
     </item>
     
   </channel>

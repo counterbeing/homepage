@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.corylogan.com/bits/bytes/github-pages-with-apex-domain/</loc>
+    <lastmod>2018-07-12T11:56:11-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.corylogan.com/bits/bytes/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</loc>
     <lastmod>2017-07-10T15:12:03+02:00</lastmod>
   </url>
@@ -50,13 +55,13 @@
   
   <url>
     <loc>https://www.corylogan.com/bits/</loc>
-    <lastmod>2017-07-10T15:12:03+02:00</lastmod>
+    <lastmod>2018-07-12T11:56:11-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.corylogan.com/bits/bytes/</loc>
-    <lastmod>2017-07-10T15:12:03+02:00</lastmod>
+    <lastmod>2018-07-12T11:56:11-07:00</lastmod>
     <priority>0</priority>
   </url>
   

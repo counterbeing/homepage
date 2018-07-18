@@ -2,7 +2,7 @@
 title = "{{ replace .TranslationBaseName "-" " " | title }}"
 description = ""
 date = {{ .Date }}
-toc = true
+toc = false
 type = 'post'
 categories = []
 tags = []

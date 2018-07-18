@@ -13,10 +13,10 @@
     
     <item>
       <title>Serving Localhost to the Web with Reverse Ssh Tunnels</title>
-      <link>https://www.corylogan.com/bits/bytes/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</link>
+      <link>https://www.corylogan.com/bits/bits/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</link>
       <pubDate>Mon, 10 Jul 2017 15:12:03 +0200</pubDate>
       
-      <guid>https://www.corylogan.com/bits/bytes/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</guid>
+      <guid>https://www.corylogan.com/bits/bits/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</guid>
       <description>Note: If you don&amp;rsquo;t have a server already, check my last tip.
 This topic is always a little tricky, so, here&amp;rsquo;s the basic thing to know, as this is the most frequent use case.
 Suppose you have a development rails server running on your local computer. You can access this server via curl http://localhost:3000. Which is to say, it&amp;rsquo;s running on your localhost, on port 3000. You want your client to see it, to give you feedback, but they&amp;rsquo;re nowhere near you, and you just want a quick way to show it to them.</description>
@@ -24,20 +24,20 @@ Suppose you have a development rails server running on your local computer. You 
     
     <item>
       <title>Saving Time With Tmux</title>
-      <link>https://www.corylogan.com/bits/articles/saving-time-with-tmux/</link>
+      <link>https://www.corylogan.com/bits/bytes/saving-time-with-tmux/</link>
       <pubDate>Mon, 10 Jul 2017 13:45:28 +0200</pubDate>
       
-      <guid>https://www.corylogan.com/bits/articles/saving-time-with-tmux/</guid>
+      <guid>https://www.corylogan.com/bits/bytes/saving-time-with-tmux/</guid>
       <description>What is a terminal multiplexer, and why do I care? When you split up a terminal screen into sub-terminals, that&amp;rsquo;s called terminal multiplexing. This is nothing new, GNU Screen has been around since 1987. Tmux is just screen&amp;rsquo;s younger, nubile cousin. I&amp;rsquo;m about to explain how this simple technology can:
  Keep you organized. Lower the bar to get to work. Save you time. Enable teamwork.  Here&amp;rsquo;s a quick demonstration:</description>
     </item>
     
     <item>
       <title>What Process Is Hogging My Port On Mac Os</title>
-      <link>https://www.corylogan.com/bits/bytes/what_process_is_hogging_my_port_on_mac_os/</link>
+      <link>https://www.corylogan.com/bits/bits/what_process_is_hogging_my_port_on_mac_os/</link>
       <pubDate>Thu, 15 Dec 2016 19:51:29 +0000</pubDate>
       
-      <guid>https://www.corylogan.com/bits/bytes/what_process_is_hogging_my_port_on_mac_os/</guid>
+      <guid>https://www.corylogan.com/bits/bits/what_process_is_hogging_my_port_on_mac_os/</guid>
       <description>Address already in use Damn. Did I leave a server running somewhere? Sometimes you&amp;rsquo;re not sure where you left a server running, or where something is running you never knew about. I&amp;rsquo;m finally writing this down, as I always have to look it up. I found this solution in a StackOverflow post.
 Here&amp;rsquo;s how to get all of the processes by what port they&amp;rsquo;re using.
 sudo lsof -iTCP -sTCP:LISTEN -n -P As A Shell Function Looking at it, I realized I would never remember it, given how infrequently I need it.</description>

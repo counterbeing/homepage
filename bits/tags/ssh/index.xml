@@ -13,10 +13,10 @@
     
     <item>
       <title>Serving Localhost to the Web with Reverse Ssh Tunnels</title>
-      <link>https://www.corylogan.com/bits/bytes/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</link>
+      <link>https://www.corylogan.com/bits/bits/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</link>
       <pubDate>Mon, 10 Jul 2017 15:12:03 +0200</pubDate>
       
-      <guid>https://www.corylogan.com/bits/bytes/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</guid>
+      <guid>https://www.corylogan.com/bits/bits/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</guid>
       <description>Note: If you don&amp;rsquo;t have a server already, check my last tip.
 This topic is always a little tricky, so, here&amp;rsquo;s the basic thing to know, as this is the most frequent use case.
 Suppose you have a development rails server running on your local computer. You can access this server via curl http://localhost:3000. Which is to say, it&amp;rsquo;s running on your localhost, on port 3000. You want your client to see it, to give you feedback, but they&amp;rsquo;re nowhere near you, and you just want a quick way to show it to them.</description>

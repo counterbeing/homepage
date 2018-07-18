@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bits and Blocks</title>
-    <link>https://www.corylogan.com/bits/</link>
-    <description>Recent content on Bits and Blocks</description>
+    <title>Bits on Bits and Blocks</title>
+    <link>https://www.corylogan.com/bits/bits/</link>
+    <description>Recent content in Bits on Bits and Blocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Jul 2018 11:56:11 -0700</lastBuildDate>
     
-	<atom:link href="https://www.corylogan.com/bits/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.corylogan.com/bits/bits/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -30,16 +30,6 @@
       <description>Note: If you don&amp;rsquo;t have a server already, check my last tip.
 This topic is always a little tricky, so, here&amp;rsquo;s the basic thing to know, as this is the most frequent use case.
 Suppose you have a development rails server running on your local computer. You can access this server via curl http://localhost:3000. Which is to say, it&amp;rsquo;s running on your localhost, on port 3000. You want your client to see it, to give you feedback, but they&amp;rsquo;re nowhere near you, and you just want a quick way to show it to them.</description>
-    </item>
-    
-    <item>
-      <title>Saving Time With Tmux</title>
-      <link>https://www.corylogan.com/bits/bytes/saving-time-with-tmux/</link>
-      <pubDate>Mon, 10 Jul 2017 13:45:28 +0200</pubDate>
-      
-      <guid>https://www.corylogan.com/bits/bytes/saving-time-with-tmux/</guid>
-      <description>What is a terminal multiplexer, and why do I care? When you split up a terminal screen into sub-terminals, that&amp;rsquo;s called terminal multiplexing. This is nothing new, GNU Screen has been around since 1987. Tmux is just screen&amp;rsquo;s younger, nubile cousin. I&amp;rsquo;m about to explain how this simple technology can:
- Keep you organized. Lower the bar to get to work. Save you time. Enable teamwork.  Here&amp;rsquo;s a quick demonstration:</description>
     </item>
     
     <item>
@@ -73,35 +63,6 @@ This is a dirty little one-liner that yields a sorted list of all of the package
       <description>Address already in use Damn. Did I leave a server running somewhere? Sometimes you&amp;rsquo;re not sure where you left a server running, or where something is running you never knew about. I&amp;rsquo;m finally writing this down, as I always have to look it up. I found this solution in a StackOverflow post.
 Here&amp;rsquo;s how to get all of the processes by what port they&amp;rsquo;re using.
 sudo lsof -iTCP -sTCP:LISTEN -n -P As A Shell Function Looking at it, I realized I would never remember it, given how infrequently I need it.</description>
-    </item>
-    
-    <item>
-      <title>Why Choose Vim</title>
-      <link>https://www.corylogan.com/bits/bytes/why_choose_vim/</link>
-      <pubDate>Tue, 13 Dec 2016 18:30:08 -0800</pubDate>
-      
-      <guid>https://www.corylogan.com/bits/bytes/why_choose_vim/</guid>
-      <description>TLDR Choosing a text editor is a very personal decision. You grow with your editor, as your editor grows with you. As I use my text editor more and more over the years, I&amp;rsquo;m constantly constantly learning new techniques for working more efficiently. Some of them stick, others are forgotten. I find that sequences and shortcuts that I most use stay. But just as importantly VIM accommodates my changing needs through configuration, plugin, or otherwise.</description>
-    </item>
-    
-    <item>
-      <title>A Single Singleton in Ruby</title>
-      <link>https://www.corylogan.com/bits/bytes/a_single_singleton_in_ruby/</link>
-      <pubDate>Tue, 13 Dec 2016 18:22:26 -0800</pubDate>
-      
-      <guid>https://www.corylogan.com/bits/bytes/a_single_singleton_in_ruby/</guid>
-      <description>The singleton design pattern I&amp;rsquo;m relatively new the the concept of the singleton, even though I&amp;rsquo;ve been programming for a number of years. I&amp;rsquo;ve run into several instances in which I new that this was exactly what I needed, but did not have a name for it. Here, I&amp;rsquo;m going to try to explain it to myself a year ago. There are a few questions I&amp;rsquo;ll try to address.</description>
-    </item>
-    
-    <item>
-      <title>The Mysteries of the Ruby Heredoc</title>
-      <link>https://www.corylogan.com/bits/bytes/the_mysteries_of_the_ruby_heredoc/</link>
-      <pubDate>Fri, 18 Nov 2016 19:28:41 +0200</pubDate>
-      
-      <guid>https://www.corylogan.com/bits/bytes/the_mysteries_of_the_ruby_heredoc/</guid>
-      <description>As of writing this, I&amp;rsquo;m running Ruby version 2.3.0. Not all of this, particularly the stripped heredoc, is available in plain ruby before 2.3.0.
-Heredoc Basics So, you need a string that&amp;rsquo;s longer than a line, and you&amp;rsquo;re sick of quotes and backslashes? And you might like to retain formatting? You want string interpolation too? Enter, heredoc.
-Here&amp;rsquo;s your basic, run of the mill, heredoc. You&amp;rsquo;ll notice we use the &amp;lt;&amp;lt;- operator, and our safe-word, which we will use to end the heredoc.</description>
     </item>
     
   </channel>

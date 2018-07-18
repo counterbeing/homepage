@@ -4,28 +4,29 @@
     <meta name="generator" content="Hugo 0.44" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Network | Bits and Blocks</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="technology, ">
+    <title>Saving Time With Tmux | Bits and Blocks</title>
+    <meta name="description" content="How I use tmux in my workflow to make my life better.">
+    <meta name="keywords" content="tmux, terminal, tools">
     
     
     
-    
-      <meta name="robots" content="noindex">
     
     
 
   <meta name="author" content="Cory Logan">
 
 
-    <meta property="og:title" content="Network" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.corylogan.com/bits/tags/network/" />
+    <meta property="og:title" content="Saving Time With Tmux" />
+<meta property="og:description" content="How I use tmux in my workflow to make my life better." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.corylogan.com/bits/bytes/saving-time-with-tmux/" />
 
 
 
-<meta property="og:updated_time" content="2016-12-15T19:51:29&#43;00:00"/>
+<meta property="article:published_time" content="2017-07-10T13:45:28&#43;02:00"/>
+
+<meta property="article:modified_time" content="2017-07-10T13:45:28&#43;02:00"/>
+
 
 
 
@@ -37,8 +38,8 @@
 
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Network"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Saving Time With Tmux"/>
+<meta name="twitter:description" content="How I use tmux in my workflow to make my life better."/>
 
     
 
@@ -67,9 +68,7 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
     
-      <link href="https://www.corylogan.com/bits/tags/network/index.xml" rel="alternate" type="application/rss+xml" title="Bits and Blocks">
-    
-    <link rel="canonical" href="https://www.corylogan.com/bits/tags/network/">
+    <link rel="canonical" href="https://www.corylogan.com/bits/bytes/saving-time-with-tmux/">
     
     
     <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDY4RTI2NzlCQjE3MTFFNkJFNDk5M0JFQjc5MEIzNEYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDY4RTI2N0FCQjE3MTFFNkJFNDk5M0JFQjc5MEIzNEYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNjhFMjY3N0JCMTcxMUU2QkU0OTkzQkVCNzkwQjM0RiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNjhFMjY3OEJCMTcxMUU2QkU0OTkzQkVCNzkwQjM0RiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pn+zX8oAAAVdSURBVHja7J07bFNXGMfvDX7VdoyNfW0IpAQpSQMKbSolCopohBRFRJ0QU8kWJgZEB1hYGFhAfSxVh07JBp0qpC6gCqlKEaKKh1RENAqRSBuC8CPYdWzXLzAfssRQIUTK/c495/j/W6PY3//+rs/Dvve7ZvPjqwZwjg4cAgiAAAABEAAgAAIABEAAgAAIABAAAQACIABAAAQACIAAAAEQACAAAgAEQACAAAgAEAABAAK0wKVElU/qhaVKarmaXq1trtVyG/VCplHMP6+Um3X6q990h3f4LFdwrzvU44n0eqID3vigL9HlDskfzZT2/oCm0ZwvPbpTWrtXXl8or6caxW39e8IVHPF3H/F3Hw30jAcOmIYJAe/K/crTm1srt7ZWbhdXbXnBiWDv8c7+qc7+w77dEPA26JT/6Z+lG4UHf9Vytr/4fk/kROjQyZ2D9IGAgP+yUH58Lb94Pb+43aFmu9DQdCo8NB0eGvHvg4BXZBul2Vxy7llyuZoR9qYDXmtm1/DpyHDMFWhrAb8UH/6w+TsNO468Ow1HZ6Kjk8G+Nl2Gfr9597vs3YfVrFMFkHia8M/Fxs5Gx9pLQLpR/CYz/23mtxe02nQU0v/lxs9/1/IXrPG4K9gWAijzlfSvc7mkJOsQOgm+zsxnG+WL8WN93pjmAv6spi+nbv+Y/0O29TidEP8265cSEwe9cZHv2yH43Jfz6Legwqg8wXOSOAE07tPII+3Rf+2Aikwz70WcEUCzrjzj/tvHIipVNwG04qQ1j6EIVCoVrI8A2m3Ret/xFee21kVUMJWtg4Bso0R7XQd3W/97vUBlU/HKC5jNJZ36puH998mz/JMWr4CF8uO5Z0lDWah4iqCwgGv5RZHfcdoOFU8RVBUwX3p0nbl6AVAECqKkABpDUwJ3NExQBNY5jEvA/crTG4UHhhZQEIqjmICbWyscv+s6AgWhOCoJaBrNW2wVOwLFafJsJFkE0Kxl1xUlkkBxmKZiFgF3SmuGdjCFYhFwr7yunwCmUPYLeFIvLOgogEJRNAUELFVSGiz/37ghoGgKCFiupg1N4Yhmv4DV2qauAjii2S9gTZf9l5ho9gvYYJipJGFDiUk4o+MMzBfNfgH55xVdBXBEs19A674tLeGIhrskHcZ+AX7TrevB4ohmv4DwDp+uAjii2S/AcuIqezFwRLNfwF4Vbo+WJ5r9Ano8EV0FcESzX0CvJ6qrAI5o9gsYEHuHiUg4otkvYNCXSOg4D1MoiqaAgC53aMTfrZ8ACtWlxCRMHNFRAFMoFgFHAz36CWAKxSJgPHBgItir09GnOEw9VlgEmIZ5vLNfJwEUh6nlE9e3oVOd/ft12ZFRkCm284lLwGHf7hOhQ3oIoCB8rbYYfw84uXNQgw0BRaAgfK/PKIBmrVPhIdUFUATWFme8v4hNh4cGvJbK3z1Y08znEK+AEf++mV3D6gqg4rlby7H/Jnw6Msw6hrLOYVQ897uwC4i5Ameio+IbIb0nVDCVLaCln4irIiaDfediYx2y9q5900ExqWAxzfwEXZZyNjp23vpMFQFUqrA2fuKuC7pgjc9EFJiQqUgqVeCnTRRxV/Bi/NgX4U9kPvpUHhUpsn2i0CvjaGa7lJiQ1gEVRuUJXi+I7pp40Bu/nJj8wHTL1r6MRp62aFvZ+hxc3TMVc/llaNzaWvPQrNtGjVtb88FXez7/0BN2tnVx62xox9bFr9emH3ktNO92Egr/qa9r1N+N9vUOgwc4SAEeYSIFeIiPFOAxVhKBB7kBvm0ggAAIABAAAQACIABAAAQACIAAAAEQACAAAgAEQACAAAgAEAABAAJ05KUAAwAFq0MGgK1C9QAAAABJRU5ErkJggg==">
@@ -258,65 +257,175 @@ article header img {
     
       <a itemprop="url" class="" href="/bits/bits/"><span itemprop="name">Bits</span></a>
     
-      <a itemprop="url" class="" href="/bits/bytes/"><span itemprop="name">Bytes</span></a>
+      <a itemprop="url" class="active" href="/bits/bytes/"><span itemprop="name">Bytes</span></a>
     
   </nav>
 
 
 </header>
     <main>
-  <header>
-    <h1>Network</h1>
-  </header>
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/bits/bits/what_process_is_hogging_my_port_on_mac_os/">What Process Is Hogging My Port On Mac Os</a>
-    </h2>
+  <article itemscope itemtype="http://schema.org/BlogPosting">
     
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+<meta itemprop="name" content="Saving Time With Tmux">
+<meta itemprop="description" content="How I use tmux in my workflow to make my life better.">
+
+
+<meta itemprop="datePublished" content="2017-07-10T13:45:28&#43;02:00" />
+<meta itemprop="dateModified" content="2017-07-10T13:45:28&#43;02:00" />
+<meta itemprop="wordCount" content="538">
+
+
+
+<meta itemprop="keywords" content="tmux,terminal,tools," />
+
+    <header>
+      <h1 itemprop="headline">Saving Time With Tmux</h1>
+      <p class="muted">
+        <svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <circle cx="16" cy="16" r="14" />
   <path d="M16 8 L16 16 20 20" />
 </svg>
-<span>1 minute read</span>
+<span>3 minute read</span>
 <svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
 </svg>
 
-  Published: <time datetime="2016-12-15T19:51:29&#43;00:00">15 Dec, 2016</time>
+  Published: <time datetime="2017-07-10T13:45:28&#43;02:00">10 Jul, 2017</time>
 
-</p>
+
+      </p>
+      
+        <blockquote itemprop="description">How I use tmux in my workflow to make my life better.</blockquote>
+      
+      
+    </header>
     
-  </header>
-  
-  <div itemprop="description">
-    Address already in use Damn. Did I leave a server running somewhere? Sometimes you&rsquo;re not sure where you left a server running, or where something is running you never knew about. I&rsquo;m finally writing this down, as I always have to look it up. I found this solution in a StackOverflow post.
-Here&rsquo;s how to get all of the processes by what port they&rsquo;re using.
-sudo lsof -iTCP -sTCP:LISTEN -n -P As A Shell Function Looking at it, I realized I would never remember it, given how infrequently I need it.
-  </div>
-  
-    <nav class="readmore"><a itemprop="url" href="/bits/bits/what_process_is_hogging_my_port_on_mac_os/">Read More&nbsp;&raquo;</a></nav>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2016-12-15T19:51:29&#43;00:00">
-  <meta itemprop="dateModified" content="2016-12-15T19:51:29&#43;00:00">
-  
-    <meta itemprop="image" content="">
-  
-</article>
+  <details>
+    <summary>Table of Contents</summary>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#what-is-a-terminal-multiplexer-and-why-do-i-care">What is a terminal multiplexer, and why do I care?</a></li>
+<li><a href="#multiple-panes-for-multiple-things">Multiple panes for multiple things</a></li>
+<li><a href="#keep-your-workspace-tidy">Keep your workspace tidy</a></li>
+<li><a href="#work-on-remote-servers">Work on remote servers</a></li>
+<li><a href="#collaborate">Collaborate</a></li>
+<li><a href="#next-steps">Next steps</a></li>
+</ul></li>
+</ul>
+</nav>
+  </details>
+  <script>
+    (function (window, document, undefined) {
+      const el = document.querySelector('details summary');
+      el.onclick = () => {
+        (function(l,o,a,d,e,r){e=o.createElement(a),r=o.getElementsByTagName(a)[0];e.async=1;e.src=d;r.parentNode.insertBefore(e,r)})(window,document,'script','\/bits\/js\/smoothscroll.js');
+        el.onclick = null;
+      };
+      document.querySelectorAll('#TableOfContents a').forEach(link => {
+        link.addEventListener('click', (evt) => {
+          evt.preventDefault();
+          const selector = link.href.slice(link.href.indexOf('#'));
+          document.querySelector(
+            selector
+          ).scrollIntoView({ behavior: 'smooth' });
+          window.history.pushState({}, "", selector);
+        });
+      });
+    })(window, document);
+  </script>
 
+
+    <div itemprop="articleBody">
+      
+
+<h2 id="what-is-a-terminal-multiplexer-and-why-do-i-care">What is a terminal multiplexer, and why do I care?</h2>
+
+<p>When you split up a terminal screen into sub-terminals, that&rsquo;s called terminal multiplexing. This is nothing new, <a href="https://en.wikipedia.org/wiki/GNU_Screen">GNU Screen</a> has been around since 1987. Tmux is just screen&rsquo;s younger, nubile cousin. I&rsquo;m about to explain how this simple technology can:</p>
+
+<ul>
+<li>Keep you organized.</li>
+<li>Lower the bar to get to work.</li>
+<li>Save you time.</li>
+<li>Enable teamwork.</li>
+</ul>
+
+<p>Here&rsquo;s a quick demonstration:
+<script type="text/javascript" src="https://asciinema.org/a/5k3urBv0sHluX7yUiopl0y0a3.js" id="asciicast-5k3urBv0sHluX7yUiopl0y0a3" data-size="small" data-speed="3" async></script></p>
+
+<h2 id="multiple-panes-for-multiple-things">Multiple panes for multiple things</h2>
+
+<p>If you watch the demo above, you can see that you can make multiple panes, and multiple windows. You can organize them however you like.</p>
+
+<p>The benefit of this is that you can have a server running in one pane, and an editor running on another. Or your test suite. Or whatever else you need to keep an eye on.</p>
+
+<p>You might think, well, I can already do that in my terminal app. And maybe you can! But, can you do it on remote servers over ssh? And can you keep those panes running even if you quit your termal app? Didn&rsquo;t think so.</p>
+
+<h2 id="keep-your-workspace-tidy">Keep your workspace tidy</h2>
+
+<p>What if, every time you went to start working on your app, your text editor opened, your test suite ran, git pulled the latest changes, and a development server launched? If that gets you at all excited, you should check out <a href="https://github.com/tmuxinator/tmuxinator">tmuxinator</a>. There are other options out there that do the same thing. But, with a simple configuration file, you can have all that and more!</p>
+
+<h2 id="work-on-remote-servers">Work on remote servers</h2>
+
+<p>Sometimes when working on a remote server, it&rsquo;s useful to keep a long running task going, or at least be able to look at the same workspace you were looking at previously. By keeping your work in a tmux session, you can simply rejoin the session you were previously using. Everything is now exactly as you left it!</p>
+
+<p>I realize it&rsquo;s not the best use, but there have been a couple of times I&rsquo;ve used tmux to keep a long running task going in the background on a server. This way, when I close my laptop and walk away, everything keeps running. Imagine a long rake task, sure I could have put it in a background job, but it was a one off task, and writing the job would hae been unnecessary work.</p>
+
+<h2 id="collaborate">Collaborate</h2>
+
+<p>You can have more than one person in a tmux session at once. This has to be one of the greatest things of all about tmux. It&rsquo;s like screen sharing, but so much faster, as it&rsquo;s just over an ssh session. There is nothing worse than trying to collaborate over a slow VNC screen share, it&rsquo;s like typing with boxing gloves. There are a few hoops to jump through, another user, ssh access, and permissions&hellip; But there&rsquo;s another option.</p>
+
+<p><a href="https://tmate.io/">Tmate</a> is a fantastically handy little utility that does all of the hoop jumping for you. After installing <code>tmate</code>, just run it, and give your friend access by copying your secure ssh command. Even from the other side of the world, you can have lag-free collaboration!</p>
+
+<h2 id="next-steps">Next steps</h2>
+
+<p>Go give <code>tmux</code> a shot!</p>
+
+<p>You&rsquo;ll need to learn some of the basic commands for getting around, and probably do a little customization. Good luck!</p>
+
+    </div>
+    
+    <footer>
+      <hr>
+      <p>
+  Published
   
+    
+      by <span itemprop="author">Cory Logan</span>
+    
+  
+  <time itemprop="datePublished" datetime="2017-07-10T13:45:28&#43;02:00">
+    10 Jul, 2017
+  </time>
+  
+  
+    and tagged <a href="/bits/tags/terminal/">terminal</a>, <a href="/bits/tags/tmux/">tmux</a> and <a href="/bits/tags/tools/">tools</a>
+  
+  using <span itemprop="wordCount">538</span> words.
+</p>
+
+      
+
+
+  <aside>
+    <header>Related Content</header>
+    <ul>
+      
+        <li><a href="/bits/bits/what_process_is_hogging_my_port_on_mac_os/">What Process Is Hogging My Port On Mac Os</a>
+        <time datetime="1M">1 minutes</time>
+      
+        <li><a href="/bits/bytes/why_choose_vim/">Why Choose Vim</a>
+        <time datetime="3M">3 minutes</time>
+      
+    </ul>
+  </aside>
+
+
+    </footer>
+  </article>
 </main>
     <footer>
-  <nav>
-  <p>
-    
-    <span>Page 1 of 1</span>
-    
-  </p>
-</nav>
-
   
 
 </footer>

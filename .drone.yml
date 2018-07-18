@@ -1,4 +1,10 @@
 pipeline:
+  Render Hugo Tech Blog :
+    image: jojomi/hugo:latest
+    commands:
+      - cd hugo_tech_blog
+      - hugo
+
   Render Homepage:
     image: corylogan/middleman-docker:latest
     pull: true
@@ -32,11 +38,6 @@ pipeline:
       - yarn
       - ember build --prod
 
-  Render Hugo Tech Blog:
-    image: publysher/hugo:latest
-    commands:
-      - cd hugo_tech_blog
-      - hugo
 
   Copy Assets to Folder:
     image: alpine
@@ -87,13 +88,6 @@ pipeline:
   #   tags:
   #     - latest
   #     - ${DRONE_COMMIT_SHA:8}
-
-  # Deploy To Kontena:
-  #   image: kontena/cli
-  #   secrets: [ KONTENA_GRID, KONTENA_TOKEN, KONTENA_URL ]
-  #   commands:
-  #     - SSL_IGNORE_ERRORS=true kontena stack deploy homepage
-
   # Submit sitemap to google:
   #   image: appropriate/curl
   #   commands:

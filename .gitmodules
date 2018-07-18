@@ -1,0 +1,3 @@
+[submodule "hugo_tech_blog/themes/after-dark"]
+	path = hugo_tech_blog/themes/after-dark
+	url = https://git.habd.as/comfusion/after-dark.git

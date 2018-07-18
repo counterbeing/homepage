@@ -33,7 +33,7 @@ pipeline:
       - ember build --prod
 
   Render Hugo Tech Blog:
-    image: corylogan/hugo-with-elinks:latest
+    image: publysher/hugo:latest
     commands:
       - cd hugo_tech_blog
       - hugo

@@ -29,7 +29,7 @@ If you watch the demo above, you can see that you can make multiple panes, and m
 
 The benefit of this is that you can have a server running in one pane, and an editor running on another. Or your test suite. Or whatever else you need to keep an eye on.
 
-You might think, well, I can already do that in my terminal app. And maybe you can! But, can you do it on remote servers over ssh? And can you keep those panes running even if you quit your termal app? Didn't think so.
+You might think, well, I can already do that in my terminal app. And maybe you can! But, can you do it on remote servers over ssh? And can you keep those panes running even if you quit your terminal app? Didn't think so.
 
 ## Keep your workspace tidy
 What if, every time you went to start working on your app, your text editor opened, your test suite ran, git pulled the latest changes, and a development server launched? If that gets you at all excited, you should check out [tmuxinator](https://github.com/tmuxinator/tmuxinator). There are other options out there that do the same thing. But, with a simple configuration file, you can have all that and more!
@@ -37,7 +37,7 @@ What if, every time you went to start working on your app, your text editor open
 ## Work on remote servers
 Sometimes when working on a remote server, it's useful to keep a long running task going, or at least be able to look at the same workspace you were looking at previously. By keeping your work in a tmux session, you can simply rejoin the session you were previously using. Everything is now exactly as you left it!
 
-I realize it's not the best use, but there have been a couple of times I've used tmux to keep a long running task going in the background on a server. This way, when I close my laptop and walk away, everything keeps running. Imagine a long rake task, sure I could have put it in a background job, but it was a one off task, and writing the job would hae been unnecessary work.
+I realize it's not the best use, but there have been a couple of times I've used tmux to keep a long running task going in the background on a server. This way, when I close my laptop and walk away, everything keeps running. Imagine a long rake task, sure I could have put it in a background job, but it was a one off task, and writing the job would have been unnecessary work.
 
 ## Collaborate
 You can have more than one person in a tmux session at once. This has to be one of the greatest things of all about tmux. It's like screen sharing, but so much faster, as it's just over an ssh session. There is nothing worse than trying to collaborate over a slow VNC screen share, it's like typing with boxing gloves. There are a few hoops to jump through, another user, ssh access, and permissions... But there's another option.

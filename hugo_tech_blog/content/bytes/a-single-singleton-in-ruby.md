@@ -17,7 +17,7 @@ I'm relatively new the the concept of the singleton, even though I've been progr
 - How should I implement it?
 
 ## Why do I care?
-A lot has been written on design patters, and by people with a lot more experience than myself. I'd recommend picking up a book on the topic and learning a bit more if it's a new concept to you. Each one of these patterns is a tool that you can use to solve problems that have been solved over and over again. They can hasten, and solidify your development, as well as give you a way to succinctly communicate big ideas.
+A lot has been written on design patterns, and by people with a lot more experience than myself. I'd recommend picking up a book on the topic and learning a bit more if it's a new concept to you. Each one of these patterns is a tool that you can use to solve problems that have been solved over and over again. They can hasten, and solidify your development, as well as give you a way to succinctly communicate big ideas.
 
 This particular pattern generally comes into play when you need some kind of global object to not only provide a set of methods, but also manage some kind of global state.
 
@@ -37,7 +37,7 @@ There are different ways to implement the singleton pattern. Let's first go over
 
 ```ruby
 class ErrorLogger
-  # This prevents the class from being instantiated. With a sigleton, we don't
+  # This prevents the class from being instantiated. With a singleton, we don't
   # want more than one instance. That's pretty much the definition.
   private_class_method :new
 

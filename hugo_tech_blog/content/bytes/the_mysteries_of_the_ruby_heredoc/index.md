@@ -91,7 +91,7 @@ There's another reason this is worth looking at. It demonstrates how to extend s
 It feels like I should feel guilty whenever I even consider adding an extension to a core class. I don't though. But, I will offer a caveat. Don't go monkey patching carelessly! Be sure you're not overwriting anything important, or you'll be in a world of hurt.
 
 
-![A world of hurt](/bits/images/monkeypatching-world-of-hurt.jpg)
+![A world of hurt](images/monkeypatching-world-of-hurt.jpg)
 
 I, for one, believe that monkey patching can be done in respectable ways.
 

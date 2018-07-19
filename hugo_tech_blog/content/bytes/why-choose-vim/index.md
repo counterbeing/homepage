@@ -22,7 +22,7 @@ Vim also has it's own set of advantages. It's very fast at large search and repl
 
 It actually looks pretty modern!
 
-![Vim Editor](/bits/images/vim-screenshot.png)
+![Vim Editor](vim-screenshot.png)
 
 ## A Few Caveats
 - Steep learning curve.

@@ -13,10 +13,10 @@
     
     <item>
       <title>A Single Singleton in Ruby</title>
-      <link>https://www.corylogan.com/bits/bytes/a_single_singleton_in_ruby/</link>
+      <link>https://www.corylogan.com/bits/bytes/a-single-singleton-in-ruby/</link>
       <pubDate>Tue, 13 Dec 2016 18:22:26 -0800</pubDate>
       
-      <guid>https://www.corylogan.com/bits/bytes/a_single_singleton_in_ruby/</guid>
+      <guid>https://www.corylogan.com/bits/bytes/a-single-singleton-in-ruby/</guid>
       <description>The singleton design pattern I&amp;rsquo;m relatively new the the concept of the singleton, even though I&amp;rsquo;ve been programming for a number of years. I&amp;rsquo;ve run into several instances in which I new that this was exactly what I needed, but did not have a name for it. Here, I&amp;rsquo;m going to try to explain it to myself a year ago. There are a few questions I&amp;rsquo;ll try to address.</description>
     </item>
     

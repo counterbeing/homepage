@@ -13,10 +13,10 @@
     
     <item>
       <title>Why Choose Vim</title>
-      <link>https://www.corylogan.com/bits/bytes/why_choose_vim/</link>
+      <link>https://www.corylogan.com/bits/bytes/why-choose-vim/</link>
       <pubDate>Tue, 13 Dec 2016 18:30:08 -0800</pubDate>
       
-      <guid>https://www.corylogan.com/bits/bytes/why_choose_vim/</guid>
+      <guid>https://www.corylogan.com/bits/bytes/why-choose-vim/</guid>
       <description>TLDR Choosing a text editor is a very personal decision. You grow with your editor, as your editor grows with you. As I use my text editor more and more over the years, I&amp;rsquo;m constantly constantly learning new techniques for working more efficiently. Some of them stick, others are forgotten. I find that sequences and shortcuts that I most use stay. But just as importantly VIM accommodates my changing needs through configuration, plugin, or otherwise.</description>
     </item>
     

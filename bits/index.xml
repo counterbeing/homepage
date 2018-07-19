@@ -77,19 +77,19 @@ sudo lsof -iTCP -sTCP:LISTEN -n -P As A Shell Function Looking at it, I realized
     
     <item>
       <title>Why Choose Vim</title>
-      <link>https://www.corylogan.com/bits/bytes/why_choose_vim/</link>
+      <link>https://www.corylogan.com/bits/bytes/why-choose-vim/</link>
       <pubDate>Tue, 13 Dec 2016 18:30:08 -0800</pubDate>
       
-      <guid>https://www.corylogan.com/bits/bytes/why_choose_vim/</guid>
+      <guid>https://www.corylogan.com/bits/bytes/why-choose-vim/</guid>
       <description>TLDR Choosing a text editor is a very personal decision. You grow with your editor, as your editor grows with you. As I use my text editor more and more over the years, I&amp;rsquo;m constantly constantly learning new techniques for working more efficiently. Some of them stick, others are forgotten. I find that sequences and shortcuts that I most use stay. But just as importantly VIM accommodates my changing needs through configuration, plugin, or otherwise.</description>
     </item>
     
     <item>
       <title>A Single Singleton in Ruby</title>
-      <link>https://www.corylogan.com/bits/bytes/a_single_singleton_in_ruby/</link>
+      <link>https://www.corylogan.com/bits/bytes/a-single-singleton-in-ruby/</link>
       <pubDate>Tue, 13 Dec 2016 18:22:26 -0800</pubDate>
       
-      <guid>https://www.corylogan.com/bits/bytes/a_single_singleton_in_ruby/</guid>
+      <guid>https://www.corylogan.com/bits/bytes/a-single-singleton-in-ruby/</guid>
       <description>The singleton design pattern I&amp;rsquo;m relatively new the the concept of the singleton, even though I&amp;rsquo;ve been programming for a number of years. I&amp;rsquo;ve run into several instances in which I new that this was exactly what I needed, but did not have a name for it. Here, I&amp;rsquo;m going to try to explain it to myself a year ago. There are a few questions I&amp;rsquo;ll try to address.</description>
     </item>
     

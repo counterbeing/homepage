@@ -12,6 +12,11 @@ googleAnalytics = "UA-19114773-9"
 min_version = 0.24
 SectionPagesMenu = "main"
 PygmentsCodeFences = true
+[[menu.main]]
+  name = "Home"
+  weight = 5
+  identifier = "home"
+  url = "../"
 
 [author]
   name = "Cory Logan"

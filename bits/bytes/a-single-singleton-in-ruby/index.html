@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta name="generator" content="Hugo 0.44" />
+    <meta name="generator" content="Hugo 0.46" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Single Singleton in Ruby | Bits and Blocks</title>
@@ -352,7 +352,7 @@ article header img {
 
 <h2 id="why-do-i-care">Why do I care?</h2>
 
-<p>A lot has been written on design patters, and by people with a lot more experience than myself. I&rsquo;d recommend picking up a book on the topic and learning a bit more if it&rsquo;s a new concept to you. Each one of these patterns is a tool that you can use to solve problems that have been solved over and over again. They can hasten, and solidify your development, as well as give you a way to succinctly communicate big ideas.</p>
+<p>A lot has been written on design patterns, and by people with a lot more experience than myself. I&rsquo;d recommend picking up a book on the topic and learning a bit more if it&rsquo;s a new concept to you. Each one of these patterns is a tool that you can use to solve problems that have been solved over and over again. They can hasten, and solidify your development, as well as give you a way to succinctly communicate big ideas.</p>
 
 <p>This particular pattern generally comes into play when you need some kind of global object to not only provide a set of methods, but also manage some kind of global state.</p>
 
@@ -370,7 +370,7 @@ article header img {
 
 <p>There are different ways to implement the singleton pattern. Let&rsquo;s first go over an example of the pattern implemented by hand, so that you can see how it works, before we try to hide some of the details. We&rsquo;ll stick with the error logger example.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ErrorLogger</span>
-  <span style="color:#75715e"># This prevents the class from being instantiated. With a sigleton, we don&#39;t</span>
+  <span style="color:#75715e"># This prevents the class from being instantiated. With a singleton, we don&#39;t</span>
   <span style="color:#75715e"># want more than one instance. That&#39;s pretty much the definition.</span>
   private_class_method <span style="color:#e6db74">:new</span>
 

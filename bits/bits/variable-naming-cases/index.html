@@ -4,28 +4,31 @@
     <meta name="generator" content="Hugo 0.46" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bytes | Bits and Blocks</title>
-    <meta name="description" content="">
+    <title>Variable Naming Cases | Bits and Blocks</title>
+    <meta name="description" content="There are a number of ways to make variables readable, and also to distinguish what variable types you might be working with. These things change from language to language, but it&rsquo;s nice to have a common set of vocabulary to refer to them. I find that I&rsquo;m sometimes forgetful of how to actually refer to any given case, so here&rsquo;s a quick reference.
+   Case Example     Snake Cases snake_case   Camel Case camelCase   Pascal Case Pascal Case   Kebab Case kebab-case    I&rsquo;ve found that I often want to be able to switch from one to another, and that there&rsquo;s always a solution already in existence, the most helpful thing is knowing what to call it for the sake of googling.">
     <meta name="keywords" content="technology, ">
     
     
     
-    
-      <meta name="robots" content="noindex">
     
     
 
   <meta name="author" content="Cory Logan">
 
 
-    <meta property="og:title" content="Bytes" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.corylogan.com/bits/bytes/" />
+    <meta property="og:title" content="Variable Naming Cases" />
+<meta property="og:description" content="There are a number of ways to make variables readable, and also to distinguish what variable types you might be working with. These things change from language to language, but it&rsquo;s nice to have a common set of vocabulary to refer to them. I find that I&rsquo;m sometimes forgetful of how to actually refer to any given case, so here&rsquo;s a quick reference.
+   Case Example     Snake Cases snake_case   Camel Case camelCase   Pascal Case Pascal Case   Kebab Case kebab-case    I&rsquo;ve found that I often want to be able to switch from one to another, and that there&rsquo;s always a solution already in existence, the most helpful thing is knowing what to call it for the sake of googling." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.corylogan.com/bits/bits/variable-naming-cases/" />
 
 
 
-<meta property="og:updated_time" content="2018-07-12T11:56:11-07:00"/>
+<meta property="article:published_time" content="2018-08-03T11:52:37-07:00"/>
+
+<meta property="article:modified_time" content="2018-08-03T11:52:37-07:00"/>
+
 
 
 
@@ -37,8 +40,9 @@
 
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Bytes"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Variable Naming Cases"/>
+<meta name="twitter:description" content="There are a number of ways to make variables readable, and also to distinguish what variable types you might be working with. These things change from language to language, but it&rsquo;s nice to have a common set of vocabulary to refer to them. I find that I&rsquo;m sometimes forgetful of how to actually refer to any given case, so here&rsquo;s a quick reference.
+   Case Example     Snake Cases snake_case   Camel Case camelCase   Pascal Case Pascal Case   Kebab Case kebab-case    I&rsquo;ve found that I often want to be able to switch from one to another, and that there&rsquo;s always a solution already in existence, the most helpful thing is knowing what to call it for the sake of googling."/>
 
     
 
@@ -67,9 +71,7 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
     
-      <link href="https://www.corylogan.com/bits/bytes/index.xml" rel="alternate" type="application/rss+xml" title="Bits and Blocks">
-    
-    <link rel="canonical" href="https://www.corylogan.com/bits/bytes/">
+    <link rel="canonical" href="https://www.corylogan.com/bits/bits/variable-naming-cases/">
     
     
     <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDY4RTI2NzlCQjE3MTFFNkJFNDk5M0JFQjc5MEIzNEYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDY4RTI2N0FCQjE3MTFFNkJFNDk5M0JFQjc5MEIzNEYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNjhFMjY3N0JCMTcxMUU2QkU0OTkzQkVCNzkwQjM0RiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNjhFMjY3OEJCMTcxMUU2QkU0OTkzQkVCNzkwQjM0RiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pn+zX8oAAAVdSURBVHja7J07bFNXGMfvDX7VdoyNfW0IpAQpSQMKbSolCopohBRFRJ0QU8kWJgZEB1hYGFhAfSxVh07JBp0qpC6gCqlKEaKKh1RENAqRSBuC8CPYdWzXLzAfssRQIUTK/c495/j/W6PY3//+rs/Dvve7ZvPjqwZwjg4cAgiAAAABEAAgAAIABEAAgAAIABAAAQACIABAAAQACIAAAAEQACAAAgAEQACAAAgAEAABAAK0wKVElU/qhaVKarmaXq1trtVyG/VCplHMP6+Um3X6q990h3f4LFdwrzvU44n0eqID3vigL9HlDskfzZT2/oCm0ZwvPbpTWrtXXl8or6caxW39e8IVHPF3H/F3Hw30jAcOmIYJAe/K/crTm1srt7ZWbhdXbXnBiWDv8c7+qc7+w77dEPA26JT/6Z+lG4UHf9Vytr/4fk/kROjQyZ2D9IGAgP+yUH58Lb94Pb+43aFmu9DQdCo8NB0eGvHvg4BXZBul2Vxy7llyuZoR9qYDXmtm1/DpyHDMFWhrAb8UH/6w+TsNO468Ow1HZ6Kjk8G+Nl2Gfr9597vs3YfVrFMFkHia8M/Fxs5Gx9pLQLpR/CYz/23mtxe02nQU0v/lxs9/1/IXrPG4K9gWAijzlfSvc7mkJOsQOgm+zsxnG+WL8WN93pjmAv6spi+nbv+Y/0O29TidEP8265cSEwe9cZHv2yH43Jfz6Legwqg8wXOSOAE07tPII+3Rf+2Aikwz70WcEUCzrjzj/tvHIipVNwG04qQ1j6EIVCoVrI8A2m3Ret/xFee21kVUMJWtg4Bso0R7XQd3W/97vUBlU/HKC5jNJZ36puH998mz/JMWr4CF8uO5Z0lDWah4iqCwgGv5RZHfcdoOFU8RVBUwX3p0nbl6AVAECqKkABpDUwJ3NExQBNY5jEvA/crTG4UHhhZQEIqjmICbWyscv+s6AgWhOCoJaBrNW2wVOwLFafJsJFkE0Kxl1xUlkkBxmKZiFgF3SmuGdjCFYhFwr7yunwCmUPYLeFIvLOgogEJRNAUELFVSGiz/37ghoGgKCFiupg1N4Yhmv4DV2qauAjii2S9gTZf9l5ho9gvYYJipJGFDiUk4o+MMzBfNfgH55xVdBXBEs19A674tLeGIhrskHcZ+AX7TrevB4ohmv4DwDp+uAjii2S/AcuIqezFwRLNfwF4Vbo+WJ5r9Ano8EV0FcESzX0CvJ6qrAI5o9gsYEHuHiUg4otkvYNCXSOg4D1MoiqaAgC53aMTfrZ8ACtWlxCRMHNFRAFMoFgFHAz36CWAKxSJgPHBgItir09GnOEw9VlgEmIZ5vLNfJwEUh6nlE9e3oVOd/ft12ZFRkCm284lLwGHf7hOhQ3oIoCB8rbYYfw84uXNQgw0BRaAgfK/PKIBmrVPhIdUFUATWFme8v4hNh4cGvJbK3z1Y08znEK+AEf++mV3D6gqg4rlby7H/Jnw6Msw6hrLOYVQ897uwC4i5Ameio+IbIb0nVDCVLaCln4irIiaDfediYx2y9q5900ExqWAxzfwEXZZyNjp23vpMFQFUqrA2fuKuC7pgjc9EFJiQqUgqVeCnTRRxV/Bi/NgX4U9kPvpUHhUpsn2i0CvjaGa7lJiQ1gEVRuUJXi+I7pp40Bu/nJj8wHTL1r6MRp62aFvZ+hxc3TMVc/llaNzaWvPQrNtGjVtb88FXez7/0BN2tnVx62xox9bFr9emH3ktNO92Egr/qa9r1N+N9vUOgwc4SAEeYSIFeIiPFOAxVhKBB7kBvm0ggAAIABAAAQACIABAAAQACIAAAAEQACAAAgAEQACAAAgAEAABAAJ05KUAAwAFq0MGgK1C9QAAAABJRU5ErkJggg==">
@@ -258,211 +260,116 @@ article header img {
     
       <a itemprop="url" class="" href="../"><span itemprop="name">Home</span></a>
     
-      <a itemprop="url" class="" href="/bits/bits/"><span itemprop="name">Bits</span></a>
+      <a itemprop="url" class="active" href="/bits/bits/"><span itemprop="name">Bits</span></a>
     
-      <a itemprop="url" class="active" href="/bits/bytes/"><span itemprop="name">Bytes</span></a>
+      <a itemprop="url" class="" href="/bits/bytes/"><span itemprop="name">Bytes</span></a>
     
   </nav>
 
 
 </header>
     <main>
-  <header>
-    <h1>Bytes</h1>
-  </header>
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/bits/bytes/github-pages-with-apex-domain/">Github Pages With Apex Domain</a>
-    </h2>
+  <article itemscope itemtype="http://schema.org/BlogPosting">
     
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+<meta itemprop="name" content="Variable Naming Cases">
+<meta itemprop="description" content="There are a number of ways to make variables readable, and also to distinguish what variable types you might be working with. These things change from language to language, but it&rsquo;s nice to have a common set of vocabulary to refer to them. I find that I&rsquo;m sometimes forgetful of how to actually refer to any given case, so here&rsquo;s a quick reference.
+   Case Example     Snake Cases snake_case   Camel Case camelCase   Pascal Case Pascal Case   Kebab Case kebab-case    I&rsquo;ve found that I often want to be able to switch from one to another, and that there&rsquo;s always a solution already in existence, the most helpful thing is knowing what to call it for the sake of googling.">
+
+
+<meta itemprop="datePublished" content="2018-08-03T11:52:37-07:00" />
+<meta itemprop="dateModified" content="2018-08-03T11:52:37-07:00" />
+<meta itemprop="wordCount" content="131">
+
+
+
+<meta itemprop="keywords" content="" />
+
+    <header>
+      <h1 itemprop="headline">Variable Naming Cases</h1>
+      <p class="muted">
+        <svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <circle cx="16" cy="16" r="14" />
   <path d="M16 8 L16 16 20 20" />
 </svg>
-<span>2 minute read</span>
+<span>1 minute read</span>
 <svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
 </svg>
 
-  Published: <time datetime="2018-07-12T11:56:11-07:00">12 Jul, 2018</time>
+  Published: <time datetime="2018-08-03T11:52:37-07:00">3 Aug, 2018</time>
 
+
+      </p>
+      
+      
+    </header>
+    
+
+    <div itemprop="articleBody">
+      <p>There are a number of ways to make variables readable, and also to distinguish what variable types you might be working with. These things change from language to language, but it&rsquo;s nice to have a common set of vocabulary to refer to them. I find that I&rsquo;m sometimes forgetful of how to actually refer to any given case, so here&rsquo;s a quick reference.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Case</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">Snake Cases</td>
+<td align="left">snake_case</td>
+</tr>
+
+<tr>
+<td align="left">Camel Case</td>
+<td align="left">camelCase</td>
+</tr>
+
+<tr>
+<td align="left">Pascal Case</td>
+<td align="left">Pascal Case</td>
+</tr>
+
+<tr>
+<td align="left">Kebab Case</td>
+<td align="left">kebab-case</td>
+</tr>
+</tbody>
+</table>
+
+<p>I&rsquo;ve found that I often want to be able to switch from one to another, and that there&rsquo;s always a solution already in existence, the most helpful thing is knowing what to call it for the sake of googling.</p>
+
+<p>It seems like I generally reach for these when doing some type of meta-programming.</p>
+
+    </div>
+    
+    <footer>
+      <hr>
+      <p>
+  Published
+  
+    
+      by <span itemprop="author">Cory Logan</span>
+    
+  
+  <time itemprop="datePublished" datetime="2018-08-03T11:52:37-07:00">
+    3 Aug, 2018
+  </time>
+  
+  
+  using <span itemprop="wordCount">131</span> words.
 </p>
-    
-  </header>
-  
-    <blockquote itemprop="headline">www and apex domains pointing to github pages</blockquote>
-  
-  <div itemprop="description">
-    Saving time and money with GitHub Pages I know that GitHub Pages are nothing new, but I only recently realized how versatile they are. You can host any static content you want there for free, and I’ve recently started using it for my blogs. Major benefits of using GitHub Pages as I see it:
- Free hosting for simple pages Deployment is as easy as a git push SSL certs are a one time checkbox It handles redirecting to the www subdomain, or to the apex domain without no real configuration  My default configuration You just have to set up the DNS.
-  </div>
-  
-    <nav class="readmore"><a itemprop="url" href="/bits/bytes/github-pages-with-apex-domain/">Read More&nbsp;&raquo;</a></nav>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2018-07-12T11:56:11-07:00">
-  <meta itemprop="dateModified" content="2018-07-12T11:56:11-07:00">
-  
-</article>
 
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/bits/bytes/saving-time-with-tmux/">Saving Time With Tmux</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>3 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
+      
 
-  Published: <time datetime="2017-07-10T13:45:28&#43;02:00">10 Jul, 2017</time>
 
-</p>
-    
-  </header>
-  
-    <blockquote itemprop="headline">How I use tmux in my workflow to make my life better.</blockquote>
-  
-  <div itemprop="description">
-    What is a terminal multiplexer, and why do I care? When you split up a terminal screen into sub-terminals, that&rsquo;s called terminal multiplexing. This is nothing new, GNU Screen has been around since 1987. Tmux is just screen&rsquo;s younger, nubile cousin. I&rsquo;m about to explain how this simple technology can:
- Keep you organized. Lower the bar to get to work. Save you time. Enable teamwork.  Here&rsquo;s a quick demonstration:
-  </div>
-  
-    <nav class="readmore"><a itemprop="url" href="/bits/bytes/saving-time-with-tmux/">Read More&nbsp;&raquo;</a></nav>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-07-10T13:45:28&#43;02:00">
-  <meta itemprop="dateModified" content="2017-07-10T13:45:28&#43;02:00">
-  
-</article>
 
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/bits/bytes/why-choose-vim/">Why Choose Vim</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>3 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
-
-  Published: <time datetime="2016-12-13T18:30:08-08:00">13 Dec, 2016</time>
-
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    TLDR Choosing a text editor is a very personal decision. You grow with your editor, as your editor grows with you. As I use my text editor more and more over the years, I&rsquo;m constantly constantly learning new techniques for working more efficiently. Some of them stick, others are forgotten. I find that sequences and shortcuts that I most use stay. But just as importantly VIM accommodates my changing needs through configuration, plugin, or otherwise.
-  </div>
-  
-    <nav class="readmore"><a itemprop="url" href="/bits/bytes/why-choose-vim/">Read More&nbsp;&raquo;</a></nav>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2016-12-13T18:30:08-08:00">
-  <meta itemprop="dateModified" content="2016-12-13T18:30:08-08:00">
-  
-</article>
-
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/bits/bytes/a-single-singleton-in-ruby/">A Single Singleton in Ruby</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>4 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
-
-  Published: <time datetime="2016-12-13T18:22:26-08:00">13 Dec, 2016</time>
-
-</p>
-    
-  </header>
-  
-    <blockquote itemprop="headline">What is a singleton anyway?</blockquote>
-  
-  <div itemprop="description">
-    The singleton design pattern I&rsquo;m relatively new the the concept of the singleton, even though I&rsquo;ve been programming for a number of years. I&rsquo;ve run into several instances in which I new that this was exactly what I needed, but did not have a name for it. Here, I&rsquo;m going to try to explain it to myself a year ago. There are a few questions I&rsquo;ll try to address.
-  </div>
-  
-    <nav class="readmore"><a itemprop="url" href="/bits/bytes/a-single-singleton-in-ruby/">Read More&nbsp;&raquo;</a></nav>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2016-12-13T18:22:26-08:00">
-  <meta itemprop="dateModified" content="2016-12-13T18:22:26-08:00">
-  
-</article>
-
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/bits/bytes/the_mysteries_of_the_ruby_heredoc/">The Mysteries of the Ruby Heredoc</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>4 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
-
-  Published: <time datetime="2016-11-18T19:28:41&#43;02:00">18 Nov, 2016</time>
-
-</p>
-    
-  </header>
-  
-    <blockquote itemprop="headline">A few tips on the ruby heredoc.</blockquote>
-  
-  <div itemprop="description">
-    As of writing this, I&rsquo;m running Ruby version 2.3.0. Not all of this, particularly the stripped heredoc, is available in plain ruby before 2.3.0.
-Heredoc Basics So, you need a string that&rsquo;s longer than a line, and you&rsquo;re sick of quotes and backslashes? And you might like to retain formatting? You want string interpolation too? Enter, heredoc.
-Here&rsquo;s your basic, run of the mill, heredoc. You&rsquo;ll notice we use the &lt;&lt;- operator, and our safe-word, which we will use to end the heredoc.
-  </div>
-  
-    <nav class="readmore"><a itemprop="url" href="/bits/bytes/the_mysteries_of_the_ruby_heredoc/">Read More&nbsp;&raquo;</a></nav>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2016-11-18T19:28:41&#43;02:00">
-  <meta itemprop="dateModified" content="2016-11-18T19:28:41&#43;02:00">
-  
-</article>
-
-  
+    </footer>
+  </article>
 </main>
     <footer>
-  <nav>
-  <p>
-    
-    <span>Page 1 of 1</span>
-    
-  </p>
-</nav>
-
   
 
 </footer>

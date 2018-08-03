@@ -6,10 +6,20 @@
     <description>Recent content in Bytes on Bits and Blocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Jul 2017 13:45:28 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 12 Jul 2018 11:56:11 -0700</lastBuildDate>
     
 	<atom:link href="https://www.corylogan.com/bits/bytes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Github Pages With Apex Domain</title>
+      <link>https://www.corylogan.com/bits/bytes/github-pages-with-apex-domain/</link>
+      <pubDate>Thu, 12 Jul 2018 11:56:11 -0700</pubDate>
+      
+      <guid>https://www.corylogan.com/bits/bytes/github-pages-with-apex-domain/</guid>
+      <description>Saving time and money with GitHub Pages I know that GitHub Pages are nothing new, but I only recently realized how versatile they are. You can host any static content you want there for free, and I’ve recently started using it for my blogs. Major benefits of using GitHub Pages as I see it:
+ Free hosting for simple pages Deployment is as easy as a git push SSL certs are a one time checkbox It handles redirecting to the www subdomain, or to the apex domain without no real configuration  My default configuration You just have to set up the DNS.</description>
+    </item>
     
     <item>
       <title>Saving Time With Tmux</title>

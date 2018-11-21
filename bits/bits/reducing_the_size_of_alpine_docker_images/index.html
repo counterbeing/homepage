@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta name="generator" content="Hugo 0.46" />
+    <meta name="generator" content="Hugo 0.50" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reducing The Size Of Alpine Docker Images | Bits and Blocks</title>
@@ -23,23 +23,8 @@ This is a dirty little one-liner that yields a sorted list of all of the package
 This is a dirty little one-liner that yields a sorted list of all of the packages on your alpine image by size. It does this by
  Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size  apk info | while read a; do apk info -s $a; done | awk NF | sed &#39;Ns/\n/ /&#39; | sort -k4 -n It may be ugly, but now I can make an informed decision about wether or not there are binaries that can be axed." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.corylogan.com/bits/bits/reducing_the_size_of_alpine_docker_images/" />
-
-
-
-<meta property="article:published_time" content="2016-12-26T22:38:02-08:00"/>
-
+<meta property="og:url" content="https://www.corylogan.com/bits/bits/reducing_the_size_of_alpine_docker_images/" /><meta property="article:published_time" content="2016-12-26T22:38:02-08:00"/>
 <meta property="article:modified_time" content="2016-12-26T22:38:02-08:00"/>
-
-
-
-
-
-
-
-
-
-
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Reducing The Size Of Alpine Docker Images"/>
@@ -62,7 +47,7 @@ This is a dirty little one-liner that yields a sorted list of all of the package
 
 
     
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;

@@ -1,10 +1,10 @@
 {
   "assets": {
     "assets/assetMap.json": "assets/assetMap.json",
-    "assets/south-america-blog.css": "assets/south-america-blog-19d3dbcc113e41ae16bbcc843f5d833d.css",
-    "assets/south-america-blog.js": "assets/south-america-blog-d7d6c7390d5e78e1071724499422214e.js",
+    "assets/south-america-blog.css": "assets/south-america-blog-70cdf52bc339cd4fbc6616a7e6e11180.css",
+    "assets/south-america-blog.js": "assets/south-america-blog-ff5c81966f653ac2555dce6d88ff6efc.js",
     "assets/vendor.css": "assets/vendor-d3aa84b783735f00b7be359e81298bf2.css",
-    "assets/vendor.js": "assets/vendor-c35a039c217e5140ec19df2f0c76e286.js"
+    "assets/vendor.js": "assets/vendor-4d3dad69d7f62db20fb2b91da908e18a.js"
   },
   "prepend": ""
 }

@@ -1,0 +1,5 @@
+baseURL = "http://corylogan.com/recipes"
+languageCode = "en-us"
+title = "Favorite Recipes"
+
+theme = "food_blog"

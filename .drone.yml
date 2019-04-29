@@ -69,6 +69,7 @@ steps:
   - name: publish
     image: plugins/gh-pages
     settings:
+      username: counterbeing
       ssh_key:
         from_secret: github_private_key
       pages_directory: rendered_assets

@@ -54,31 +54,32 @@ steps:
   #     - cp -r static/* ./rendered_assets/
 
   #
-  # - name: Commit
-  #   image: indiehosters/git
-  #   environment:
-  #     SSH_PRIVATE_KEY:
-  #       from_secret: github_private_key
-  #   commands:
-  #     - echo "${SSH_PRIVATE_KEY}" > /root/.ssh/id_ed25519
-  #     - git config --global user.email "ci@drone.corylogan.com"
-  #     - git config --global user.name "Drone Server"
-  #     - rm -rf src/south-america-blog
-  #     - git fetch origin
-  #     - git checkout --track origin/gh-pages
-  #     - cp -r rendered_assets/* ./ && rm -rf rendered_assets
-  #     - echo 'ran' >> README.md
-  #     - git add .
-  #     - git commit -am "build $(date +'%Y/%m/%d %H:%M:%S:%3N')"
-  #     - git push origin HEAD
-
-  - name: publish
-    image: plugins/gh-pages
-    settings:
-      username:
+  - name: Commit
+    image: indiehosters/git
+    environment:
+      SSH_PRIVATE_KEY:
         from_secret: github_private_key
-      password: x-oauth-basic
-      pages_directory: rendered_assets
+    commands:
+      - mkdir -p  /root/.ssh
+      - echo "${SSH_PRIVATE_KEY}" > /root/.ssh/id_ed25519
+      - git config --global user.email "ci@drone.corylogan.com"
+      - git config --global user.name "Drone Server"
+      - rm -rf src/south-america-blog
+      - git fetch origin
+      - git checkout --track origin/gh-pages
+      - cp -r rendered_assets/* ./ && rm -rf rendered_assets
+      - echo 'ran' >> README.md
+      - git add .
+      - git commit -am "build $(date +'%Y/%m/%d %H:%M:%S:%3N')"
+      - git push origin HEAD
+
+  # - name: publish
+  #   image: plugins/gh-pages
+  #   settings:
+  #     username:
+  #       from_secret: github_private_key
+  #     password: x-oauth-basic
+  #     pages_directory: rendered_assets
 
   # - name: Git Push
   #   image: appleboy/drone-git-push

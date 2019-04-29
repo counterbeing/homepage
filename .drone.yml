@@ -64,13 +64,14 @@ pipeline:
 
   Git Push:
     image: appleboy/drone-git-push
+    environment:
+      GIT_PUSH_SSH_KEY:
+        from_secret: github_private_key
     remote: git@github.com:counterbeing/homepage.git
     force: false
     branch: gh-pages
     local_ref: gh-pages
-    # environment:
-    #   GIT_PUSH_SSH_KEY:
-    #     from_secret: github_private_key
+
 
 
   # Build Sitemap:

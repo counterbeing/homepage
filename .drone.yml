@@ -1,11 +1,14 @@
-pipeline:
-  Render Hugo Tech Blog :
+kind: pipeline
+name: default
+
+steps:
+  - name: Render Hugo Tech Blog
     image: jojomi/hugo:latest
     commands:
       - cd hugo_tech_blog
       - hugo
 
-  Render Homepage:
+  - name: Render Homepage
     image: corylogan/middleman-docker:latest
     pull: true
     commands:
@@ -13,13 +16,13 @@ pipeline:
       - bundle install --quiet
       - middleman build
 
-  Clone Blogs:
+  - name: Clone Blogs
     image: indiehosters/git
     commands:
       - git clone https://github.com/counterbeing/europe-trip-blog.git
       - git clone https://github.com/counterbeing/south-america-blog.git
 
-  Build Europe Blog:
+  - name: Build Europe Blog
     image: node:8.1.2
     commands:
       - cd europe-trip-blog
@@ -29,7 +32,7 @@ pipeline:
       - yarn --silent
       - ember build --environment="production"
 
-  Build South America Blog:
+  - name: Build South America Blog
     image: node:6.11
     commands:
       - cd south-america-blog
@@ -39,7 +42,7 @@ pipeline:
       - ember build --prod
 
 
-  Copy Assets to Folder:
+  - name: Copy Assets to Folder
     image: alpine
     commands:
       - cp -r homepage/build/* rendered_assets/
@@ -50,7 +53,7 @@ pipeline:
       - rm -rf south-america-blog
       - cp -r static/* ./rendered_assets/
 
-  Commit:
+  - name: Commit
     image: indiehosters/git
     commands:
       - git config --global user.email "ci@drone.corylogan.com"
@@ -62,11 +65,11 @@ pipeline:
       - git add .
       - git commit -am "build $(date +'%Y/%m/%d %H:%M:%S:%3N')"
 
-  Git Push:
+  - name: Git Push
     image: appleboy/drone-git-push
-    environment:
-      GIT_PUSH_SSH_KEY:
-        from_secret: "github_private_key"
+    settings:
+    secrets:
+      from_secret: "github_private_key"
     remote: git@github.com:counterbeing/homepage.git
     force: false
     branch: gh-pages

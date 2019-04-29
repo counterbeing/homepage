@@ -67,9 +67,10 @@ steps:
 
   - name: Git Push
     image: appleboy/drone-git-push
+    environment:
+      USERNAME:
+        GIT_PUSH_SSH_KEY: "github_private_key"
     settings:
-      secrets:
-        from_secret: "github_private_key"
       remote: git@github.com:counterbeing/homepage.git
       force: false
       branch: gh-pages

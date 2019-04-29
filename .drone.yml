@@ -80,10 +80,10 @@ steps:
   - name: publish
     image: plugins/gh-pages
     settings:
-      username:
-        from_secret: github_private_key
-      password: x-oauth-basic
+      ssh_key:
+        from_secret: github_deploy_key
       pages_directory: rendered_assets
+      remote_url: git@github.com:counterbeing/homepage.git
 
   # - name: Git Push
   #   image: appleboy/drone-git-push

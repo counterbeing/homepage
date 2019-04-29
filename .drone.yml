@@ -48,9 +48,9 @@ steps:
   #     - cp -r homepage/build/* rendered_assets/
       - cp -r hugo_tech_blog/public rendered_assets/bits
   #     - cp -r europe-trip-blog/dist rendered_assets/eu
-  #     - rm -rf europe-trip-blog
+      - rm -rf europe-trip-blog
   #     - cp -r south-america-blog/dist rendered_assets/sa
-  #     - rm -rf south-america-blog
+      - rm -rf south-america-blog
   #     - cp -r static/* ./rendered_assets/
   #
   # - name: Commit

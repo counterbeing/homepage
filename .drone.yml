@@ -65,16 +65,23 @@ steps:
       - git add .
       - git commit -am "build $(date +'%Y/%m/%d %H:%M:%S:%3N')"
 
-  - name: Git Push
-    image: appleboy/drone-git-push
-    environment:
-      USERNAME:
-        GIT_PUSH_SSH_KEY: "github_private_key"
+  - name: publish
+    image: plugins/gh-pages
     settings:
-      remote: git@github.com:counterbeing/homepage.git
-      force: false
-      branch: gh-pages
-      local_ref: gh-pages
+      ssh_key:
+        from_secret: github_username
+      pages_directory: .
+
+  # - name: Git Push
+  #   image: appleboy/drone-git-push
+  #   environment:
+  #     USERNAME:
+  #       GIT_PUSH_SSH_KEY: "github_private_key"
+  #   settings:
+  #     remote: git@github.com:counterbeing/homepage.git
+  #     force: false
+  #     branch: gh-pages
+  #     local_ref: gh-pages
 
 
 

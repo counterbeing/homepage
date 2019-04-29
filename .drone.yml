@@ -68,7 +68,9 @@ pipeline:
     force: false
     branch: gh-pages
     local_ref: gh-pages
-    secrets: [ GIT_PUSH_SSH_KEY ]
+    environment:
+      GIT_PUSH_SSH_KEY:
+        from_secret: github_private_key
 
 
   # Build Sitemap:

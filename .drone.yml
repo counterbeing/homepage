@@ -4,7 +4,6 @@ pipeline:
     commands:
       - cd hugo_tech_blog
       - hugo
-      
 
   Render Homepage:
     image: corylogan/middleman-docker:latest

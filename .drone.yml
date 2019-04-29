@@ -61,29 +61,29 @@ steps:
         from_secret: github_private_key
     commands:
       - git remote set-url origin git@github.com:counterbeing/homepage.git
-      # - mkdir -p  /root/.ssh
-      # - echo "$SSH_PRIVATE_KEY" > /root/.ssh/id_ed25519
-      # - chmod 0600 /root/.ssh/id_ed25519
-      # - eval "$(ssh-agent)"
-      # - ssh-add /root/.ssh/id_ed25519
-      # - git config --global user.email "ci@drone.corylogan.com"
-      # - git config --global user.name "Drone Server"
-      # - rm -rf src/south-america-blog
-      # - git fetch origin
-      # - git checkout --track origin/gh-pages
-      # - cp -r rendered_assets/* ./ && rm -rf rendered_assets
-      # - echo 'ran' >> README.md
-      # - git add .
-      # - git commit -am "build $(date +'%Y/%m/%d %H:%M:%S:%3N')"
-      # - git push origin HEAD
+      - mkdir -p  /root/.ssh
+      - echo "$SSH_PRIVATE_KEY" > /root/.ssh/id_ed25519
+      - chmod 0600 /root/.ssh/id_ed25519
+      - eval "$(ssh-agent)"
+      - ssh-add /root/.ssh/id_ed25519
+      - git config --global user.email "ci@drone.corylogan.com"
+      - git config --global user.name "Drone Server"
+      - rm -rf src/south-america-blog
+      - git fetch origin
+      - git checkout --track origin/gh-pages
+      - cp -r rendered_assets/* ./ && rm -rf rendered_assets
+      - echo 'ran' >> README.md
+      - git add .
+      - git commit -am "build $(date +'%Y/%m/%d %H:%M:%S:%3N')"
+      - git push origin HEAD
 
-  - name: publish
-    image: plugins/gh-pages
-    settings:
-      ssh_key:
-        from_secret: github_deploy_key
-      pages_directory: rendered_assets
-      remote_url: git@github.com:counterbeing/homepage.git
+  # - name: publish
+  #   image: plugins/gh-pages
+  #   settings:
+  #     ssh_key:
+  #       from_secret: github_deploy_key
+  #     pages_directory: rendered_assets
+  #     remote_url: git@github.com:counterbeing/homepage.git
 
   # - name: Git Push
   #   image: appleboy/drone-git-push

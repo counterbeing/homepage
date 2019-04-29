@@ -63,6 +63,7 @@ steps:
       - git remote set-url origin git@github.com:counterbeing/homepage.git
       - mkdir -p  /root/.ssh
       - echo "$SSH_PRIVATE_KEY" > /root/.ssh/id_ed25519
+      - chmod 0600 /root/.ssh/id_ed25519
       - eval "$(ssh-agent)"
       - ssh-add /root/.ssh/id_ed25519
       - git config --global user.email "ci@drone.corylogan.com"

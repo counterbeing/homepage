@@ -52,6 +52,7 @@ steps:
   #     - cp -r south-america-blog/dist rendered_assets/sa
       - rm -rf south-america-blog
   #     - cp -r static/* ./rendered_assets/
+  
   #
   # - name: Commit
   #   image: indiehosters/git

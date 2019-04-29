@@ -8,52 +8,51 @@ steps:
       - cd hugo_tech_blog
       - hugo
 
-  # - name: Render Homepage
-  #   image: corylogan/middleman-docker:latest
-  #   pull: true
-  #   commands:
-  #     - cd homepage
-  #     - bundle install --quiet
-  #     - middleman build
-  #
-  # - name: Clone Blogs
-  #   image: indiehosters/git
-  #   commands:
-  #     - git clone https://github.com/counterbeing/europe-trip-blog.git
-  #     - git clone https://github.com/counterbeing/south-america-blog.git
-  #
-  # - name: Build Europe Blog
-  #   image: node:8.1.2
-  #   commands:
-  #     - cd europe-trip-blog
-  #     # - npm install -g ember-cli@2.14.1 --silent
-  #     # - npm install --silent
-  #     - yarn global add ember-cli@2.14.1 --silent
-  #     - yarn --silent
-  #     - ember build --environment="production"
-  #
-  # - name: Build South America Blog
-  #   image: node:6.11
-  #   commands:
-  #     - cd south-america-blog
-  #     # - npm install -g ember-cli --silent
-  #     - yarn global add ember-cli
-  #     - yarn
-  #     - ember build --prod
-  #
-  #
+  - name: Render Homepage
+    image: corylogan/middleman-docker:latest
+    pull: true
+    commands:
+      - cd homepage
+      - bundle install --quiet
+      - middleman build
+
+  - name: Clone Blogs
+    image: indiehosters/git
+    commands:
+      - git clone https://github.com/counterbeing/europe-trip-blog.git
+      - git clone https://github.com/counterbeing/south-america-blog.git
+
+  - name: Build Europe Blog
+    image: node:8.1.2
+    commands:
+      - cd europe-trip-blog
+      # - npm install -g ember-cli@2.14.1 --silent
+      # - npm install --silent
+      - yarn global add ember-cli@2.14.1 --silent
+      - yarn --silent
+      - ember build --environment="production"
+
+  - name: Build South America Blog
+    image: node:6.11
+    commands:
+      - cd south-america-blog
+      # - npm install -g ember-cli --silent
+      - yarn global add ember-cli
+      - yarn
+      - ember build --prod
+
+
   - name: Copy Assets to Folder
     image: alpine
     commands:
-  #     - cp -r homepage/build/* rendered_assets/
+      - cp -r homepage/build/* rendered_assets/
       - cp -r hugo_tech_blog/public rendered_assets/bits
-  #     - cp -r europe-trip-blog/dist rendered_assets/eu
+      - cp -r europe-trip-blog/dist rendered_assets/eu
       - rm -rf europe-trip-blog
-  #     - cp -r south-america-blog/dist rendered_assets/sa
+      - cp -r south-america-blog/dist rendered_assets/sa
       - rm -rf south-america-blog
-  #     - cp -r static/* ./rendered_assets/
+      - cp -r static/* ./rendered_assets/
 
-  #
   - name: Commit
     image: indiehosters/git
     environment:

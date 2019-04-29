@@ -60,6 +60,7 @@ steps:
       SSH_PRIVATE_KEY:
         from_secret: github_private_key
     commands:
+      - git remote set-url origin git@github.com:counterbeing/homepage.git
       - mkdir -p  /root/.ssh
       - echo "${SSH_PRIVATE_KEY}" > /root/.ssh/id_ed25519
       - git config --global user.email "ci@drone.corylogan.com"

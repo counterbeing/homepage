@@ -63,7 +63,7 @@ steps:
       - git remote set-url origin git@github.com:counterbeing/homepage.git
       - mkdir -p  /root/.ssh
       - echo "$SSH_PRIVATE_KEY" > /root/.ssh/id_ed25519
-      - tail -n 1 /root/.ssh/id_ed25519
+      - ssh-add /root/.ssh/id_ed25519
       - git config --global user.email "ci@drone.corylogan.com"
       - git config --global user.name "Drone Server"
       - rm -rf src/south-america-blog

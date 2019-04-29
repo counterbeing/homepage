@@ -53,7 +53,7 @@ pipeline:
   Commit:
     image: indiehosters/git
     commands:
-      - git config --global user.email "ci@drone.flirtmoji.co"
+      - git config --global user.email "ci@drone.corylogan.com"
       - git config --global user.name "Drone Server"
       - git fetch origin
       - git checkout --track origin/gh-pages

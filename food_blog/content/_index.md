@@ -1,1 +1,1 @@
-Hell yeah.
+Content for index from _index.

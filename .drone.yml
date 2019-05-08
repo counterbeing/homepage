@@ -21,6 +21,7 @@ steps:
     commands:
       - git clone https://github.com/counterbeing/europe-trip-blog.git
       - git clone https://github.com/counterbeing/south-america-blog.git
+      - cd south-america-blog && git checkout rendered
 
   - name: Build Europe Blog
     image: node:8.1.2
@@ -31,16 +32,6 @@ steps:
       - yarn global add ember-cli@2.14.1 --silent
       - yarn --silent
       - ember build --environment="production"
-
-  - name: Build South America Blog
-    image: node:6.11
-    commands:
-      - cd south-america-blog
-      # - npm install -g ember-cli --silent
-      - yarn global add ember-cli
-      - yarn
-      - ember build --prod
-
 
   - name: Copy Assets to Folder
     image: alpine
@@ -84,7 +75,6 @@ steps:
   #       from_secret: github_deploy_key
   #     pages_directory: rendered_assets
   #     remote_url: git@github.com:counterbeing/homepage.git
-
   # - name: Git Push
   #   image: appleboy/drone-git-push
   #   environment:
@@ -95,9 +85,6 @@ steps:
   #     force: false
   #     branch: gh-pages
   #     local_ref: gh-pages
-
-
-
   # Build Sitemap:
   #   image: node:8.1.2
   #   commands:

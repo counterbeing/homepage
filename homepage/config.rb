@@ -43,20 +43,3 @@ configure :build do
 end
 
 require('pry')
-###
-# Build South America Blog
-###
-Dir.glob('data/south_america/*').each do |f|
-  content = File.read(f + '/post.md')
-  data = YAML.parse(content).to_ruby
-  content.gsub!(/---.*---/m, '')
-  proxy "/map/#{data['date']}.html", '/south_america.html',
-        locals: {
-          body: render_markdown(content),
-          city: data['city'],
-          country: data['country'],
-          latitude: data['longitude'],
-          flickr_link: data['flickr_link']
-        },
-        layout: false
-end

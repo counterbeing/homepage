@@ -1,7 +1,7 @@
 +++
 date = "2016-12-13T18:22:26-08:00"
 title = "A Single Singleton in Ruby"
-description = "What is a singleton anyway?"
+description = "What is a singleton anyway? How do we use them to put large blocks of text in code."
 type = "post"
 toc = true
 tags = ["ruby"]
@@ -17,6 +17,7 @@ I'm relatively new the the concept of the singleton, even though I've been progr
 - How should I implement it?
 
 ## Why do I care?
+
 A lot has been written on design patterns, and by people with a lot more experience than myself. I'd recommend picking up a book on the topic and learning a bit more if it's a new concept to you. Each one of these patterns is a tool that you can use to solve problems that have been solved over and over again. They can hasten, and solidify your development, as well as give you a way to succinctly communicate big ideas.
 
 This particular pattern generally comes into play when you need some kind of global object to not only provide a set of methods, but also manage some kind of global state.

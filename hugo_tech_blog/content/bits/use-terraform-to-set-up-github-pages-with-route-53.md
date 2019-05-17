@@ -2,6 +2,13 @@
 title: "Use Terraform to Set Up Github Pages With Route 53"
 date: 2019-05-17T15:31:13-04:00
 description: Terraform can quickly build the DNS records for your github pages site. It's declarative, and easy to keep up to date, and replicate.
+categories:
+  - infrastructure
+tags:
+  - terraform
+  - aws
+  - dns
+type: post
 draft: false
 ---
 

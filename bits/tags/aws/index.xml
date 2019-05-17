@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>aws on Bits and Blocks</title>
+    <link>https://www.corylogan.com/bits/tags/aws/</link>
+    <description>Recent content in aws on Bits and Blocks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 May 2019 15:31:13 -0400</lastBuildDate>
+    
+	<atom:link href="https://www.corylogan.com/bits/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Use Terraform to Set Up Github Pages With Route 53</title>
+      <link>https://www.corylogan.com/bits/bits/use-terraform-to-set-up-github-pages-with-route-53/</link>
+      <pubDate>Fri, 17 May 2019 15:31:13 -0400</pubDate>
+      
+      <guid>https://www.corylogan.com/bits/bits/use-terraform-to-set-up-github-pages-with-route-53/</guid>
+      <description>It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS.
+After doing this you&amp;rsquo;ll still need to specify the CNAME on your target project, and set the name servers on the domain. This requires that you&amp;rsquo;re using terraform to manage all DNS for this domain.</description>
+    </item>
+    
+  </channel>
+</rss>

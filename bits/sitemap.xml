@@ -15,8 +15,44 @@
   </url>
   
   <url>
+    <loc>https://www.corylogan.com/bits/categories/</loc>
+    <lastmod>2019-05-17T15:31:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.corylogan.com/bits/tags/</loc>
+    <lastmod>2019-05-17T15:31:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.corylogan.com/bits/bits/use-terraform-to-set-up-github-pages-with-route-53/</loc>
     <lastmod>2019-05-17T15:31:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.corylogan.com/bits/tags/aws/</loc>
+    <lastmod>2019-05-17T15:31:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.corylogan.com/bits/tags/dns/</loc>
+    <lastmod>2019-05-17T15:31:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.corylogan.com/bits/categories/infrastructure/</loc>
+    <lastmod>2019-05-17T15:31:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.corylogan.com/bits/tags/terraform/</loc>
+    <lastmod>2019-05-17T15:31:13-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -41,20 +77,8 @@
   </url>
   
   <url>
-    <loc>https://www.corylogan.com/bits/categories/</loc>
-    <lastmod>2017-07-10T15:12:03+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.corylogan.com/bits/bits/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</loc>
     <lastmod>2017-07-10T15:12:03+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.corylogan.com/bits/tags/</loc>
-    <lastmod>2017-07-10T15:12:03+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

@@ -4,14 +4,19 @@
   
   <url>
     <loc>https://www.corylogan.com/bits/bits/</loc>
-    <lastmod>2018-08-03T11:52:37-07:00</lastmod>
+    <lastmod>2019-05-17T15:31:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.corylogan.com/bits/</loc>
-    <lastmod>2018-08-03T11:52:37-07:00</lastmod>
+    <lastmod>2019-05-17T15:31:13-04:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.corylogan.com/bits/bits/use-terraform-to-set-up-github-pages-with-route-53/</loc>
+    <lastmod>2019-05-17T15:31:13-04:00</lastmod>
   </url>
   
   <url>

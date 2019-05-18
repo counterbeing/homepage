@@ -9,8 +9,26 @@
     <language>en-us</language>
     <managingEditor> (Cory Logan)</managingEditor>
     <webMaster> (Cory Logan)</webMaster>
-    <lastBuildDate>Sat, 18 May 2019 20:51:08 UT</lastBuildDate>
+    <lastBuildDate>Sat, 18 May 2019 21:56:58 UT</lastBuildDate>
     <atom:link href="https://www.corylogan.com/bits/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Big O Notation Put Simply</title>
+      <link>https://www.corylogan.com/bits/bits/big-o-notation-put-simply/</link>
+      <pubDate>Sat, 18 May 2019 21:02:54 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
+      <guid>https://www.corylogan.com/bits/bits/big-o-notation-put-simply/</guid>
+      <description>&amp;ldquo;Big O&amp;rdquo; notation is called this because it&amp;rsquo;s written something like O(n), and serves as a measure of efficiency of a particular algorithm. It&amp;rsquo;s a way of explaining how much a particular piece of code will suffer when put under load.
+The the meaning of the &amp;ldquo;O&amp;rdquo; appears to be purely historical. So don&amp;rsquo;t get caught up on that.
+I&amp;rsquo;ll do a few examples in ruby to show how this works.</description>
+      <content:encoded><![CDATA[ &amp;ldquo;Big O&amp;rdquo; notation is called this because it&amp;rsquo;s written something like O(n), and serves as a measure of efficiency of a particular algorithm. It&amp;rsquo;s a way of explaining how much a particular piece of code will suffer when put under load.
+The the meaning of the &amp;ldquo;O&amp;rdquo; appears to be purely historical. So don&amp;rsquo;t get caught up on that.
+I&amp;rsquo;ll do a few examples in ruby to show how this works.
+O(n) or O of n Here we have a method with the complexity O(n), which means that it will take longer based on how much information you put in it, on a linear scale.
+# Create a large something we can iterate over many = 1..1_000 def o_of_n(arg) arg.each { |i| puts i} end o_of_n(many) O(n^2) or &amp;ldquo;O of n squared&amp;rdquo; This one will square the amount of time it takes based on the same data. Assume the same setup as above. In other words, it takes 1000 times longer to run than the last example.
+def o_of_n_squared(arg) arg.each do |i| arg.each do |n| puts(i,n) end end end o_of_n_squared(many) O(a&#43;b) Becuase this method does two things in sequence, we add the two together.
+a = 1..1_000 b = 1..10_000 def o_of_a_plus_b(a, b) a.each { |i| puts i} b.each { |i| puts i} end O(1) Does not change complexity based on the input You&amp;rsquo;ll notice our method in this case doesn&amp;rsquo;t actually use the input at all. Increasing the amount of data input into the method changes nothing.
+many = 1..1_000_000 def o_of_one(arg) 2 &#43; 2 end o_of_one(many)   Visualizing various Big O efficiencies    ]]></content:encoded>
+    </item>
     <item>
       <title>Use Terraform to Set Up Github Pages With Route 53</title>
       <link>https://www.corylogan.com/bits/bits/use-terraform-to-set-up-github-pages-with-route-53/</link>

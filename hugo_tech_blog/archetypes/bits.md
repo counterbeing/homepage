@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
-description: ""
 date: "{{ .Date }}"
+description: ""
 toc: false
 type: post
 categories: []

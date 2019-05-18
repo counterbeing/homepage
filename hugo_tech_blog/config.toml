@@ -12,6 +12,7 @@ googleAnalytics = "UA-19114773-9"
 min_version = 0.24
 SectionPagesMenu = "main"
 PygmentsCodeFences = true
+pygmentsUseClasses = true # Required for custom syntax highlighting
 [[menu.main]]
   name = "Home"
   weight = 5

@@ -7,5 +7,5 @@ type = 'post'
 categories = []
 tags = []
 images = [] # overrides the site-wide open graph image
-draft = true
+draft = false
 +++

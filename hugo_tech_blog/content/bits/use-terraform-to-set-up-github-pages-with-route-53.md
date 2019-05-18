@@ -13,6 +13,10 @@ type: post
 draft: false
 ---
 
+{{< hackcss-alert type="warning" >}}
+This will result in a certificate error if you don't take further steps.
+{{< /hackcss-alert >}}
+
 It's nice to be able to spin up everything you need for github pages all in one
 go. If you're using amazon for AWS, here's a basic terraform configuration that
 should do everything you want in terms of DNS.

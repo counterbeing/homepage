@@ -8,6 +8,7 @@ tags:
   - terraform
   - aws
   - dns
+  - github pages
 type: post
 draft: false
 ---
@@ -19,6 +20,12 @@ should do everything you want in terms of DNS.
 After doing this you'll still need to specify the CNAME on your target project,
 and set the name servers on the domain. This requires that you're using
 terraform to manage all DNS for this domain.
+
+This will direct any traffic from any of `https://example.com`,
+`http://example.com`, and `http://www.example.com` to the same github pages
+location. The only problem with this is when it comes to directing
+`https://www.example.com` to your github pages site. You'll need to do a server
+side redirect if you want that part to work.
 
 ```
 resource "aws_route53_zone" "primary" {
@@ -32,7 +39,6 @@ resource "aws_route53_record" "main" {
   ttl     = "300"
   records = ["185.199.108.153", "185.199.109.153", "185.199.110.153", "185.199.111.153"]
 }
-
 
 resource "aws_route53_record" "www" {
   zone_id = "${aws_route53_zone.primary.zone_id}"

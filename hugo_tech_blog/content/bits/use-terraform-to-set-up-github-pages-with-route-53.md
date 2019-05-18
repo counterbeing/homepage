@@ -31,7 +31,13 @@ location. The only problem with this is when it comes to directing
 `https://www.example.com` to your github pages site. You'll need to do a server
 side redirect if you want that part to work.
 
+```go-html-template
+<div class="alert {{ with .type }}alert-{{ . }}{{ end }}">
+  {{ .body }}
+</div>
 ```
+
+```js
 resource "aws_route53_zone" "primary" {
   name = "example.com"
 }

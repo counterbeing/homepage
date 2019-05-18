@@ -1,26 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
+    <docs>https://blogs.law.harvard.edu/tech/rss</docs>
     <title>network on Bits and Blocks</title>
     <link>https://www.corylogan.com/bits/tags/network/</link>
     <description>Recent content in network on Bits and Blocks</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <ttl>1440</ttl>
+    <generator>Hugo 0.55.5</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Dec 2016 19:51:29 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.corylogan.com/bits/tags/network/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <managingEditor> (Cory Logan)</managingEditor>
+    <webMaster> (Cory Logan)</webMaster>
+    <lastBuildDate>Sat, 18 May 2019 18:37:42 UT</lastBuildDate>
+    <atom:link href="https://www.corylogan.com/bits/tags/network/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What Process Is Hogging My Port On Mac Os</title>
       <link>https://www.corylogan.com/bits/bits/what_process_is_hogging_my_port_on_mac_os/</link>
-      <pubDate>Thu, 15 Dec 2016 19:51:29 +0000</pubDate>
-      
+      <pubDate>Thu, 15 Dec 2016 19:51:29 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/what_process_is_hogging_my_port_on_mac_os/</guid>
       <description>Address already in use Damn. Did I leave a server running somewhere? Sometimes you&amp;rsquo;re not sure where you left a server running, or where something is running you never knew about. I&amp;rsquo;m finally writing this down, as I always have to look it up. I found this solution in a StackOverflow post.
 Here&amp;rsquo;s how to get all of the processes by what port they&amp;rsquo;re using.
 sudo lsof -iTCP -sTCP:LISTEN -n -P As A Shell Function Looking at it, I realized I would never remember it, given how infrequently I need it.</description>
+      <category domain="https://www.corylogan.com/categories/technology">Technology</category>
+      <content:encoded><![CDATA[ Address already in use Damn. Did I leave a server running somewhere? Sometimes you&amp;rsquo;re not sure where you left a server running, or where something is running you never knew about. I&amp;rsquo;m finally writing this down, as I always have to look it up. I found this solution in a StackOverflow post.
+Here&amp;rsquo;s how to get all of the processes by what port they&amp;rsquo;re using.
+sudo lsof -iTCP -sTCP:LISTEN -n -P As A Shell Function Looking at it, I realized I would never remember it, given how infrequently I need it. So, I wrote a function. You should be able to pop this into your .bashrc or .zshrc, or whatever you&amp;rsquo;re using.
+function whats_using { if [ -z $1 ]; then sudo lsof -iTCP -sTCP:LISTEN -n -P else sudo lsof -iTCP -sTCP:LISTEN -n -P | grep $1 fi } Now you can search for what&amp;rsquo;s using a port like so, or don&amp;rsquo;t specify a port number to return all results.
+➜ whats_using 8181 com.docke 4082 cory 20u IPv4 0xa05b24c922aef1a1 0t0 TCP *:8181 (LISTEN) com.docke 4082 cory 21u IPv6 0xa05b24c91a710329 0t0 TCP [::1]:8181 (LISTEN)]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

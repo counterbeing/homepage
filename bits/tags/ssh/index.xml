@@ -1,26 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
+    <docs>https://blogs.law.harvard.edu/tech/rss</docs>
     <title>ssh on Bits and Blocks</title>
     <link>https://www.corylogan.com/bits/tags/ssh/</link>
     <description>Recent content in ssh on Bits and Blocks</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <ttl>1440</ttl>
+    <generator>Hugo 0.55.5</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Jul 2017 15:12:03 +0200</lastBuildDate>
-    
-	<atom:link href="https://www.corylogan.com/bits/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <managingEditor> (Cory Logan)</managingEditor>
+    <webMaster> (Cory Logan)</webMaster>
+    <lastBuildDate>Sat, 18 May 2019 18:37:42 UT</lastBuildDate>
+    <atom:link href="https://www.corylogan.com/bits/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Serving Localhost to the Web with Reverse Ssh Tunnels</title>
       <link>https://www.corylogan.com/bits/bits/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</link>
-      <pubDate>Mon, 10 Jul 2017 15:12:03 +0200</pubDate>
-      
+      <pubDate>Mon, 10 Jul 2017 13:12:03 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</guid>
       <description>Note: If you don&amp;rsquo;t have a server already, check my last tip.
 This topic is always a little tricky, so, here&amp;rsquo;s the basic thing to know, as this is the most frequent use case.
 Suppose you have a development rails server running on your local computer. You can access this server via curl http://localhost:3000. Which is to say, it&amp;rsquo;s running on your localhost, on port 3000. You want your client to see it, to give you feedback, but they&amp;rsquo;re nowhere near you, and you just want a quick way to show it to them.</description>
+      <category domain="https://www.corylogan.com/categories/technology">Technology</category>
+      <content:encoded><![CDATA[ Note: If you don&amp;rsquo;t have a server already, check my last tip.
+This topic is always a little tricky, so, here&amp;rsquo;s the basic thing to know, as this is the most frequent use case.
+Suppose you have a development rails server running on your local computer. You can access this server via curl http://localhost:3000. Which is to say, it&amp;rsquo;s running on your localhost, on port 3000. You want your client to see it, to give you feedback, but they&amp;rsquo;re nowhere near you, and you just want a quick way to show it to them.
+Fortunately for you, you know about ssh. You know that it will take you just a few seconds to set up a reverse tunnel through an intermediate server. Cake! Huh?
+Things you&amp;rsquo;ll need, and their values in my example:
+ Some kind of server on the web running sshd (yourserver.com) A local webserver accessible (0.0.0.0:3000)  ssh -NR 3333:localhost:3000 user@yourserver.com Now that the tunnel is running, you should be able to access your web server at http://yourserver.com:3333. You can of course change either of the ports. There are a few caveats, but this is it in the basic form.
+Troubleshooting If that&amp;rsquo;s not working for you, chances are you need the GatewayPorts yes option added to the file /etc/ssh/sshd_config on the server. Go in there and add that line, then restart the ssh service. With ubuntu that&amp;rsquo;s just sudo service ssh restart.
+Tips  You can run this in the background if you want by adding the -f flag. I prefer to run it in the foreground when I&amp;rsquo;m just using it for a moment, or troubleshooting as it&amp;rsquo;s easier to kill. If you run it in the background, and you just try to run it again on the same port, they will collide, and you will fail. Lower port numbers (lower than 1024) can&amp;rsquo;t be used unless you&amp;rsquo;re a super user on the system. Generally, it&amp;rsquo;s just easier to use a higher port number on the remote server. The -v flag will give you the full ssh output with authentication. This is another common source of problems. If you have a few dollars, and not much interest in the topic, check out ngrok, it&amp;rsquo;s a great tool that really takes most of the trouble out of it. It also means you don&amp;rsquo;t need to bring your own server! If you don&amp;rsquo;t wish to run your own server, this is the way to go.  ]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

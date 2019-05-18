@@ -1,138 +1,234 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
+    <docs>https://blogs.law.harvard.edu/tech/rss</docs>
     <title>Bits and Blocks</title>
     <link>https://www.corylogan.com/bits/</link>
     <description>Recent content on Bits and Blocks</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <ttl>1440</ttl>
+    <generator>Hugo 0.55.5</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 May 2019 15:31:13 -0400</lastBuildDate>
-    
-	<atom:link href="https://www.corylogan.com/bits/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <managingEditor> (Cory Logan)</managingEditor>
+    <webMaster> (Cory Logan)</webMaster>
+    <lastBuildDate>Sat, 18 May 2019 18:37:42 UT</lastBuildDate>
+    <atom:link href="https://www.corylogan.com/bits/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use Terraform to Set Up Github Pages With Route 53</title>
       <link>https://www.corylogan.com/bits/bits/use-terraform-to-set-up-github-pages-with-route-53/</link>
-      <pubDate>Fri, 17 May 2019 15:31:13 -0400</pubDate>
-      
+      <pubDate>Fri, 17 May 2019 19:31:13 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/use-terraform-to-set-up-github-pages-with-route-53/</guid>
-      <description>It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS.
-After doing this you&amp;rsquo;ll still need to specify the CNAME on your target project, and set the name servers on the domain. This requires that you&amp;rsquo;re using terraform to manage all DNS for this domain.</description>
+      <description>This will result in a certificate error if you don&#39;t take further steps.  It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS.
+After doing this you&amp;rsquo;ll still need to specify the CNAME on your target project, and set the name servers on the domain.</description>
+      <category domain="https://www.corylogan.com/categories/infrastructure">Infrastructure</category>
+      <content:encoded><![CDATA[ This will result in a certificate error if you don&#39;t take further steps.  It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS.
+After doing this you&amp;rsquo;ll still need to specify the CNAME on your target project, and set the name servers on the domain. This requires that you&amp;rsquo;re using terraform to manage all DNS for this domain.
+This will direct any traffic from any of https://example.com, http://example.com, and http://www.example.com to the same github pages location. The only problem with this is when it comes to directing https://www.example.com to your github pages site. You&amp;rsquo;ll need to do a server side redirect if you want that part to work.
+resource &amp;quot;aws_route53_zone&amp;quot; &amp;quot;primary&amp;quot; { name = &amp;quot;example.com&amp;quot; } resource &amp;quot;aws_route53_record&amp;quot; &amp;quot;main&amp;quot; { zone_id = &amp;quot;${aws_route53_zone.primary.zone_id}&amp;quot; name = &amp;quot;example.com&amp;quot; type = &amp;quot;A&amp;quot; ttl = &amp;quot;300&amp;quot; records = [&amp;quot;185.199.108.153&amp;quot;, &amp;quot;185.199.109.153&amp;quot;, &amp;quot;185.199.110.153&amp;quot;, &amp;quot;185.199.111.153&amp;quot;] } resource &amp;quot;aws_route53_record&amp;quot; &amp;quot;www&amp;quot; { zone_id = &amp;quot;${aws_route53_zone.primary.zone_id}&amp;quot; name = &amp;quot;www.example.com&amp;quot; type = &amp;quot;CNAME&amp;quot; ttl = &amp;quot;300&amp;quot; records = [&amp;quot;yourusername.github.io&amp;quot;] } output &amp;quot;name_servers&amp;quot; { value = &amp;quot;${aws_route53_zone.primary.name_servers}&amp;quot; }  ]]></content:encoded>
     </item>
-    
     <item>
       <title>Variable Naming Cases</title>
       <link>https://www.corylogan.com/bits/bits/variable-naming-cases/</link>
-      <pubDate>Fri, 03 Aug 2018 11:52:37 -0700</pubDate>
-      
+      <pubDate>Fri, 03 Aug 2018 18:52:37 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/variable-naming-cases/</guid>
       <description>There are a number of ways to make variables readable, and also to distinguish what variable types you might be working with. These things change from language to language, but it&amp;rsquo;s nice to have a common set of vocabulary to refer to them. I find that I&amp;rsquo;m sometimes forgetful of how to actually refer to any given case, so here&amp;rsquo;s a quick reference.
    Case Example     Snake Cases snake_case   Camel Case camelCase   Pascal Case Pascal Case   Kebab Case kebab-case    I&amp;rsquo;ve found that I often want to be able to switch from one to another, and that there&amp;rsquo;s always a solution already in existence, the most helpful thing is knowing what to call it for the sake of googling.</description>
+      <content:encoded><![CDATA[There are a number of ways to make variables readable, and also to distinguish what variable types you might be working with. These things change from language to language, but it&amp;rsquo;s nice to have a common set of vocabulary to refer to them. I find that I&amp;rsquo;m sometimes forgetful of how to actually refer to any given case, so here&amp;rsquo;s a quick reference.
+   Case Example     Snake Cases snake_case   Camel Case camelCase   Pascal Case Pascal Case   Kebab Case kebab-case    I&amp;rsquo;ve found that I often want to be able to switch from one to another, and that there&amp;rsquo;s always a solution already in existence, the most helpful thing is knowing what to call it for the sake of googling.
+It seems like I generally reach for these when doing some type of meta-programming.
+]]></content:encoded>
     </item>
-    
     <item>
       <title>Github Pages With Apex Domain</title>
       <link>https://www.corylogan.com/bits/bits/github-pages-with-apex-domain/</link>
-      <pubDate>Thu, 12 Jul 2018 11:56:11 -0700</pubDate>
-      
+      <pubDate>Thu, 12 Jul 2018 18:56:11 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/github-pages-with-apex-domain/</guid>
       <description>Saving time and money with GitHub Pages I know that GitHub Pages are nothing new, but I only recently realized how versatile they are. You can host any static content you want there for free, and I’ve recently started using it for my blogs. Major benefits of using GitHub Pages as I see it:
  Free hosting for simple pages Deployment is as easy as a git push SSL certs are a one time checkbox It handles redirecting to the www subdomain, or to the apex domain without no real configuration  My default configuration You just have to set up the DNS.</description>
+      <content:encoded><![CDATA[ Saving time and money with GitHub Pages I know that GitHub Pages are nothing new, but I only recently realized how versatile they are. You can host any static content you want there for free, and I’ve recently started using it for my blogs. Major benefits of using GitHub Pages as I see it:
+ Free hosting for simple pages Deployment is as easy as a git push SSL certs are a one time checkbox It handles redirecting to the www subdomain, or to the apex domain without no real configuration  My default configuration You just have to set up the DNS.
+ Create a CNAME record from your www subdomain to your-username.github.io Create an A record to each of the following from your apex domains   185.199.108.153 185.199.109.153 185.199.110.153 185.199.111.153   Once your DNS has propagated, visit the settings on your repo, add either your www or apex domain as your custom domain:   GitHub Pages Control Panel     Once GitHub has gotten a cert from LetsEncrypt, the option to enforce HTTPS will be available to you. Now all you have to do is set up an index.html file on the gh-pages branch (if you selected that option), or on the master in the docs folder (if you chose this route). This will probably depend on how you choose to build your site, what’s convenient.  I use a build server that builds all of my blogs as static sites, and then adds them to my gh-pages branch and pushes to git after I make any change to any of them, that’s beyond the scope of this article, but it’s something to think about.
+GitHub pages seem perfect for small businesses, personal blogs, or software docs. More complete documentation can be found on GitHub. These are just the settings I generally go with, as I think they’re great defaults.
+The problem with this setup You&amp;rsquo;ll get a cert error when visiting the https:// version of the site. If you want to avoid this, you&amp;rsquo;ll need to point the version of the domain, be it the www or the apex, to a server that can perform a 301 redirect.
+]]></content:encoded>
     </item>
-    
     <item>
       <title>Github Pages With Apex Domain</title>
       <link>https://www.corylogan.com/bits/bytes/github-pages-with-apex-domain/</link>
-      <pubDate>Thu, 12 Jul 2018 11:56:11 -0700</pubDate>
-      
+      <pubDate>Thu, 12 Jul 2018 18:56:11 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bytes/github-pages-with-apex-domain/</guid>
       <description>Saving time and money with GitHub Pages I know that GitHub Pages are nothing new, but I only recently realized how versatile they are. You can host any static content you want there for free, and I’ve recently started using it for my blogs. Major benefits of using GitHub Pages as I see it:
  Free hosting for simple pages Deployment is as easy as a git push SSL certs are a one time checkbox It handles redirecting to the www subdomain, or to the apex domain without no real configuration  My default configuration You just have to set up the DNS.</description>
+      <content:encoded><![CDATA[ Saving time and money with GitHub Pages I know that GitHub Pages are nothing new, but I only recently realized how versatile they are. You can host any static content you want there for free, and I’ve recently started using it for my blogs. Major benefits of using GitHub Pages as I see it:
+ Free hosting for simple pages Deployment is as easy as a git push SSL certs are a one time checkbox It handles redirecting to the www subdomain, or to the apex domain without no real configuration  My default configuration You just have to set up the DNS.
+ Create a CNAME record from your www subdomain to your-username.github.io Create an A record to each of the following from your apex domains  185.199.108.153 185.199.109.153 185.199.110.153 185.199.111.153  Once your DNS has propagated, visit the settings on your repo, add either your www or apex domain as your custom domain:   GitHub Pages Control Panel     Once GitHub has gotten a cert from LetsEncrypt, the option to enforce HTTPS will be available to you. Now all you have to do is set up an index.html file on the gh-pages branch (if you selected that option), or on the master in the docs folder (if you chose this route). This will probably depend on how you choose to build your site, what’s convenient.  I use a build server that builds all of my blogs as static sites, and then adds them to my gh-pages branch and pushes to git after I make any change to any of them, that’s beyond the scope of this article, but it’s something to think about.
+GitHub pages seem perfect for small businesses, personal blogs, or software docs. More complete documentation can be found on GitHub. These are just the settings I generally go with, as I think they’re great defaults.
+]]></content:encoded>
     </item>
-    
     <item>
       <title>Serving Localhost to the Web with Reverse Ssh Tunnels</title>
       <link>https://www.corylogan.com/bits/bits/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</link>
-      <pubDate>Mon, 10 Jul 2017 15:12:03 +0200</pubDate>
-      
+      <pubDate>Mon, 10 Jul 2017 13:12:03 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</guid>
       <description>Note: If you don&amp;rsquo;t have a server already, check my last tip.
 This topic is always a little tricky, so, here&amp;rsquo;s the basic thing to know, as this is the most frequent use case.
 Suppose you have a development rails server running on your local computer. You can access this server via curl http://localhost:3000. Which is to say, it&amp;rsquo;s running on your localhost, on port 3000. You want your client to see it, to give you feedback, but they&amp;rsquo;re nowhere near you, and you just want a quick way to show it to them.</description>
+      <category domain="https://www.corylogan.com/categories/technology">Technology</category>
+      <content:encoded><![CDATA[ Note: If you don&amp;rsquo;t have a server already, check my last tip.
+This topic is always a little tricky, so, here&amp;rsquo;s the basic thing to know, as this is the most frequent use case.
+Suppose you have a development rails server running on your local computer. You can access this server via curl http://localhost:3000. Which is to say, it&amp;rsquo;s running on your localhost, on port 3000. You want your client to see it, to give you feedback, but they&amp;rsquo;re nowhere near you, and you just want a quick way to show it to them.
+Fortunately for you, you know about ssh. You know that it will take you just a few seconds to set up a reverse tunnel through an intermediate server. Cake! Huh?
+Things you&amp;rsquo;ll need, and their values in my example:
+ Some kind of server on the web running sshd (yourserver.com) A local webserver accessible (0.0.0.0:3000)  ssh -NR 3333:localhost:3000 user@yourserver.com Now that the tunnel is running, you should be able to access your web server at http://yourserver.com:3333. You can of course change either of the ports. There are a few caveats, but this is it in the basic form.
+Troubleshooting If that&amp;rsquo;s not working for you, chances are you need the GatewayPorts yes option added to the file /etc/ssh/sshd_config on the server. Go in there and add that line, then restart the ssh service. With ubuntu that&amp;rsquo;s just sudo service ssh restart.
+Tips  You can run this in the background if you want by adding the -f flag. I prefer to run it in the foreground when I&amp;rsquo;m just using it for a moment, or troubleshooting as it&amp;rsquo;s easier to kill. If you run it in the background, and you just try to run it again on the same port, they will collide, and you will fail. Lower port numbers (lower than 1024) can&amp;rsquo;t be used unless you&amp;rsquo;re a super user on the system. Generally, it&amp;rsquo;s just easier to use a higher port number on the remote server. The -v flag will give you the full ssh output with authentication. This is another common source of problems. If you have a few dollars, and not much interest in the topic, check out ngrok, it&amp;rsquo;s a great tool that really takes most of the trouble out of it. It also means you don&amp;rsquo;t need to bring your own server! If you don&amp;rsquo;t wish to run your own server, this is the way to go.  ]]></content:encoded>
     </item>
-    
     <item>
       <title>Saving Time With Tmux</title>
       <link>https://www.corylogan.com/bits/bytes/saving-time-with-tmux/</link>
-      <pubDate>Mon, 10 Jul 2017 13:45:28 +0200</pubDate>
-      
+      <pubDate>Mon, 10 Jul 2017 11:45:28 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bytes/saving-time-with-tmux/</guid>
       <description>What is a terminal multiplexer, and why do I care? When you split up a terminal screen into sub-terminals, that&amp;rsquo;s called terminal multiplexing. This is nothing new, GNU Screen has been around since 1987. Tmux is just screen&amp;rsquo;s younger, nubile cousin. I&amp;rsquo;m about to explain how this simple technology can:
  Keep you organized. Lower the bar to get to work. Save you time. Enable teamwork.  Here&amp;rsquo;s a quick demonstration:</description>
+      <content:encoded><![CDATA[ What is a terminal multiplexer, and why do I care? When you split up a terminal screen into sub-terminals, that&amp;rsquo;s called terminal multiplexing. This is nothing new, GNU Screen has been around since 1987. Tmux is just screen&amp;rsquo;s younger, nubile cousin. I&amp;rsquo;m about to explain how this simple technology can:
+ Keep you organized. Lower the bar to get to work. Save you time. Enable teamwork.  Here&amp;rsquo;s a quick demonstration: 
+Multiple panes for multiple things If you watch the demo above, you can see that you can make multiple panes, and multiple windows. You can organize them however you like.
+The benefit of this is that you can have a server running in one pane, and an editor running on another. Or your test suite. Or whatever else you need to keep an eye on.
+You might think, well, I can already do that in my terminal app. And maybe you can! But, can you do it on remote servers over ssh? And can you keep those panes running even if you quit your terminal app? Didn&amp;rsquo;t think so.
+Keep your workspace tidy What if, every time you went to start working on your app, your text editor opened, your test suite ran, git pulled the latest changes, and a development server launched? If that gets you at all excited, you should check out tmuxinator. There are other options out there that do the same thing. But, with a simple configuration file, you can have all that and more!
+Work on remote servers Sometimes when working on a remote server, it&amp;rsquo;s useful to keep a long running task going, or at least be able to look at the same workspace you were looking at previously. By keeping your work in a tmux session, you can simply rejoin the session you were previously using. Everything is now exactly as you left it!
+I realize it&amp;rsquo;s not the best use, but there have been a couple of times I&amp;rsquo;ve used tmux to keep a long running task going in the background on a server. This way, when I close my laptop and walk away, everything keeps running. Imagine a long rake task, sure I could have put it in a background job, but it was a one off task, and writing the job would have been unnecessary work.
+Collaborate You can have more than one person in a tmux session at once. This has to be one of the greatest things of all about tmux. It&amp;rsquo;s like screen sharing, but so much faster, as it&amp;rsquo;s just over an ssh session. There is nothing worse than trying to collaborate over a slow VNC screen share, it&amp;rsquo;s like typing with boxing gloves. There are a few hoops to jump through, another user, ssh access, and permissions&amp;hellip; But there&amp;rsquo;s another option.
+Tmate is a fantastically handy little utility that does all of the hoop jumping for you. After installing tmate, just run it, and give your friend access by copying your secure ssh command. Even from the other side of the world, you can have lag-free collaboration!
+Next steps Go give tmux a shot!
+You&amp;rsquo;ll need to learn some of the basic commands for getting around, and probably do a little customization. Good luck!
+]]></content:encoded>
     </item>
-    
     <item>
       <title>Exporting A Zone File From Mediatemple</title>
       <link>https://www.corylogan.com/bits/bits/exporting_a_zone_file_from_mediatemple/</link>
-      <pubDate>Sun, 08 Jan 2017 16:45:38 -0800</pubDate>
-      
+      <pubDate>Mon, 09 Jan 2017 00:45:38 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/exporting_a_zone_file_from_mediatemple/</guid>
       <description>I was in the process of moving my DNS from MediaTemple to Route53 and was having trouble making sure I&amp;rsquo;d moved all of the entries. I decided I&amp;rsquo;d just export a zone file to do a comparison in a text editor.
 Surprise! You can&amp;rsquo;t.
 Instead, here&amp;rsquo;s a quick bit of jQuery, which is already available in the MediaTemple control panel. Just navigate to the zone file editor, open your console, and use this:</description>
+      <content:encoded><![CDATA[I was in the process of moving my DNS from MediaTemple to Route53 and was having trouble making sure I&amp;rsquo;d moved all of the entries. I decided I&amp;rsquo;d just export a zone file to do a comparison in a text editor.
+Surprise! You can&amp;rsquo;t.
+Instead, here&amp;rsquo;s a quick bit of jQuery, which is already available in the MediaTemple control panel. Just navigate to the zone file editor, open your console, and use this:
+$.each($(&amp;#34;.dns_record&amp;#34;), function(i, el) { name = $(el).find(&amp;#34;.u-nowrap input&amp;#34;).val() type = $(el).find(&amp;#34;select.dropdown-select&amp;#34;).val() data = $(el).find(&amp;#34;td input.textInput--full[name^=&amp;#39;data&amp;#39;]&amp;#34;).val() console.log(name &#43; &amp;#34; &amp;#34; &#43; type &#43; &amp;#34; &amp;#34; &#43; data) })  From here, it&amp;rsquo;s pretty easy to clean up and convert. Good luck!
+]]></content:encoded>
     </item>
-    
     <item>
       <title>Reducing The Size Of Alpine Docker Images</title>
       <link>https://www.corylogan.com/bits/bits/reducing_the_size_of_alpine_docker_images/</link>
-      <pubDate>Mon, 26 Dec 2016 22:38:02 -0800</pubDate>
-      
+      <pubDate>Tue, 27 Dec 2016 06:38:02 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/reducing_the_size_of_alpine_docker_images/</guid>
       <description>Why the heck is my alpine docker image so huge? That&amp;rsquo;s a tough question to answer, especially when you have no idea what&amp;rsquo;s taking up all of the space.
 This is a dirty little one-liner that yields a sorted list of all of the packages on your alpine image by size. It does this by
  Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size  apk info | while read a; do apk info -s $a; done | awk NF | sed &amp;#39;Ns/\n/ /&amp;#39; | sort -k4 -n It may be ugly, but now I can make an informed decision about wether or not there are binaries that can be axed.</description>
+      <content:encoded><![CDATA[ Why the heck is my alpine docker image so huge? That&amp;rsquo;s a tough question to answer, especially when you have no idea what&amp;rsquo;s taking up all of the space.
+This is a dirty little one-liner that yields a sorted list of all of the packages on your alpine image by size. It does this by
+ Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size  apk info | while read a; do apk info -s $a; done | awk NF | sed &amp;#39;Ns/\n/ /&amp;#39; | sort -k4 -n It may be ugly, but now I can make an informed decision about wether or not there are binaries that can be axed.
+]]></content:encoded>
     </item>
-    
     <item>
       <title>What Process Is Hogging My Port On Mac Os</title>
       <link>https://www.corylogan.com/bits/bits/what_process_is_hogging_my_port_on_mac_os/</link>
-      <pubDate>Thu, 15 Dec 2016 19:51:29 +0000</pubDate>
-      
+      <pubDate>Thu, 15 Dec 2016 19:51:29 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/what_process_is_hogging_my_port_on_mac_os/</guid>
       <description>Address already in use Damn. Did I leave a server running somewhere? Sometimes you&amp;rsquo;re not sure where you left a server running, or where something is running you never knew about. I&amp;rsquo;m finally writing this down, as I always have to look it up. I found this solution in a StackOverflow post.
 Here&amp;rsquo;s how to get all of the processes by what port they&amp;rsquo;re using.
 sudo lsof -iTCP -sTCP:LISTEN -n -P As A Shell Function Looking at it, I realized I would never remember it, given how infrequently I need it.</description>
+      <category domain="https://www.corylogan.com/categories/technology">Technology</category>
+      <content:encoded><![CDATA[ Address already in use Damn. Did I leave a server running somewhere? Sometimes you&amp;rsquo;re not sure where you left a server running, or where something is running you never knew about. I&amp;rsquo;m finally writing this down, as I always have to look it up. I found this solution in a StackOverflow post.
+Here&amp;rsquo;s how to get all of the processes by what port they&amp;rsquo;re using.
+sudo lsof -iTCP -sTCP:LISTEN -n -P As A Shell Function Looking at it, I realized I would never remember it, given how infrequently I need it. So, I wrote a function. You should be able to pop this into your .bashrc or .zshrc, or whatever you&amp;rsquo;re using.
+function whats_using { if [ -z $1 ]; then sudo lsof -iTCP -sTCP:LISTEN -n -P else sudo lsof -iTCP -sTCP:LISTEN -n -P | grep $1 fi } Now you can search for what&amp;rsquo;s using a port like so, or don&amp;rsquo;t specify a port number to return all results.
+➜ whats_using 8181 com.docke 4082 cory 20u IPv4 0xa05b24c922aef1a1 0t0 TCP *:8181 (LISTEN) com.docke 4082 cory 21u IPv6 0xa05b24c91a710329 0t0 TCP [::1]:8181 (LISTEN)]]></content:encoded>
     </item>
-    
     <item>
       <title>Why Choose Vim</title>
       <link>https://www.corylogan.com/bits/bytes/why-choose-vim/</link>
-      <pubDate>Tue, 13 Dec 2016 18:30:08 -0800</pubDate>
-      
+      <pubDate>Wed, 14 Dec 2016 02:30:08 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bytes/why-choose-vim/</guid>
       <description>TLDR Choosing a text editor is a very personal decision. You grow with your editor, as your editor grows with you. As I use my text editor more and more over the years, I&amp;rsquo;m constantly constantly learning new techniques for working more efficiently. Some of them stick, others are forgotten. I find that sequences and shortcuts that I most use stay. But just as importantly VIM accommodates my changing needs through configuration, plugin, or otherwise.</description>
+      <content:encoded><![CDATA[ TLDR Choosing a text editor is a very personal decision. You grow with your editor, as your editor grows with you. As I use my text editor more and more over the years, I&amp;rsquo;m constantly constantly learning new techniques for working more efficiently. Some of them stick, others are forgotten. I find that sequences and shortcuts that I most use stay. But just as importantly VIM accommodates my changing needs through configuration, plugin, or otherwise.
+Most of all, you need a good editor, that you are familiar with.
+Why Vim Works For Me Different jobs require different tools.
+Vim also has it&amp;rsquo;s own set of advantages. It&amp;rsquo;s very fast at large search and replace operations. It&amp;rsquo;s infinitely extensible, with plugins that integrate with git, automatically format tables, check syntax. It can be operated entirely over SSH. It&amp;rsquo;s easily customized. It&amp;rsquo;s ubiquitous. It&amp;rsquo;s free. It has a great community of people.
+What does it look like? It actually looks pretty modern!
+A Few Caveats  Steep learning curve. Customization is almost requisite Not everyone knows how to use VIM, this can be and impediment to working with someone else at your computer.  I actually keep a couple of GUI editors around as I find that have uses for them. There are some tasks that mice are just really good at. TextWrangler works well with really large files. Sometimes I might just it to look at a gigantic CSV alongside the code that&amp;rsquo;s being used to manipulate it.
+Better, Faster, Stronger Vim is brilliant in how extensible and malleable it is. You can change it by simply installing a new plugin. The setup can be entirely scripted.
+As an editor, Vi has really led the way on a great many conventions. Vim came after Vi and offers a superset of features. Having different modes of editing, and keyboard navigation, are some of the most fundamental parts. It wasn&amp;rsquo;t just that it was early to introduce these features, but that they&amp;rsquo;ve been perfected over many years.
+Vim has always been light and nimble. It&amp;rsquo;s fast to boot (unless you load it down with tons of plugins)
+Portability Vim comes standard on all modern builds of Linux and Mac OS. You can jump right into it. It&amp;rsquo;s really helpful to be able to navigate a bare bones installation of Vim, even if you don&amp;rsquo;t do it as well as with a customized version.
+Another huge piece of portability, is remote access. Vim works marvelously over an ssh connection. I can do remote work on a server far away, as though it were local. This is really great for travel.
+If you want to give it a go, you can try out my configuration found on github.
+I Frequently Use Other Editors Vim is a tool. It&amp;rsquo;s very useful to know. But sometimes, I actually prefer to work in a different application. My other favorite editor at the moment is Atom, and I&amp;rsquo;m using it right now to with this entry. It has great markdown support and integrates with system spell checking. At the end of the day, Vim has a load of features and advantages that can help you work faster. But, you must always use what works for you!
+]]></content:encoded>
     </item>
-    
     <item>
       <title>A Single Singleton in Ruby</title>
       <link>https://www.corylogan.com/bits/bytes/a-single-singleton-in-ruby/</link>
-      <pubDate>Tue, 13 Dec 2016 18:22:26 -0800</pubDate>
-      
+      <pubDate>Wed, 14 Dec 2016 02:22:26 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bytes/a-single-singleton-in-ruby/</guid>
       <description>The singleton design pattern I&amp;rsquo;m relatively new the the concept of the singleton, even though I&amp;rsquo;ve been programming for a number of years. I&amp;rsquo;ve run into several instances in which I new that this was exactly what I needed, but did not have a name for it. Here, I&amp;rsquo;m going to try to explain it to myself a year ago. There are a few questions I&amp;rsquo;ll try to address.</description>
+      <content:encoded><![CDATA[ The singleton design pattern I&amp;rsquo;m relatively new the the concept of the singleton, even though I&amp;rsquo;ve been programming for a number of years. I&amp;rsquo;ve run into several instances in which I new that this was exactly what I needed, but did not have a name for it. Here, I&amp;rsquo;m going to try to explain it to myself a year ago. There are a few questions I&amp;rsquo;ll try to address.
+ Why do I care? What does it do? How should I implement it?  Why do I care? A lot has been written on design patterns, and by people with a lot more experience than myself. I&amp;rsquo;d recommend picking up a book on the topic and learning a bit more if it&amp;rsquo;s a new concept to you. Each one of these patterns is a tool that you can use to solve problems that have been solved over and over again. They can hasten, and solidify your development, as well as give you a way to succinctly communicate big ideas.
+This particular pattern generally comes into play when you need some kind of global object to not only provide a set of methods, but also manage some kind of global state.
+What does it do? I&amp;rsquo;ll give you a real world example to help make the point. In working on an application that was in charge of sifting through large piles of data, and alerting a person for errors several times a day, I needed a way to keep track of the errors in memory. It also needed to be available to many different classes in the application.
+The singleton fits this almost perfectly.
+I&amp;rsquo;ll admit, there are many cases when it&amp;rsquo;s a poor choice for the pattern to use. Any time you only need state for a little while, or if you need more than a handful of methods on an object.
+In essence, the singleton is for simple objects that are action based, and that you only want one of in the instance of your application.
+How should I implement it? There are different ways to implement the singleton pattern. Let&amp;rsquo;s first go over an example of the pattern implemented by hand, so that you can see how it works, before we try to hide some of the details. We&amp;rsquo;ll stick with the error logger example.
+class ErrorLogger # This prevents the class from being instantiated. With a singleton, we don&amp;#39;t # want more than one instance. That&amp;#39;s pretty much the definition. private_class_method :new # This class variable will be in charge of storing the global state of our # singleton in memory. All of the information will end up here. We&amp;#39;ll access # it through another method of our choosing. @@log = [] # Everything inside of this will be declared as a class method. class &amp;lt;&amp;lt; self def log_an_error(error) @@log &amp;lt;&amp;lt; error end def print_log @@log.inspect end end end ErrorLogger.log_an_error(&amp;#39;Server is on fire!&amp;#39;) ErrorLogger.print_log # =&amp;gt; [&amp;#34;Server is on fire&amp;#34;] There are other implementations of the singleton, but I prefer to simply have the class expose any methods directly on itself. Some other singletons have the class create a single instance of itself, and all methods are instance methods, and in that case you can use instance variables.
+But, this can be simplified further with the help of ruby&amp;rsquo;s built in singleton module. The one gotcha here, is that calling it behaves a little differently. These are now instance methods and must be called on the instance.
+require &amp;#39;singleton&amp;#39; class ErrorLogger include Singleton def initialize @log = [] end def log_an_error(error) @log &amp;lt;&amp;lt; error end def print_log @log.inspect end end error_logger = ErrorLogger.instance error_logger.log_an_error(&amp;#39;Killing me softly...&amp;#39;) error_logger.print_log # =&amp;gt; [&amp;#34;Killing me softly...&amp;#34;] In my opinion, it doesn&amp;rsquo;t look much better than the first example. But, it does avoid the use of class variables, which is nice.
+I think though, the one that I&amp;rsquo;ll probably reach for next time, is using module methods on a module. I know that this overlooks a few things, like the fact that modules can be mixed into classes, and you don&amp;rsquo;t really want that with a singleton. But, I&amp;rsquo;d say, in all practical terms, just don&amp;rsquo;t do that.
+module ErrorLogger class &amp;lt;&amp;lt; self def log @log ||= [] end def log_an_error(error) log &amp;lt;&amp;lt; error end def print_log log.inspect end end end ErrorLogger.log_an_error(&amp;#39;Whoops!&amp;#39;) ErrorLogger.print_log # =&amp;gt; [&amp;#34;Whoops!&amp;#34;] There are other great articles that dive further into the topic. I&amp;rsquo;d really recommend Practicing Ruby&amp;rsquo;s take on the topic.
+]]></content:encoded>
     </item>
-    
     <item>
       <title>The Mysteries of the Ruby Heredoc</title>
       <link>https://www.corylogan.com/bits/bytes/the_mysteries_of_the_ruby_heredoc/</link>
-      <pubDate>Fri, 18 Nov 2016 19:28:41 +0200</pubDate>
-      
+      <pubDate>Fri, 18 Nov 2016 17:28:41 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bytes/the_mysteries_of_the_ruby_heredoc/</guid>
       <description>As of writing this, I&amp;rsquo;m running Ruby version 2.3.0. Not all of this, particularly the stripped heredoc, is available in plain ruby before 2.3.0.
 Heredoc Basics So, you need a string that&amp;rsquo;s longer than a line, and you&amp;rsquo;re sick of quotes and backslashes? And you might like to retain formatting? You want string interpolation too? Enter, heredoc.
 Here&amp;rsquo;s your basic, run of the mill, heredoc. You&amp;rsquo;ll notice we use the &amp;lt;&amp;lt;- operator, and our safe-word, which we will use to end the heredoc.</description>
+      <content:encoded><![CDATA[ As of writing this, I&amp;rsquo;m running Ruby version 2.3.0. Not all of this, particularly the stripped heredoc, is available in plain ruby before 2.3.0.
+Heredoc Basics So, you need a string that&amp;rsquo;s longer than a line, and you&amp;rsquo;re sick of quotes and backslashes? And you might like to retain formatting? You want string interpolation too? Enter, heredoc.
+Here&amp;rsquo;s your basic, run of the mill, heredoc. You&amp;rsquo;ll notice we use the &amp;lt;&amp;lt;- operator, and our safe-word, which we will use to end the heredoc.
+def print_a_haiku haiku = &amp;lt;&amp;lt;-TEXT ruby is pretty the formatting perfected lovely indented TEXT puts haiku end print_a_haiku That would simply return the text as expected:
+ruby is pretty the formatting perfected lovely indented This works, but it&amp;rsquo;s clearly ugly. When you see it in a piece of code you&amp;rsquo;re trying to navigate, it&amp;rsquo;s more than a little disorienting. You could actually indent the text above, but, if you do that the string returned will also have leading spaces. In some cases, leading spaces can break things in unexpected ways.
+Stripped Heredocs One thing that drives me nuts, is when I&amp;rsquo;m reading some code that contains heredocs, and suddenly you&amp;rsquo;re all the way unindented. While in many cases this might be an indicator that something is wrong, there are many places I think it&amp;rsquo;s acceptable, and even preferable to have an indented heredoc.
+As of Ruby 2.3, we have a new way to handle this. We declare the heredoc using the &amp;lt;&amp;lt;~ operator.
+def print_a_haiku haiku = &amp;lt;&amp;lt;~TEXT ruby is pretty the formatting perfected lovely indented TEXT puts haiku end It&amp;rsquo;s a small thing, but these little niceties really help when trying to internalize a complicated file quickly.
+The Rails Way Long before ruby featured a stripped heredoc, Rails saw the need and implemented their own method. Here is their implementation, which was added as an extension of String.
+class String def strip_heredoc indent = scan(/^[ \t]*(?=\S)/).min.try(:size) || 0 gsub(/^[ \t]{#{indent}}/, &amp;#39;&amp;#39;) end end This counts the minimum number of spaces before all lines of your heredoc, and indents accordingly. You&amp;rsquo;d use it like so.
+puts &amp;lt;&amp;lt;-MY_STRING.strip_heredoc  here is some text and indented once here MY_STRING I mention this in part, because I found it useful, and you might find it useful if you&amp;rsquo;re on an earlier version of ruby. If you&amp;rsquo;re 2.3 or later, I would prefer the Ruby implementation.
+There&amp;rsquo;s another reason this is worth looking at. It demonstrates how to extend string and write your own heredoc formatter.
+My Own Bastardization It feels like I should feel guilty whenever I even consider adding an extension to a core class. I don&amp;rsquo;t though. But, I will offer a caveat. Don&amp;rsquo;t go monkey patching carelessly! Be sure you&amp;rsquo;re not overwriting anything important, or you&amp;rsquo;ll be in a world of hurt.
+I, for one, believe that monkey patching can be done in respectable ways.
+Enough with the warnings. Here&amp;rsquo;s the use case that got me thinking about it. Recently, I&amp;rsquo;ve been having frequent need to test the output of various CSVs. There are various ways to do this&amp;hellip; I could have fixtures, but that&amp;rsquo;s a lot of fixtures to manage. I could simply let the lines run on long, but that&amp;rsquo;s very difficult to read, and even more difficult to format. It&amp;rsquo;s a monkey patch for string that allows you to write in a clearer format, that allows you to respect line length limitations.
+Take a CSV for example, but, also imagine it&amp;rsquo;s much wider.
+first_name,last_name,favorite_hobby,favorite_color,favorite_food,favorite_kind_of_motorcycle Cory,Logan,climbing,red,pizza,drz400 Paul,Baker,reading,blue,cheese,klr650  So, we could just stuff it in a heredoc and call it done, but that leaves the line length too long to look at on one screen. If you&amp;rsquo;re running something like rubocop, you probably have a line length limit to contend with as well.
+So, here it is with a specially formatted heredoc, in which, two line breaks equal one. Allowing you to break lines, wherever, as long as you don&amp;rsquo;t need two.
+csv_string = &amp;lt;&amp;lt;-CSV.csv_doc 	first_name,last_name,favorite_hobby,favorite_color, favorite_food,favorite_kind_of_motorcycle Cory,Logan,climbing,red,pizza,drz400 Paul,Baker,reading,blue,cheese,klr650 CSV It&amp;rsquo;s worth noting what&amp;rsquo;s actually happening here, as I&amp;rsquo;d never seen the syntax for calling a method on the result of a heredoc before. The &amp;lt;&amp;lt;-CSV part, is just your regular heredoc, it&amp;rsquo;s saying that the end of the string is at the next occurrence of the text CSV, which you will find at the end. Then, the method csv_doc is called on the resulting instance of String.
+This formatting is all about being able to read it in the context of code or a test. In order to achieve this formatting, this is where the monkey patch comes in.
+class String def csvdoc stripped = strip_heredoc.gsub(/\n(?!\n)/, &amp;#39;&amp;#39;) &amp;#34;#{stripped}\n&amp;#34; end end This also inserts an extra empty line at the end of the string, to make it a valid CSV. This could be modified to many different cases. I&amp;rsquo;ve just been running into the CSV example a lot. And if you&amp;rsquo;re really not into monkey patching, you might consider implementing it as a standalone method that you pass a string to.
+Have fun!
+]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

@@ -1,34 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
+    <docs>https://blogs.law.harvard.edu/tech/rss</docs>
     <title>tools on Bits and Blocks</title>
     <link>https://www.corylogan.com/bits/tags/tools/</link>
     <description>Recent content in tools on Bits and Blocks</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <ttl>1440</ttl>
+    <generator>Hugo 0.55.5</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Jul 2017 13:45:28 +0200</lastBuildDate>
-    
-	<atom:link href="https://www.corylogan.com/bits/tags/tools/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <managingEditor> (Cory Logan)</managingEditor>
+    <webMaster> (Cory Logan)</webMaster>
+    <lastBuildDate>Sat, 18 May 2019 18:37:42 UT</lastBuildDate>
+    <atom:link href="https://www.corylogan.com/bits/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Saving Time With Tmux</title>
       <link>https://www.corylogan.com/bits/bytes/saving-time-with-tmux/</link>
-      <pubDate>Mon, 10 Jul 2017 13:45:28 +0200</pubDate>
-      
+      <pubDate>Mon, 10 Jul 2017 11:45:28 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bytes/saving-time-with-tmux/</guid>
       <description>What is a terminal multiplexer, and why do I care? When you split up a terminal screen into sub-terminals, that&amp;rsquo;s called terminal multiplexing. This is nothing new, GNU Screen has been around since 1987. Tmux is just screen&amp;rsquo;s younger, nubile cousin. I&amp;rsquo;m about to explain how this simple technology can:
  Keep you organized. Lower the bar to get to work. Save you time. Enable teamwork.  Here&amp;rsquo;s a quick demonstration:</description>
+      <content:encoded><![CDATA[ What is a terminal multiplexer, and why do I care? When you split up a terminal screen into sub-terminals, that&amp;rsquo;s called terminal multiplexing. This is nothing new, GNU Screen has been around since 1987. Tmux is just screen&amp;rsquo;s younger, nubile cousin. I&amp;rsquo;m about to explain how this simple technology can:
+ Keep you organized. Lower the bar to get to work. Save you time. Enable teamwork.  Here&amp;rsquo;s a quick demonstration: 
+Multiple panes for multiple things If you watch the demo above, you can see that you can make multiple panes, and multiple windows. You can organize them however you like.
+The benefit of this is that you can have a server running in one pane, and an editor running on another. Or your test suite. Or whatever else you need to keep an eye on.
+You might think, well, I can already do that in my terminal app. And maybe you can! But, can you do it on remote servers over ssh? And can you keep those panes running even if you quit your terminal app? Didn&amp;rsquo;t think so.
+Keep your workspace tidy What if, every time you went to start working on your app, your text editor opened, your test suite ran, git pulled the latest changes, and a development server launched? If that gets you at all excited, you should check out tmuxinator. There are other options out there that do the same thing. But, with a simple configuration file, you can have all that and more!
+Work on remote servers Sometimes when working on a remote server, it&amp;rsquo;s useful to keep a long running task going, or at least be able to look at the same workspace you were looking at previously. By keeping your work in a tmux session, you can simply rejoin the session you were previously using. Everything is now exactly as you left it!
+I realize it&amp;rsquo;s not the best use, but there have been a couple of times I&amp;rsquo;ve used tmux to keep a long running task going in the background on a server. This way, when I close my laptop and walk away, everything keeps running. Imagine a long rake task, sure I could have put it in a background job, but it was a one off task, and writing the job would have been unnecessary work.
+Collaborate You can have more than one person in a tmux session at once. This has to be one of the greatest things of all about tmux. It&amp;rsquo;s like screen sharing, but so much faster, as it&amp;rsquo;s just over an ssh session. There is nothing worse than trying to collaborate over a slow VNC screen share, it&amp;rsquo;s like typing with boxing gloves. There are a few hoops to jump through, another user, ssh access, and permissions&amp;hellip; But there&amp;rsquo;s another option.
+Tmate is a fantastically handy little utility that does all of the hoop jumping for you. After installing tmate, just run it, and give your friend access by copying your secure ssh command. Even from the other side of the world, you can have lag-free collaboration!
+Next steps Go give tmux a shot!
+You&amp;rsquo;ll need to learn some of the basic commands for getting around, and probably do a little customization. Good luck!
+]]></content:encoded>
     </item>
-    
     <item>
       <title>Why Choose Vim</title>
       <link>https://www.corylogan.com/bits/bytes/why-choose-vim/</link>
-      <pubDate>Tue, 13 Dec 2016 18:30:08 -0800</pubDate>
-      
+      <pubDate>Wed, 14 Dec 2016 02:30:08 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bytes/why-choose-vim/</guid>
       <description>TLDR Choosing a text editor is a very personal decision. You grow with your editor, as your editor grows with you. As I use my text editor more and more over the years, I&amp;rsquo;m constantly constantly learning new techniques for working more efficiently. Some of them stick, others are forgotten. I find that sequences and shortcuts that I most use stay. But just as importantly VIM accommodates my changing needs through configuration, plugin, or otherwise.</description>
+      <content:encoded><![CDATA[ TLDR Choosing a text editor is a very personal decision. You grow with your editor, as your editor grows with you. As I use my text editor more and more over the years, I&amp;rsquo;m constantly constantly learning new techniques for working more efficiently. Some of them stick, others are forgotten. I find that sequences and shortcuts that I most use stay. But just as importantly VIM accommodates my changing needs through configuration, plugin, or otherwise.
+Most of all, you need a good editor, that you are familiar with.
+Why Vim Works For Me Different jobs require different tools.
+Vim also has it&amp;rsquo;s own set of advantages. It&amp;rsquo;s very fast at large search and replace operations. It&amp;rsquo;s infinitely extensible, with plugins that integrate with git, automatically format tables, check syntax. It can be operated entirely over SSH. It&amp;rsquo;s easily customized. It&amp;rsquo;s ubiquitous. It&amp;rsquo;s free. It has a great community of people.
+What does it look like? It actually looks pretty modern!
+A Few Caveats  Steep learning curve. Customization is almost requisite Not everyone knows how to use VIM, this can be and impediment to working with someone else at your computer.  I actually keep a couple of GUI editors around as I find that have uses for them. There are some tasks that mice are just really good at. TextWrangler works well with really large files. Sometimes I might just it to look at a gigantic CSV alongside the code that&amp;rsquo;s being used to manipulate it.
+Better, Faster, Stronger Vim is brilliant in how extensible and malleable it is. You can change it by simply installing a new plugin. The setup can be entirely scripted.
+As an editor, Vi has really led the way on a great many conventions. Vim came after Vi and offers a superset of features. Having different modes of editing, and keyboard navigation, are some of the most fundamental parts. It wasn&amp;rsquo;t just that it was early to introduce these features, but that they&amp;rsquo;ve been perfected over many years.
+Vim has always been light and nimble. It&amp;rsquo;s fast to boot (unless you load it down with tons of plugins)
+Portability Vim comes standard on all modern builds of Linux and Mac OS. You can jump right into it. It&amp;rsquo;s really helpful to be able to navigate a bare bones installation of Vim, even if you don&amp;rsquo;t do it as well as with a customized version.
+Another huge piece of portability, is remote access. Vim works marvelously over an ssh connection. I can do remote work on a server far away, as though it were local. This is really great for travel.
+If you want to give it a go, you can try out my configuration found on github.
+I Frequently Use Other Editors Vim is a tool. It&amp;rsquo;s very useful to know. But sometimes, I actually prefer to work in a different application. My other favorite editor at the moment is Atom, and I&amp;rsquo;m using it right now to with this entry. It has great markdown support and integrates with system spell checking. At the end of the day, Vim has a load of features and advantages that can help you work faster. But, you must always use what works for you!
+]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

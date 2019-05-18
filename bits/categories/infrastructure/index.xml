@@ -1,25 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
+    <docs>https://blogs.law.harvard.edu/tech/rss</docs>
     <title>infrastructure on Bits and Blocks</title>
     <link>https://www.corylogan.com/bits/categories/infrastructure/</link>
     <description>Recent content in infrastructure on Bits and Blocks</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <ttl>1440</ttl>
+    <generator>Hugo 0.55.5</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 May 2019 15:31:13 -0400</lastBuildDate>
-    
-	<atom:link href="https://www.corylogan.com/bits/categories/infrastructure/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <managingEditor> (Cory Logan)</managingEditor>
+    <webMaster> (Cory Logan)</webMaster>
+    <lastBuildDate>Sat, 18 May 2019 18:37:42 UT</lastBuildDate>
+    <atom:link href="https://www.corylogan.com/bits/categories/infrastructure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use Terraform to Set Up Github Pages With Route 53</title>
       <link>https://www.corylogan.com/bits/bits/use-terraform-to-set-up-github-pages-with-route-53/</link>
-      <pubDate>Fri, 17 May 2019 15:31:13 -0400</pubDate>
-      
+      <pubDate>Fri, 17 May 2019 19:31:13 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/use-terraform-to-set-up-github-pages-with-route-53/</guid>
-      <description>It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS.
-After doing this you&amp;rsquo;ll still need to specify the CNAME on your target project, and set the name servers on the domain. This requires that you&amp;rsquo;re using terraform to manage all DNS for this domain.</description>
+      <description>This will result in a certificate error if you don&#39;t take further steps.  It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS.
+After doing this you&amp;rsquo;ll still need to specify the CNAME on your target project, and set the name servers on the domain.</description>
+      <category domain="https://www.corylogan.com/categories/infrastructure">Infrastructure</category>
+      <content:encoded><![CDATA[ This will result in a certificate error if you don&#39;t take further steps.  It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS.
+After doing this you&amp;rsquo;ll still need to specify the CNAME on your target project, and set the name servers on the domain. This requires that you&amp;rsquo;re using terraform to manage all DNS for this domain.
+This will direct any traffic from any of https://example.com, http://example.com, and http://www.example.com to the same github pages location. The only problem with this is when it comes to directing https://www.example.com to your github pages site. You&amp;rsquo;ll need to do a server side redirect if you want that part to work.
+resource &amp;quot;aws_route53_zone&amp;quot; &amp;quot;primary&amp;quot; { name = &amp;quot;example.com&amp;quot; } resource &amp;quot;aws_route53_record&amp;quot; &amp;quot;main&amp;quot; { zone_id = &amp;quot;${aws_route53_zone.primary.zone_id}&amp;quot; name = &amp;quot;example.com&amp;quot; type = &amp;quot;A&amp;quot; ttl = &amp;quot;300&amp;quot; records = [&amp;quot;185.199.108.153&amp;quot;, &amp;quot;185.199.109.153&amp;quot;, &amp;quot;185.199.110.153&amp;quot;, &amp;quot;185.199.111.153&amp;quot;] } resource &amp;quot;aws_route53_record&amp;quot; &amp;quot;www&amp;quot; { zone_id = &amp;quot;${aws_route53_zone.primary.zone_id}&amp;quot; name = &amp;quot;www.example.com&amp;quot; type = &amp;quot;CNAME&amp;quot; ttl = &amp;quot;300&amp;quot; records = [&amp;quot;yourusername.github.io&amp;quot;] } output &amp;quot;name_servers&amp;quot; { value = &amp;quot;${aws_route53_zone.primary.name_servers}&amp;quot; }  ]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

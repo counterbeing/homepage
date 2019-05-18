@@ -1,114 +1,103 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
+    <docs>https://blogs.law.harvard.edu/tech/rss</docs>
     <title>Tags on Bits and Blocks</title>
     <link>https://www.corylogan.com/bits/tags/</link>
     <description>Recent content in Tags on Bits and Blocks</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <ttl>1440</ttl>
+    <generator>Hugo 0.55.5</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 May 2019 15:31:13 -0400</lastBuildDate>
-    
-	<atom:link href="https://www.corylogan.com/bits/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <managingEditor> (Cory Logan)</managingEditor>
+    <webMaster> (Cory Logan)</webMaster>
+    <lastBuildDate>Sat, 18 May 2019 18:37:42 UT</lastBuildDate>
+    <atom:link href="https://www.corylogan.com/bits/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>aws</title>
       <link>https://www.corylogan.com/bits/tags/aws/</link>
-      <pubDate>Fri, 17 May 2019 15:31:13 -0400</pubDate>
-      
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/tags/aws/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
-    
     <item>
       <title>dns</title>
       <link>https://www.corylogan.com/bits/tags/dns/</link>
-      <pubDate>Fri, 17 May 2019 15:31:13 -0400</pubDate>
-      
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/tags/dns/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
-    
     <item>
       <title>github pages</title>
       <link>https://www.corylogan.com/bits/tags/github-pages/</link>
-      <pubDate>Fri, 17 May 2019 15:31:13 -0400</pubDate>
-      
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/tags/github-pages/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
-    
     <item>
       <title>terraform</title>
       <link>https://www.corylogan.com/bits/tags/terraform/</link>
-      <pubDate>Fri, 17 May 2019 15:31:13 -0400</pubDate>
-      
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/tags/terraform/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
-    
     <item>
       <title>ssh</title>
       <link>https://www.corylogan.com/bits/tags/ssh/</link>
-      <pubDate>Mon, 10 Jul 2017 15:12:03 +0200</pubDate>
-      
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/tags/ssh/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
-    
     <item>
       <title>terminal</title>
       <link>https://www.corylogan.com/bits/tags/terminal/</link>
-      <pubDate>Mon, 10 Jul 2017 15:12:03 +0200</pubDate>
-      
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/tags/terminal/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
-    
     <item>
       <title>tmux</title>
       <link>https://www.corylogan.com/bits/tags/tmux/</link>
-      <pubDate>Mon, 10 Jul 2017 13:45:28 +0200</pubDate>
-      
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/tags/tmux/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
-    
     <item>
       <title>tools</title>
       <link>https://www.corylogan.com/bits/tags/tools/</link>
-      <pubDate>Mon, 10 Jul 2017 13:45:28 +0200</pubDate>
-      
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/tags/tools/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
-    
     <item>
       <title>network</title>
       <link>https://www.corylogan.com/bits/tags/network/</link>
-      <pubDate>Thu, 15 Dec 2016 19:51:29 +0000</pubDate>
-      
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/tags/network/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
-    
     <item>
       <title>vim</title>
       <link>https://www.corylogan.com/bits/tags/vim/</link>
-      <pubDate>Tue, 13 Dec 2016 18:30:08 -0800</pubDate>
-      
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/tags/vim/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
-    
     <item>
       <title>ruby</title>
       <link>https://www.corylogan.com/bits/tags/ruby/</link>
-      <pubDate>Tue, 13 Dec 2016 18:22:26 -0800</pubDate>
-      
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/tags/ruby/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

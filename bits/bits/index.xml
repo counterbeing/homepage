@@ -1,89 +1,121 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
+    <docs>https://blogs.law.harvard.edu/tech/rss</docs>
     <title>Bits on Bits and Blocks</title>
     <link>https://www.corylogan.com/bits/bits/</link>
     <description>Recent content in Bits on Bits and Blocks</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <ttl>1440</ttl>
+    <generator>Hugo 0.55.5</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 May 2019 15:31:13 -0400</lastBuildDate>
-    
-	<atom:link href="https://www.corylogan.com/bits/bits/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <managingEditor> (Cory Logan)</managingEditor>
+    <webMaster> (Cory Logan)</webMaster>
+    <lastBuildDate>Sat, 18 May 2019 18:37:42 UT</lastBuildDate>
+    <atom:link href="https://www.corylogan.com/bits/bits/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use Terraform to Set Up Github Pages With Route 53</title>
       <link>https://www.corylogan.com/bits/bits/use-terraform-to-set-up-github-pages-with-route-53/</link>
-      <pubDate>Fri, 17 May 2019 15:31:13 -0400</pubDate>
-      
+      <pubDate>Fri, 17 May 2019 19:31:13 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/use-terraform-to-set-up-github-pages-with-route-53/</guid>
-      <description>It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS.
-After doing this you&amp;rsquo;ll still need to specify the CNAME on your target project, and set the name servers on the domain. This requires that you&amp;rsquo;re using terraform to manage all DNS for this domain.</description>
+      <description>This will result in a certificate error if you don&#39;t take further steps.  It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS.
+After doing this you&amp;rsquo;ll still need to specify the CNAME on your target project, and set the name servers on the domain.</description>
+      <category domain="https://www.corylogan.com/categories/infrastructure">Infrastructure</category>
+      <content:encoded><![CDATA[ This will result in a certificate error if you don&#39;t take further steps.  It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS.
+After doing this you&amp;rsquo;ll still need to specify the CNAME on your target project, and set the name servers on the domain. This requires that you&amp;rsquo;re using terraform to manage all DNS for this domain.
+This will direct any traffic from any of https://example.com, http://example.com, and http://www.example.com to the same github pages location. The only problem with this is when it comes to directing https://www.example.com to your github pages site. You&amp;rsquo;ll need to do a server side redirect if you want that part to work.
+resource &amp;quot;aws_route53_zone&amp;quot; &amp;quot;primary&amp;quot; { name = &amp;quot;example.com&amp;quot; } resource &amp;quot;aws_route53_record&amp;quot; &amp;quot;main&amp;quot; { zone_id = &amp;quot;${aws_route53_zone.primary.zone_id}&amp;quot; name = &amp;quot;example.com&amp;quot; type = &amp;quot;A&amp;quot; ttl = &amp;quot;300&amp;quot; records = [&amp;quot;185.199.108.153&amp;quot;, &amp;quot;185.199.109.153&amp;quot;, &amp;quot;185.199.110.153&amp;quot;, &amp;quot;185.199.111.153&amp;quot;] } resource &amp;quot;aws_route53_record&amp;quot; &amp;quot;www&amp;quot; { zone_id = &amp;quot;${aws_route53_zone.primary.zone_id}&amp;quot; name = &amp;quot;www.example.com&amp;quot; type = &amp;quot;CNAME&amp;quot; ttl = &amp;quot;300&amp;quot; records = [&amp;quot;yourusername.github.io&amp;quot;] } output &amp;quot;name_servers&amp;quot; { value = &amp;quot;${aws_route53_zone.primary.name_servers}&amp;quot; }  ]]></content:encoded>
     </item>
-    
     <item>
       <title>Variable Naming Cases</title>
       <link>https://www.corylogan.com/bits/bits/variable-naming-cases/</link>
-      <pubDate>Fri, 03 Aug 2018 11:52:37 -0700</pubDate>
-      
+      <pubDate>Fri, 03 Aug 2018 18:52:37 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/variable-naming-cases/</guid>
       <description>There are a number of ways to make variables readable, and also to distinguish what variable types you might be working with. These things change from language to language, but it&amp;rsquo;s nice to have a common set of vocabulary to refer to them. I find that I&amp;rsquo;m sometimes forgetful of how to actually refer to any given case, so here&amp;rsquo;s a quick reference.
    Case Example     Snake Cases snake_case   Camel Case camelCase   Pascal Case Pascal Case   Kebab Case kebab-case    I&amp;rsquo;ve found that I often want to be able to switch from one to another, and that there&amp;rsquo;s always a solution already in existence, the most helpful thing is knowing what to call it for the sake of googling.</description>
+      <content:encoded><![CDATA[There are a number of ways to make variables readable, and also to distinguish what variable types you might be working with. These things change from language to language, but it&amp;rsquo;s nice to have a common set of vocabulary to refer to them. I find that I&amp;rsquo;m sometimes forgetful of how to actually refer to any given case, so here&amp;rsquo;s a quick reference.
+   Case Example     Snake Cases snake_case   Camel Case camelCase   Pascal Case Pascal Case   Kebab Case kebab-case    I&amp;rsquo;ve found that I often want to be able to switch from one to another, and that there&amp;rsquo;s always a solution already in existence, the most helpful thing is knowing what to call it for the sake of googling.
+It seems like I generally reach for these when doing some type of meta-programming.
+]]></content:encoded>
     </item>
-    
     <item>
       <title>Github Pages With Apex Domain</title>
       <link>https://www.corylogan.com/bits/bits/github-pages-with-apex-domain/</link>
-      <pubDate>Thu, 12 Jul 2018 11:56:11 -0700</pubDate>
-      
+      <pubDate>Thu, 12 Jul 2018 18:56:11 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/github-pages-with-apex-domain/</guid>
       <description>Saving time and money with GitHub Pages I know that GitHub Pages are nothing new, but I only recently realized how versatile they are. You can host any static content you want there for free, and I’ve recently started using it for my blogs. Major benefits of using GitHub Pages as I see it:
  Free hosting for simple pages Deployment is as easy as a git push SSL certs are a one time checkbox It handles redirecting to the www subdomain, or to the apex domain without no real configuration  My default configuration You just have to set up the DNS.</description>
+      <content:encoded><![CDATA[ Saving time and money with GitHub Pages I know that GitHub Pages are nothing new, but I only recently realized how versatile they are. You can host any static content you want there for free, and I’ve recently started using it for my blogs. Major benefits of using GitHub Pages as I see it:
+ Free hosting for simple pages Deployment is as easy as a git push SSL certs are a one time checkbox It handles redirecting to the www subdomain, or to the apex domain without no real configuration  My default configuration You just have to set up the DNS.
+ Create a CNAME record from your www subdomain to your-username.github.io Create an A record to each of the following from your apex domains   185.199.108.153 185.199.109.153 185.199.110.153 185.199.111.153   Once your DNS has propagated, visit the settings on your repo, add either your www or apex domain as your custom domain:   GitHub Pages Control Panel     Once GitHub has gotten a cert from LetsEncrypt, the option to enforce HTTPS will be available to you. Now all you have to do is set up an index.html file on the gh-pages branch (if you selected that option), or on the master in the docs folder (if you chose this route). This will probably depend on how you choose to build your site, what’s convenient.  I use a build server that builds all of my blogs as static sites, and then adds them to my gh-pages branch and pushes to git after I make any change to any of them, that’s beyond the scope of this article, but it’s something to think about.
+GitHub pages seem perfect for small businesses, personal blogs, or software docs. More complete documentation can be found on GitHub. These are just the settings I generally go with, as I think they’re great defaults.
+The problem with this setup You&amp;rsquo;ll get a cert error when visiting the https:// version of the site. If you want to avoid this, you&amp;rsquo;ll need to point the version of the domain, be it the www or the apex, to a server that can perform a 301 redirect.
+]]></content:encoded>
     </item>
-    
     <item>
       <title>Serving Localhost to the Web with Reverse Ssh Tunnels</title>
       <link>https://www.corylogan.com/bits/bits/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</link>
-      <pubDate>Mon, 10 Jul 2017 15:12:03 +0200</pubDate>
-      
+      <pubDate>Mon, 10 Jul 2017 13:12:03 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/serving-localhost-to-the-web-with-reverse-ssh-tunnels/</guid>
       <description>Note: If you don&amp;rsquo;t have a server already, check my last tip.
 This topic is always a little tricky, so, here&amp;rsquo;s the basic thing to know, as this is the most frequent use case.
 Suppose you have a development rails server running on your local computer. You can access this server via curl http://localhost:3000. Which is to say, it&amp;rsquo;s running on your localhost, on port 3000. You want your client to see it, to give you feedback, but they&amp;rsquo;re nowhere near you, and you just want a quick way to show it to them.</description>
+      <category domain="https://www.corylogan.com/categories/technology">Technology</category>
+      <content:encoded><![CDATA[ Note: If you don&amp;rsquo;t have a server already, check my last tip.
+This topic is always a little tricky, so, here&amp;rsquo;s the basic thing to know, as this is the most frequent use case.
+Suppose you have a development rails server running on your local computer. You can access this server via curl http://localhost:3000. Which is to say, it&amp;rsquo;s running on your localhost, on port 3000. You want your client to see it, to give you feedback, but they&amp;rsquo;re nowhere near you, and you just want a quick way to show it to them.
+Fortunately for you, you know about ssh. You know that it will take you just a few seconds to set up a reverse tunnel through an intermediate server. Cake! Huh?
+Things you&amp;rsquo;ll need, and their values in my example:
+ Some kind of server on the web running sshd (yourserver.com) A local webserver accessible (0.0.0.0:3000)  ssh -NR 3333:localhost:3000 user@yourserver.com Now that the tunnel is running, you should be able to access your web server at http://yourserver.com:3333. You can of course change either of the ports. There are a few caveats, but this is it in the basic form.
+Troubleshooting If that&amp;rsquo;s not working for you, chances are you need the GatewayPorts yes option added to the file /etc/ssh/sshd_config on the server. Go in there and add that line, then restart the ssh service. With ubuntu that&amp;rsquo;s just sudo service ssh restart.
+Tips  You can run this in the background if you want by adding the -f flag. I prefer to run it in the foreground when I&amp;rsquo;m just using it for a moment, or troubleshooting as it&amp;rsquo;s easier to kill. If you run it in the background, and you just try to run it again on the same port, they will collide, and you will fail. Lower port numbers (lower than 1024) can&amp;rsquo;t be used unless you&amp;rsquo;re a super user on the system. Generally, it&amp;rsquo;s just easier to use a higher port number on the remote server. The -v flag will give you the full ssh output with authentication. This is another common source of problems. If you have a few dollars, and not much interest in the topic, check out ngrok, it&amp;rsquo;s a great tool that really takes most of the trouble out of it. It also means you don&amp;rsquo;t need to bring your own server! If you don&amp;rsquo;t wish to run your own server, this is the way to go.  ]]></content:encoded>
     </item>
-    
     <item>
       <title>Exporting A Zone File From Mediatemple</title>
       <link>https://www.corylogan.com/bits/bits/exporting_a_zone_file_from_mediatemple/</link>
-      <pubDate>Sun, 08 Jan 2017 16:45:38 -0800</pubDate>
-      
+      <pubDate>Mon, 09 Jan 2017 00:45:38 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/exporting_a_zone_file_from_mediatemple/</guid>
       <description>I was in the process of moving my DNS from MediaTemple to Route53 and was having trouble making sure I&amp;rsquo;d moved all of the entries. I decided I&amp;rsquo;d just export a zone file to do a comparison in a text editor.
 Surprise! You can&amp;rsquo;t.
 Instead, here&amp;rsquo;s a quick bit of jQuery, which is already available in the MediaTemple control panel. Just navigate to the zone file editor, open your console, and use this:</description>
+      <content:encoded><![CDATA[I was in the process of moving my DNS from MediaTemple to Route53 and was having trouble making sure I&amp;rsquo;d moved all of the entries. I decided I&amp;rsquo;d just export a zone file to do a comparison in a text editor.
+Surprise! You can&amp;rsquo;t.
+Instead, here&amp;rsquo;s a quick bit of jQuery, which is already available in the MediaTemple control panel. Just navigate to the zone file editor, open your console, and use this:
+$.each($(&amp;#34;.dns_record&amp;#34;), function(i, el) { name = $(el).find(&amp;#34;.u-nowrap input&amp;#34;).val() type = $(el).find(&amp;#34;select.dropdown-select&amp;#34;).val() data = $(el).find(&amp;#34;td input.textInput--full[name^=&amp;#39;data&amp;#39;]&amp;#34;).val() console.log(name &#43; &amp;#34; &amp;#34; &#43; type &#43; &amp;#34; &amp;#34; &#43; data) })  From here, it&amp;rsquo;s pretty easy to clean up and convert. Good luck!
+]]></content:encoded>
     </item>
-    
     <item>
       <title>Reducing The Size Of Alpine Docker Images</title>
       <link>https://www.corylogan.com/bits/bits/reducing_the_size_of_alpine_docker_images/</link>
-      <pubDate>Mon, 26 Dec 2016 22:38:02 -0800</pubDate>
-      
+      <pubDate>Tue, 27 Dec 2016 06:38:02 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/reducing_the_size_of_alpine_docker_images/</guid>
       <description>Why the heck is my alpine docker image so huge? That&amp;rsquo;s a tough question to answer, especially when you have no idea what&amp;rsquo;s taking up all of the space.
 This is a dirty little one-liner that yields a sorted list of all of the packages on your alpine image by size. It does this by
  Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size  apk info | while read a; do apk info -s $a; done | awk NF | sed &amp;#39;Ns/\n/ /&amp;#39; | sort -k4 -n It may be ugly, but now I can make an informed decision about wether or not there are binaries that can be axed.</description>
+      <content:encoded><![CDATA[ Why the heck is my alpine docker image so huge? That&amp;rsquo;s a tough question to answer, especially when you have no idea what&amp;rsquo;s taking up all of the space.
+This is a dirty little one-liner that yields a sorted list of all of the packages on your alpine image by size. It does this by
+ Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size  apk info | while read a; do apk info -s $a; done | awk NF | sed &amp;#39;Ns/\n/ /&amp;#39; | sort -k4 -n It may be ugly, but now I can make an informed decision about wether or not there are binaries that can be axed.
+]]></content:encoded>
     </item>
-    
     <item>
       <title>What Process Is Hogging My Port On Mac Os</title>
       <link>https://www.corylogan.com/bits/bits/what_process_is_hogging_my_port_on_mac_os/</link>
-      <pubDate>Thu, 15 Dec 2016 19:51:29 +0000</pubDate>
-      
+      <pubDate>Thu, 15 Dec 2016 19:51:29 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/what_process_is_hogging_my_port_on_mac_os/</guid>
       <description>Address already in use Damn. Did I leave a server running somewhere? Sometimes you&amp;rsquo;re not sure where you left a server running, or where something is running you never knew about. I&amp;rsquo;m finally writing this down, as I always have to look it up. I found this solution in a StackOverflow post.
 Here&amp;rsquo;s how to get all of the processes by what port they&amp;rsquo;re using.
 sudo lsof -iTCP -sTCP:LISTEN -n -P As A Shell Function Looking at it, I realized I would never remember it, given how infrequently I need it.</description>
+      <category domain="https://www.corylogan.com/categories/technology">Technology</category>
+      <content:encoded><![CDATA[ Address already in use Damn. Did I leave a server running somewhere? Sometimes you&amp;rsquo;re not sure where you left a server running, or where something is running you never knew about. I&amp;rsquo;m finally writing this down, as I always have to look it up. I found this solution in a StackOverflow post.
+Here&amp;rsquo;s how to get all of the processes by what port they&amp;rsquo;re using.
+sudo lsof -iTCP -sTCP:LISTEN -n -P As A Shell Function Looking at it, I realized I would never remember it, given how infrequently I need it. So, I wrote a function. You should be able to pop this into your .bashrc or .zshrc, or whatever you&amp;rsquo;re using.
+function whats_using { if [ -z $1 ]; then sudo lsof -iTCP -sTCP:LISTEN -n -P else sudo lsof -iTCP -sTCP:LISTEN -n -P | grep $1 fi } Now you can search for what&amp;rsquo;s using a port like so, or don&amp;rsquo;t specify a port number to return all results.
+➜ whats_using 8181 com.docke 4082 cory 20u IPv4 0xa05b24c922aef1a1 0t0 TCP *:8181 (LISTEN) com.docke 4082 cory 21u IPv6 0xa05b24c91a710329 0t0 TCP [::1]:8181 (LISTEN)]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

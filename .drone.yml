@@ -5,11 +5,6 @@ clone:
   depth: 1
 
 steps:
-  - name: submodules
-    image: docker:git
-    commands:
-      - git submodule update --depth 1 --recursive --remote
-
   - name: Render Hugo Tech Blog
     image: jojomi/hugo:latest
     commands:

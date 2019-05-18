@@ -74,7 +74,7 @@ fetchInject(["/bits/js/lazysizes.min.js"]);
     <link rel="canonical" href="https://www.corylogan.com/bits/bytes/a-single-singleton-in-ruby/">
     
     
-    <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDY4RTI2NzlCQjE3MTFFNkJFNDk5M0JFQjc5MEIzNEYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDY4RTI2N0FCQjE3MTFFNkJFNDk5M0JFQjc5MEIzNEYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNjhFMjY3N0JCMTcxMUU2QkU0OTkzQkVCNzkwQjM0RiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNjhFMjY3OEJCMTcxMUU2QkU0OTkzQkVCNzkwQjM0RiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pn+zX8oAAAVdSURBVHja7J07bFNXGMfvDX7VdoyNfW0IpAQpSQMKbSolCopohBRFRJ0QU8kWJgZEB1hYGFhAfSxVh07JBp0qpC6gCqlKEaKKh1RENAqRSBuC8CPYdWzXLzAfssRQIUTK/c495/j/W6PY3//+rs/Dvve7ZvPjqwZwjg4cAgiAAAABEAAgAAIABEAAgAAIABAAAQACIABAAAQACIAAAAEQACAAAgAEQACAAAgAEAABAAK0wKVElU/qhaVKarmaXq1trtVyG/VCplHMP6+Um3X6q990h3f4LFdwrzvU44n0eqID3vigL9HlDskfzZT2/oCm0ZwvPbpTWrtXXl8or6caxW39e8IVHPF3H/F3Hw30jAcOmIYJAe/K/crTm1srt7ZWbhdXbXnBiWDv8c7+qc7+w77dEPA26JT/6Z+lG4UHf9Vytr/4fk/kROjQyZ2D9IGAgP+yUH58Lb94Pb+43aFmu9DQdCo8NB0eGvHvg4BXZBul2Vxy7llyuZoR9qYDXmtm1/DpyHDMFWhrAb8UH/6w+TsNO468Ow1HZ6Kjk8G+Nl2Gfr9597vs3YfVrFMFkHia8M/Fxs5Gx9pLQLpR/CYz/23mtxe02nQU0v/lxs9/1/IXrPG4K9gWAijzlfSvc7mkJOsQOgm+zsxnG+WL8WN93pjmAv6spi+nbv+Y/0O29TidEP8265cSEwe9cZHv2yH43Jfz6Legwqg8wXOSOAE07tPII+3Rf+2Aikwz70WcEUCzrjzj/tvHIipVNwG04qQ1j6EIVCoVrI8A2m3Ret/xFee21kVUMJWtg4Bso0R7XQd3W/97vUBlU/HKC5jNJZ36puH998mz/JMWr4CF8uO5Z0lDWah4iqCwgGv5RZHfcdoOFU8RVBUwX3p0nbl6AVAECqKkABpDUwJ3NExQBNY5jEvA/crTG4UHhhZQEIqjmICbWyscv+s6AgWhOCoJaBrNW2wVOwLFafJsJFkE0Kxl1xUlkkBxmKZiFgF3SmuGdjCFYhFwr7yunwCmUPYLeFIvLOgogEJRNAUELFVSGiz/37ghoGgKCFiupg1N4Yhmv4DV2qauAjii2S9gTZf9l5ho9gvYYJipJGFDiUk4o+MMzBfNfgH55xVdBXBEs19A674tLeGIhrskHcZ+AX7TrevB4ohmv4DwDp+uAjii2S/AcuIqezFwRLNfwF4Vbo+WJ5r9Ano8EV0FcESzX0CvJ6qrAI5o9gsYEHuHiUg4otkvYNCXSOg4D1MoiqaAgC53aMTfrZ8ACtWlxCRMHNFRAFMoFgFHAz36CWAKxSJgPHBgItir09GnOEw9VlgEmIZ5vLNfJwEUh6nlE9e3oVOd/ft12ZFRkCm284lLwGHf7hOhQ3oIoCB8rbYYfw84uXNQgw0BRaAgfK/PKIBmrVPhIdUFUATWFme8v4hNh4cGvJbK3z1Y08znEK+AEf++mV3D6gqg4rlby7H/Jnw6Msw6hrLOYVQ897uwC4i5Ameio+IbIb0nVDCVLaCln4irIiaDfediYx2y9q5900ExqWAxzfwEXZZyNjp23vpMFQFUqrA2fuKuC7pgjc9EFJiQqUgqVeCnTRRxV/Bi/NgX4U9kPvpUHhUpsn2i0CvjaGa7lJiQ1gEVRuUJXi+I7pp40Bu/nJj8wHTL1r6MRp62aFvZ+hxc3TMVc/llaNzaWvPQrNtGjVtb88FXez7/0BN2tnVx62xox9bFr9emH3ktNO92Egr/qa9r1N+N9vUOgwc4SAEeYSIFeIiPFOAxVhKBB7kBvm0ggAAIABAAAQACIABAAAQACIAAAAEQACAAAgAEQACAAAgAEAABAAJ05KUAAwAFq0MGgK1C9QAAAABJRU5ErkJggg==">
+    <link rel="icon" sizes="any" href="data:image/svg+xml,%3Csvg%20viewBox='0%200%2046%2045'%20xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EAfter%20Dark%3C/title%3E%3Cpath%20d='M.708%2045L23%20.416%2045.292%2045H.708zM35%2038L23%2019%2011%2038h24z'%20fill='%23000'/%3E%3C/svg%3E">
 
     
 
@@ -284,74 +284,74 @@ a[itemprop="url"]:hover {
 <h2 id="how-should-i-implement-it">How should I implement it?</h2>
 
 <p>There are different ways to implement the singleton pattern. Let&rsquo;s first go over an example of the pattern implemented by hand, so that you can see how it works, before we try to hide some of the details. We&rsquo;ll stick with the error logger example.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ErrorLogger</span>
-  <span style="color:#75715e"># This prevents the class from being instantiated. With a singleton, we don&#39;t</span>
-  <span style="color:#75715e"># want more than one instance. That&#39;s pretty much the definition.</span>
-  private_class_method <span style="color:#e6db74">:new</span>
+<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">ErrorLogger</span>
+  <span class="c1"># This prevents the class from being instantiated. With a singleton, we don&#39;t</span>
+  <span class="c1"># want more than one instance. That&#39;s pretty much the definition.</span>
+  <span class="nb">private_class_method</span> <span class="ss">:new</span>
 
-  <span style="color:#75715e"># This class variable will be in charge of storing the global state of our</span>
-  <span style="color:#75715e"># singleton in memory. All of the information will end up here. We&#39;ll access</span>
-  <span style="color:#75715e"># it through another method of our choosing.</span>
-  @@log <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
+  <span class="c1"># This class variable will be in charge of storing the global state of our</span>
+  <span class="c1"># singleton in memory. All of the information will end up here. We&#39;ll access</span>
+  <span class="c1"># it through another method of our choosing.</span>
+  <span class="vc">@@log</span> <span class="o">=</span> <span class="o">[]</span>
 
-  <span style="color:#75715e"># Everything inside of this will be declared as a class method.</span>
-  <span style="color:#66d9ef">class</span> <span style="color:#f92672">&lt;&lt;</span> self
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">log_an_error</span>(error)
-      @@log <span style="color:#f92672">&lt;&lt;</span> error
-    <span style="color:#66d9ef">end</span>
+  <span class="c1"># Everything inside of this will be declared as a class method.</span>
+  <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span>
+    <span class="k">def</span> <span class="nf">log_an_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+      <span class="vc">@@log</span> <span class="o">&lt;&lt;</span> <span class="n">error</span>
+    <span class="k">end</span>
 
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_log</span>
-      @@log<span style="color:#f92672">.</span>inspect
-    <span style="color:#66d9ef">end</span>
-  <span style="color:#66d9ef">end</span>
-<span style="color:#66d9ef">end</span>
+    <span class="k">def</span> <span class="nf">print_log</span>
+      <span class="vc">@@log</span><span class="o">.</span><span class="n">inspect</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 
-<span style="color:#66d9ef">ErrorLogger</span><span style="color:#f92672">.</span>log_an_error(<span style="color:#e6db74">&#39;Server is on fire!&#39;</span>)
-<span style="color:#66d9ef">ErrorLogger</span><span style="color:#f92672">.</span>print_log <span style="color:#75715e"># =&gt; [&#34;Server is on fire&#34;]</span></code></pre></div>
+<span class="no">ErrorLogger</span><span class="o">.</span><span class="n">log_an_error</span><span class="p">(</span><span class="s1">&#39;Server is on fire!&#39;</span><span class="p">)</span>
+<span class="no">ErrorLogger</span><span class="o">.</span><span class="n">print_log</span> <span class="c1"># =&gt; [&#34;Server is on fire&#34;]</span></code></pre></div>
 <p>There are other implementations of the singleton, but I prefer to simply have the class expose any methods directly on itself. Some other singletons have the class create a single instance of itself, and all methods are instance methods, and in that case you can use instance variables.</p>
 
 <p>But, this can be simplified further with the help of ruby&rsquo;s built in <a href="https://ruby-doc.org/stdlib-2.3.0/libdoc/singleton/rdoc/Singleton.html">singleton module</a>. The one gotcha here, is that calling it behaves a little differently. These are now instance methods and must be called on the instance.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">require <span style="color:#e6db74">&#39;singleton&#39;</span>
+<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;singleton&#39;</span>
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ErrorLogger</span>
-  <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">Singleton</span>
+<span class="k">class</span> <span class="nc">ErrorLogger</span>
+  <span class="kp">include</span> <span class="no">Singleton</span>
 
-  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>
-    @log <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
-  <span style="color:#66d9ef">end</span>
-  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">log_an_error</span>(error)
-    @log <span style="color:#f92672">&lt;&lt;</span> error
-  <span style="color:#66d9ef">end</span>
+  <span class="k">def</span> <span class="nf">initialize</span>
+    <span class="vi">@log</span> <span class="o">=</span> <span class="o">[]</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">log_an_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+    <span class="vi">@log</span> <span class="o">&lt;&lt;</span> <span class="n">error</span>
+  <span class="k">end</span>
 
-  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_log</span>
-    @log<span style="color:#f92672">.</span>inspect
-  <span style="color:#66d9ef">end</span>
-<span style="color:#66d9ef">end</span>
+  <span class="k">def</span> <span class="nf">print_log</span>
+    <span class="vi">@log</span><span class="o">.</span><span class="n">inspect</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 
-error_logger <span style="color:#f92672">=</span> <span style="color:#66d9ef">ErrorLogger</span><span style="color:#f92672">.</span>instance
-error_logger<span style="color:#f92672">.</span>log_an_error(<span style="color:#e6db74">&#39;Killing me softly...&#39;</span>)
-error_logger<span style="color:#f92672">.</span>print_log <span style="color:#75715e"># =&gt; [&#34;Killing me softly...&#34;]</span></code></pre></div>
+<span class="n">error_logger</span> <span class="o">=</span> <span class="no">ErrorLogger</span><span class="o">.</span><span class="n">instance</span>
+<span class="n">error_logger</span><span class="o">.</span><span class="n">log_an_error</span><span class="p">(</span><span class="s1">&#39;Killing me softly...&#39;</span><span class="p">)</span>
+<span class="n">error_logger</span><span class="o">.</span><span class="n">print_log</span> <span class="c1"># =&gt; [&#34;Killing me softly...&#34;]</span></code></pre></div>
 <p>In my opinion, it doesn&rsquo;t look much better than the first example. But, it does avoid the use of class variables, which is nice.</p>
 
 <p>I think though, the one that I&rsquo;ll probably reach for next time, is using module methods on a module. I know that this overlooks a few things, like the fact that modules can be mixed into classes, and you don&rsquo;t really want that with a singleton. But, I&rsquo;d say, in all practical terms, just don&rsquo;t do that.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">module</span> ErrorLogger
-  <span style="color:#66d9ef">class</span> <span style="color:#f92672">&lt;&lt;</span> self
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">log</span>
-      @log <span style="color:#f92672">||=</span> <span style="color:#f92672">[]</span>
-    <span style="color:#66d9ef">end</span>
+<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="k">module</span> <span class="nn">ErrorLogger</span>
+  <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span>
+    <span class="k">def</span> <span class="nf">log</span>
+      <span class="vi">@log</span> <span class="o">||=</span> <span class="o">[]</span>
+    <span class="k">end</span>
 
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">log_an_error</span>(error)
-      log <span style="color:#f92672">&lt;&lt;</span> error
-    <span style="color:#66d9ef">end</span>
+    <span class="k">def</span> <span class="nf">log_an_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+      <span class="n">log</span> <span class="o">&lt;&lt;</span> <span class="n">error</span>
+    <span class="k">end</span>
 
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_log</span>
-      log<span style="color:#f92672">.</span>inspect
-    <span style="color:#66d9ef">end</span>
-  <span style="color:#66d9ef">end</span>
-<span style="color:#66d9ef">end</span>
+    <span class="k">def</span> <span class="nf">print_log</span>
+      <span class="n">log</span><span class="o">.</span><span class="n">inspect</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 
-<span style="color:#66d9ef">ErrorLogger</span><span style="color:#f92672">.</span>log_an_error(<span style="color:#e6db74">&#39;Whoops!&#39;</span>)
-<span style="color:#66d9ef">ErrorLogger</span><span style="color:#f92672">.</span>print_log <span style="color:#75715e"># =&gt; [&#34;Whoops!&#34;]</span></code></pre></div>
+<span class="no">ErrorLogger</span><span class="o">.</span><span class="n">log_an_error</span><span class="p">(</span><span class="s1">&#39;Whoops!&#39;</span><span class="p">)</span>
+<span class="no">ErrorLogger</span><span class="o">.</span><span class="n">print_log</span> <span class="c1"># =&gt; [&#34;Whoops!&#34;]</span></code></pre></div>
 <p>There are other great articles that dive further into the topic. I&rsquo;d really recommend <a href="http://practicingruby.com/articles/ruby-and-the-singleton-pattern-dont-get-along">Practicing Ruby&rsquo;s take on the topic</a>.</p>
 
     </div>

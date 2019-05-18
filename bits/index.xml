@@ -9,7 +9,7 @@
     <language>en-us</language>
     <managingEditor> (Cory Logan)</managingEditor>
     <webMaster> (Cory Logan)</webMaster>
-    <lastBuildDate>Sat, 18 May 2019 18:37:42 UT</lastBuildDate>
+    <lastBuildDate>Sat, 18 May 2019 20:51:08 UT</lastBuildDate>
     <atom:link href="https://www.corylogan.com/bits/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use Terraform to Set Up Github Pages With Route 53</title>
@@ -23,7 +23,7 @@ After doing this you&amp;rsquo;ll still need to specify the CNAME on your target
       <content:encoded><![CDATA[ This will result in a certificate error if you don&#39;t take further steps.  It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS.
 After doing this you&amp;rsquo;ll still need to specify the CNAME on your target project, and set the name servers on the domain. This requires that you&amp;rsquo;re using terraform to manage all DNS for this domain.
 This will direct any traffic from any of https://example.com, http://example.com, and http://www.example.com to the same github pages location. The only problem with this is when it comes to directing https://www.example.com to your github pages site. You&amp;rsquo;ll need to do a server side redirect if you want that part to work.
-resource &amp;quot;aws_route53_zone&amp;quot; &amp;quot;primary&amp;quot; { name = &amp;quot;example.com&amp;quot; } resource &amp;quot;aws_route53_record&amp;quot; &amp;quot;main&amp;quot; { zone_id = &amp;quot;${aws_route53_zone.primary.zone_id}&amp;quot; name = &amp;quot;example.com&amp;quot; type = &amp;quot;A&amp;quot; ttl = &amp;quot;300&amp;quot; records = [&amp;quot;185.199.108.153&amp;quot;, &amp;quot;185.199.109.153&amp;quot;, &amp;quot;185.199.110.153&amp;quot;, &amp;quot;185.199.111.153&amp;quot;] } resource &amp;quot;aws_route53_record&amp;quot; &amp;quot;www&amp;quot; { zone_id = &amp;quot;${aws_route53_zone.primary.zone_id}&amp;quot; name = &amp;quot;www.example.com&amp;quot; type = &amp;quot;CNAME&amp;quot; ttl = &amp;quot;300&amp;quot; records = [&amp;quot;yourusername.github.io&amp;quot;] } output &amp;quot;name_servers&amp;quot; { value = &amp;quot;${aws_route53_zone.primary.name_servers}&amp;quot; }  ]]></content:encoded>
+resource &amp;#34;aws_route53_zone&amp;#34; &amp;#34;primary&amp;#34; { name = &amp;#34;example.com&amp;#34; } resource &amp;#34;aws_route53_record&amp;#34; &amp;#34;main&amp;#34; { zone_id = &amp;#34;${aws_route53_zone.primary.zone_id}&amp;#34; name = &amp;#34;example.com&amp;#34; type = &amp;#34;A&amp;#34; ttl = &amp;#34;300&amp;#34; records = [&amp;#34;185.199.108.153&amp;#34;, &amp;#34;185.199.109.153&amp;#34;, &amp;#34;185.199.110.153&amp;#34;, &amp;#34;185.199.111.153&amp;#34;] } resource &amp;#34;aws_route53_record&amp;#34; &amp;#34;www&amp;#34; { zone_id = &amp;#34;${aws_route53_zone.primary.zone_id}&amp;#34; name = &amp;#34;www.example.com&amp;#34; type = &amp;#34;CNAME&amp;#34; ttl = &amp;#34;300&amp;#34; records = [&amp;#34;yourusername.github.io&amp;#34;] } output &amp;#34;name_servers&amp;#34; { value = &amp;#34;${aws_route53_zone.primary.name_servers}&amp;#34; } ]]></content:encoded>
     </item>
     <item>
       <title>Variable Naming Cases</title>

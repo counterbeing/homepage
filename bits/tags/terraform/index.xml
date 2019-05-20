@@ -9,7 +9,7 @@
     <language>en-us</language>
     <managingEditor> (Cory Logan)</managingEditor>
     <webMaster> (Cory Logan)</webMaster>
-    <lastBuildDate>Sat, 18 May 2019 21:56:58 UT</lastBuildDate>
+    <lastBuildDate>Mon, 20 May 2019 05:29:39 UT</lastBuildDate>
     <atom:link href="https://www.corylogan.com/bits/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use Terraform to Set Up Github Pages With Route 53</title>

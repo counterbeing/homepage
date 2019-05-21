@@ -9,7 +9,7 @@
     <language>en-us</language>
     <managingEditor> (Cory Logan)</managingEditor>
     <webMaster> (Cory Logan)</webMaster>
-    <lastBuildDate>Tue, 21 May 2019 16:13:16 UT</lastBuildDate>
+    <lastBuildDate>Tue, 21 May 2019 16:23:15 UT</lastBuildDate>
     <atom:link href="https://www.corylogan.com/bits/bits/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Proving the Monty Hall Problem</title>
@@ -24,9 +24,9 @@ Should you switch? What are the odds if you do or don&amp;rsquo;t switch?
 If you keep reading you&#39;ll read the answer and the solution, if you want a minute to think about it for yourself, pause here.  To most people, it appears obvious that you have 50&amp;frasl;50 odds in this case. But in fact, you should always switch. If you don&amp;rsquo;t switch, your odds of winning are 1&amp;frasl;3, and if you do, your odds are 2&amp;frasl;3.
 You should always switch.
 Explanation of why this works When you first guess at a door your odds are exactly 1/3. So your odds of picking wrong are 2/3. Once one door is eliminated, it&amp;rsquo;s still true that your probably picked incorrectly, thus, you should switch doors.
-Code to Prove It Here we run the experiment 10k times to show what the odds really are.
-def gameshow(switch) doors = [1, 0, 0].shuffle choice = rand(3) removed_door = [0,1,2] .reject { |d| d == choice } .filter { |d| doors[d] == 0 } .sample switched_choice = [0, 1, 2] .reject { |d| removed_door == d || choice == d } .first choice = switched_choice if switch doors[choice] end def run_experiment switch_results = 10_000.times.map do gameshow(true) end.sum / 100.0 stay_results = 10_000.times.map do gameshow(false) end.sum / 100.0 puts &amp;#34;By switching you won #{switch_results}&amp;#34; puts &amp;#34;By staying you won #{stay_results}&amp;#34; end run_experiment This returns as anticipated:
-By switching you won 67.89 By staying you won 34.11  A more in depth explanation   ]]></content:encoded>
+Code to Prove It Here we run the experiment a million times to show what the odds really are.
+def gameshow(switch) doors = [1, 0, 0].shuffle choice = rand(3) removed_door = [0,1,2] .reject { |d| d == choice } .filter { |d| doors[d] == 0 } .sample switched_choice = [0, 1, 2] .reject { |d| removed_door == d || choice == d } .first choice = switched_choice if switch doors[choice] end def run_experiment switch_results = 1_000_000.times.map do gameshow(true) end.sum / 10_000.0 stay_results = 1_000_000.times.map do gameshow(false) end.sum / 10_000.0 puts &amp;#34;By switching you won #{switch_results}&amp;#34; puts &amp;#34;By staying you won #{stay_results}&amp;#34; end run_experiment This returns as anticipated:
+By switching you won 66.6246 By staying you won 33.3209  A more in depth explanation   ]]></content:encoded>
     </item>
     <item>
       <title>Find Adjascent Squares for a Coding Challenge</title>

@@ -212,7 +212,7 @@ a[itemprop="url"]:hover {
 
 <meta itemprop="datePublished" content="2019-05-21T00:35:16-04:00" />
 <meta itemprop="dateModified" content="2019-05-21T00:35:16-04:00" />
-<meta itemprop="wordCount" content="440">
+<meta itemprop="wordCount" content="441">
 
 
 
@@ -318,7 +318,7 @@ probably picked incorrectly, thus, you should switch doors.</p>
 
 <h3 id="code-to-prove-it">Code to Prove It</h3>
 
-<p>Here we run the experiment 10k times to show what the odds really are.</p>
+<p>Here we run the experiment a million times to show what the odds really are.</p>
 <div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">gameshow</span><span class="p">(</span><span class="n">switch</span><span class="p">)</span>
   <span class="n">doors</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="o">].</span><span class="n">shuffle</span>
   <span class="n">choice</span> <span class="o">=</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -334,13 +334,13 @@ probably picked incorrectly, thus, you should switch doors.</p>
 <span class="k">end</span>
 
 <span class="k">def</span> <span class="nf">run_experiment</span>
-  <span class="n">switch_results</span> <span class="o">=</span> <span class="mi">10_000</span><span class="o">.</span><span class="n">times</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span>
+  <span class="n">switch_results</span> <span class="o">=</span> <span class="mi">1_000_000</span><span class="o">.</span><span class="n">times</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span>
     <span class="n">gameshow</span><span class="p">(</span><span class="kp">true</span><span class="p">)</span>
-  <span class="k">end</span><span class="o">.</span><span class="n">sum</span> <span class="sr">/ 100.0
+  <span class="k">end</span><span class="o">.</span><span class="n">sum</span> <span class="sr">/ 10_000.0
 </span><span class="sr">
-</span><span class="sr">  stay_results = 10_000.times.map do
+</span><span class="sr">  stay_results = 1_000_000.times.map do
 </span><span class="sr">    gameshow(false)
-</span><span class="sr">  end.sum /</span> <span class="mi">100</span><span class="o">.</span><span class="mi">0</span>
+</span><span class="sr">  end.sum /</span> <span class="mi">10_000</span><span class="o">.</span><span class="mi">0</span>
 
   <span class="nb">puts</span> <span class="s2">&#34;By switching you won </span><span class="si">#{</span><span class="n">switch_results</span><span class="si">}</span><span class="s2">&#34;</span>
   <span class="nb">puts</span> <span class="s2">&#34;By staying you won </span><span class="si">#{</span><span class="n">stay_results</span><span class="si">}</span><span class="s2">&#34;</span>
@@ -355,8 +355,8 @@ probably picked incorrectly, thus, you should switch doors.</p>
 
 <div class="alert alert-success">
   
-By switching you won 67.89 <br>
-By staying you won 34.11
+By switching you won 66.6246 <br>
+By staying you won 33.3209
 
 </div>
 
@@ -387,7 +387,7 @@ By staying you won 34.11
   
     and tagged <a rel="tag" href="/bits/tags/puzzles/">puzzles</a> and <a rel="tag" href="/bits/tags/ruby/">ruby</a>
   
-  using <span itemprop="wordCount">440</span> words.
+  using <span itemprop="wordCount">441</span> words.
 </p>
 
       

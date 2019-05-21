@@ -86,9 +86,17 @@ class GridChecker
 
   def within_grid(row, col)
     row >= 0 &&
-      row < 10 &&
+      row < grid_height &&
       col >= 0 &&
-      col < 10
+      col < grid_width
+  end
+
+  def grid_width
+    @grid_width ||= @grid[0].length
+  end
+
+  def grid_height
+    @grid_height ||= @grid.length
   end
 
   def neighbor_coords(row, col)
@@ -100,7 +108,6 @@ class GridChecker
     ]
   end
 end
-
 ```
 
 ### The Twist

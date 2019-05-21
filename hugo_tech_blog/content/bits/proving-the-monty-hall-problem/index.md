@@ -53,7 +53,7 @@ probably picked incorrectly, thus, you should switch doors.
 
 ### Code to Prove It
 
-Here we run the experiment 10k times to show what the odds really are.
+Here we run the experiment a million times to show what the odds really are.
 
 ```ruby
 def gameshow(switch)
@@ -71,13 +71,13 @@ def gameshow(switch)
 end
 
 def run_experiment
-  switch_results = 10_000.times.map do
+  switch_results = 1_000_000.times.map do
     gameshow(true)
-  end.sum / 100.0
+  end.sum / 10_000.0
 
-  stay_results = 10_000.times.map do
+  stay_results = 1_000_000.times.map do
     gameshow(false)
-  end.sum / 100.0
+  end.sum / 10_000.0
 
   puts "By switching you won #{switch_results}"
   puts "By staying you won #{stay_results}"
@@ -89,8 +89,8 @@ run_experiment
 This returns as anticipated:
 
 {{< hackcss-alert type="success" >}}
-By switching you won 67.89 <br>
-By staying you won 34.11
+By switching you won 66.6246 <br>
+By staying you won 33.3209
 {{< /hackcss-alert >}}
 
 ### A more in depth explanation

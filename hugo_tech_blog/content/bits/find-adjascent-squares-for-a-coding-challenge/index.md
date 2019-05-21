@@ -49,32 +49,35 @@ But, let's expand this to say, a million squares. The following program can do t
 class GridChecker
   def initialize(grid)
     @assessed = {}
-    @clusters = []
     @grid = grid
   end
 
   def run
+    greatest = 0
     @grid.each_with_index do |row, ri|
       row.each_with_index do |_col, ni|
         coords = [ri, ni]
         next if @assessed.key?(coords)
-        @assessed[coords] = nil
-        @clusters.push(find_cluster(coords, true))
+        cluster_size = check_square(coords)
+        greatest = cluster_size if cluster_size > greatest
       end
     end
-    @clusters.map(&:length).max
+    greatest
   end
 
-  def find_cluster(coords, first = false)
-    @in_cluster = [] if first
-    @in_cluster.push(coords)
+  def check_square(coords)
+    @assessed[coords] = nil
+    find_cluster(coords)
+  end
+
+  def find_cluster(coords)
+    total = 1
     adjascent_squares(coords).map do |adjascent_coords|
       next if @assessed.key?(adjascent_coords)
-      next if @in_cluster.include?(adjascent_coords)
       @assessed[adjascent_coords] = nil
-      find_cluster(adjascent_coords)
+      total += find_cluster(adjascent_coords)
     end
-    @in_cluster
+    total
   end
 
   def adjascent_squares(coords)

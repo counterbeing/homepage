@@ -9,7 +9,7 @@
     <language>en-us</language>
     <managingEditor> (Cory Logan)</managingEditor>
     <webMaster> (Cory Logan)</webMaster>
-    <lastBuildDate>Tue, 21 May 2019 05:40:56 UT</lastBuildDate>
+    <lastBuildDate>Tue, 21 May 2019 05:48:22 UT</lastBuildDate>
     <atom:link href="https://www.corylogan.com/bits/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Proving the Monty Hall Problem</title>
@@ -17,11 +17,12 @@
       <pubDate>Tue, 21 May 2019 04:35:16 UT</pubDate>
       <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/proving-the-monty-hall-problem/</guid>
-      <description>Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&amp;rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I stil don&amp;rsquo;t quit believe it.</description>
-      <content:encoded><![CDATA[   Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&amp;rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I stil don&amp;rsquo;t quit believe it. Which is why I&amp;rsquo;m going to write a program that can run the problem over and over to show wether or not the Monty Hall problem actually has a solution.
+      <description>Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&amp;rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I still don&amp;rsquo;t quite believe it.</description>
+      <content:encoded><![CDATA[   Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&amp;rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I still don&amp;rsquo;t quite believe it. Which is why I&amp;rsquo;m going to write a program that can run the problem over and over to show wether or not the Monty Hall problem actually has a solution.
 The Monty Hall Problem Itself Imagine you are a gameshow contestant standing in front of three doors. You know that behind one door is a pile of money and the other two doors, there is nothing. You then pick one door, let&amp;rsquo;s say door A. After selecting a door, the game show host points to one of the other two doors, door B, and tells you that this door does not contain the prize. At this point you are offered the opportunity to switch doors from door A to door C, or stick with your original choice of door A.
+Should you switch? What are the odds if you do or don&amp;rsquo;t switch?
+If you keep reading you&#39;ll read the answer and the solution, if you want a minute to think about it for yourself, pause here.  To most people, it appears obvious that you have 50&amp;frasl;50 odds in this case. But in fact, you should always switch. If you don&amp;rsquo;t switch, your odds of winning are 1&amp;frasl;3, and if you do, your odds are 2&amp;frasl;3.
 You should always switch.
-To most people, it appears obvious that you have 50&amp;frasl;50 odds in this case. But in fact, you should always switch. If you don&amp;rsquo;t switch, your odds of winning are 1&amp;frasl;3, and if you do, your odds are 2&amp;frasl;3.
 Explanation of why this works When you first guess at a door your odds are exactly 1/3. So your odds of picking wrong are 2/3. Once one door is eliminated, it&amp;rsquo;s still true that your probably picked incorrectly, thus, you should switch doors.
 Code to Prove It Here we run the experiment 10k times to show what the odds really are.
 def gameshow(switch) doors = [1, 0, 0].shuffle choice = rand(3) removed_door = [0,1,2] .reject { |d| d == choice } .filter { |d| doors[d] == 0 } .sample switched_choice = [0, 1, 2] .reject { |d| removed_door == d || choice == d } .first choice = switched_choice if switch doors[choice] end def run_experiment switch_results = 10_000.times.map do gameshow(true) end.sum / 100.0 stay_results = 10_000.times.map do gameshow(false) end.sum / 100.0 puts &amp;#34;By switching you won #{switch_results}&amp;#34; puts &amp;#34;By staying you won #{stay_results}&amp;#34; end run_experiment This returns as anticipated:

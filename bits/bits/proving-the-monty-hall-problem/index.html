@@ -11,14 +11,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proving the Monty Hall Problem | Bits and Blocks</title>
-    <meta name="description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I stil don&rsquo;t quit believe it.">
+    <meta name="description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I still don&rsquo;t quite believe it.">
     <meta name="keywords" content="ruby, puzzles">
     
     
     
     
     <meta property="og:title" content="Proving the Monty Hall Problem" />
-<meta property="og:description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I stil don&rsquo;t quit believe it." />
+<meta property="og:description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I still don&rsquo;t quite believe it." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.corylogan.com/bits/bits/proving-the-monty-hall-problem/" />
 <meta property="article:published_time" content="2019-05-21T00:35:16-04:00"/>
@@ -26,7 +26,7 @@
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Proving the Monty Hall Problem"/>
-<meta name="twitter:description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I stil don&rsquo;t quit believe it."/>
+<meta name="twitter:description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I still don&rsquo;t quite believe it."/>
 
     
 
@@ -207,12 +207,12 @@ a[itemprop="url"]:hover {
   <article itemscope itemtype="https://schema.org/BlogPosting">
     
 <meta itemprop="name" content="Proving the Monty Hall Problem">
-<meta itemprop="description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I stil don&rsquo;t quit believe it.">
+<meta itemprop="description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I still don&rsquo;t quite believe it.">
 
 
 <meta itemprop="datePublished" content="2019-05-21T00:35:16-04:00" />
 <meta itemprop="dateModified" content="2019-05-21T00:35:16-04:00" />
-<meta itemprop="wordCount" content="398">
+<meta itemprop="wordCount" content="435">
 
 
 
@@ -225,7 +225,7 @@ a[itemprop="url"]:hover {
   <circle cx="16" cy="16" r="14" />
   <path d="M16 8 L16 16 20 20" />
 </svg>
-<span>2 minute read</span>
+<span>3 minute read</span>
 <svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
 </svg>
@@ -275,7 +275,7 @@ a[itemprop="url"]:hover {
 <a href="https://samharris.org/books/the-moral-landscape/">The Moral Landscape</a>, and it
 took me a few minutes to really wrap my brain about it. Talking about it with a
 few people since, I struggle to convince them that this really works this way. I
-think part of it is that I stil don&rsquo;t quit believe it. Which is why I&rsquo;m going to
+think part of it is that I still don&rsquo;t quite believe it. Which is why I&rsquo;m going to
 write a program that can run the problem over and over to show wether or not the
 Monty Hall problem actually has a solution.</p>
 
@@ -289,11 +289,26 @@ this door does not contain the prize. At this point you are offered the
 opportunity to switch doors from door A to door C, or stick with your original
 choice of door A.</p>
 
-<p>You should always switch.</p>
+<p>Should you switch? What are the odds if you do or don&rsquo;t switch?</p>
+
+
+
+
+
+<div class="alert alert-warning">
+  
+If you keep reading you'll read the answer and the solution, if you want a
+minute to think about it for yourself, pause here.
+
+</div>
+
+
 
 <p>To most people, it appears obvious that you have <sup>50</sup>&frasl;<sub>50</sub> odds in this case. But in
 fact, you should always switch. If you don&rsquo;t switch, your odds of winning are
 <sup>1</sup>&frasl;<sub>3</sub>, and if you do, your odds are <sup>2</sup>&frasl;<sub>3</sub>.</p>
+
+<p>You should always switch.</p>
 
 <h3 id="explanation-of-why-this-works">Explanation of why this works</h3>
 
@@ -355,7 +370,7 @@ By staying you won 34.11
   
     and tagged <a rel="tag" href="/bits/tags/puzzles/">puzzles</a> and <a rel="tag" href="/bits/tags/ruby/">ruby</a>
   
-  using <span itemprop="wordCount">398</span> words.
+  using <span itemprop="wordCount">435</span> words.
 </p>
 
       

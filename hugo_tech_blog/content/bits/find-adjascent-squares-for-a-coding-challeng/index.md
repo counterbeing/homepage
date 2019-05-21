@@ -1,5 +1,5 @@
 ---
-title: "Find Adjascent Squares for a Coding Challeng"
+title: "Find Adjascent Squares for a Coding Challenge"
 date: "2019-05-20T01:11:59-04:00"
 description: ""
 toc: false

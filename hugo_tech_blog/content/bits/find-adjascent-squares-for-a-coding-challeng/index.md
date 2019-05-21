@@ -5,7 +5,7 @@ description: ""
 toc: false
 type: post
 categories: []
-tags: []
+tags: ["ruby"]
 images: []
 draft: false
 ---

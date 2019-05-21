@@ -5,7 +5,9 @@ description: ""
 toc: false
 type: post
 categories: []
-tags: ["ruby"]
+tags:
+  - ruby
+  - puzzle
 images: []
 draft: false
 ---

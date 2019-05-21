@@ -9,7 +9,7 @@
     <language>en-us</language>
     <managingEditor> (Cory Logan)</managingEditor>
     <webMaster> (Cory Logan)</webMaster>
-    <lastBuildDate>Tue, 21 May 2019 15:54:01 UT</lastBuildDate>
+    <lastBuildDate>Tue, 21 May 2019 16:09:25 UT</lastBuildDate>
     <atom:link href="https://www.corylogan.com/bits/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Serving Localhost to the Web with Reverse Ssh Tunnels</title>

@@ -88,10 +88,10 @@ run_experiment
 
 This returns as anticipated:
 
-```
-By switching you won 67.89
+{{< hackcss-alert type="success" >}}
+By switching you won 67.89 <br>
 By staying you won 34.11
-```
+{{< /hackcss-alert >}}
 
 ### A more in depth explanation
 

@@ -212,7 +212,7 @@ a[itemprop="url"]:hover {
 
 <meta itemprop="datePublished" content="2019-05-17T15:31:13-04:00" />
 <meta itemprop="dateModified" content="2019-05-17T15:31:13-04:00" />
-<meta itemprop="wordCount" content="195">
+<meta itemprop="wordCount" content="211">
 
 
 
@@ -256,10 +256,11 @@ This will result in a certificate error if you don't take further steps.
 
 <p>It&rsquo;s nice to be able to spin up everything you need for github pages all in one
 go. If you&rsquo;re using amazon for AWS, here&rsquo;s a basic terraform configuration that
-should do everything you want in terms of DNS.</p>
+should do everything you want in terms of DNS. This assumes you want to point
+everything at the apex domain rather than the www.</p>
 
-<p>After doing this you&rsquo;ll still need to specify the CNAME on your target project,
-and set the name servers on the domain. This requires that you&rsquo;re using
+<p>After doing this you&rsquo;ll still need to specify the CNAME file on your target
+project, and set the name servers on the domain. This requires that you&rsquo;re using
 terraform to manage all DNS for this domain.</p>
 
 <p>This will direct any traffic from any of <code>https://example.com</code>,
@@ -310,7 +311,7 @@ side redirect if you want that part to work.</p>
   
     and tagged <a rel="tag" href="/bits/tags/aws/">aws</a>, <a rel="tag" href="/bits/tags/dns/">dns</a>, <a rel="tag" href="/bits/tags/github-pages/">github pages</a> and <a rel="tag" href="/bits/tags/terraform/">terraform</a>
   
-  using <span itemprop="wordCount">195</span> words.
+  using <span itemprop="wordCount">211</span> words.
 </p>
 
       

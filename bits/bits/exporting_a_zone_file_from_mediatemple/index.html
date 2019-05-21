@@ -212,7 +212,7 @@ a[itemprop="url"]:hover {
 
 <meta itemprop="datePublished" content="2017-01-08T16:45:38-08:00" />
 <meta itemprop="dateModified" content="2017-01-08T16:45:38-08:00" />
-<meta itemprop="wordCount" content="112">
+<meta itemprop="wordCount" content="118">
 
 
 
@@ -242,17 +242,27 @@ a[itemprop="url"]:hover {
     
 
     <div itemprop="articleBody">
-      <p>I was in the process of moving my DNS from MediaTemple to Route53 and was having trouble making sure I&rsquo;d moved all of the entries. I decided I&rsquo;d just export a zone file to do a comparison in a text editor.</p>
+      <p>I was in the process of moving my DNS from MediaTemple to Route53 and was having
+trouble making sure I&rsquo;d moved all of the entries. I decided I&rsquo;d just export a
+zone file to do a comparison in a text editor.</p>
 
 <p>Surprise! You can&rsquo;t.</p>
 
-<p>Instead, here&rsquo;s a quick bit of jQuery, which is already available in the MediaTemple control panel. Just navigate to the zone file editor, open your console, and use this:</p>
+<p>Instead, here&rsquo;s a quick bit of jQuery, which is already available in the
+MediaTemple control panel. Just navigate to the zone file editor, open your
+console, and use this:</p>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">&#34;.dns_record&#34;</span><span class="p">),</span> <span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">el</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">name</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">el</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;.u-nowrap input&#34;</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span>
-  <span class="nx">type</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">el</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;select.dropdown-select&#34;</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span>
-  <span class="nx">data</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">el</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;td input.textInput--full[name^=&#39;data&#39;]&#34;</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&#34;  &#34;</span> <span class="o">+</span> <span class="nx">type</span> <span class="o">+</span> <span class="s2">&#34;  &#34;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">)</span>
-<span class="p">})</span>
+  <span class="nx">name</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;.u-nowrap input&#34;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">val</span><span class="p">();</span>
+  <span class="nx">type</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;select.dropdown-select&#34;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">val</span><span class="p">();</span>
+  <span class="nx">data</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;td input.textInput--full[name^=&#39;data&#39;]&#34;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">val</span><span class="p">();</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&#34;  &#34;</span> <span class="o">+</span> <span class="nx">type</span> <span class="o">+</span> <span class="s2">&#34;  &#34;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
 </code></pre></div>
 <p>From here, it&rsquo;s pretty easy to clean up and convert. Good luck!</p>
 
@@ -271,7 +281,7 @@ a[itemprop="url"]:hover {
   </time>
   
   
-  using <span itemprop="wordCount">112</span> words.
+  using <span itemprop="wordCount">118</span> words.
 </p>
 
       

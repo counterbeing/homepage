@@ -9,8 +9,24 @@
     <language>en-us</language>
     <managingEditor> (Cory Logan)</managingEditor>
     <webMaster> (Cory Logan)</webMaster>
-    <lastBuildDate>Tue, 21 May 2019 04:03:14 UT</lastBuildDate>
+    <lastBuildDate>Tue, 21 May 2019 05:35:47 UT</lastBuildDate>
     <atom:link href="https://www.corylogan.com/bits/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proving the Monty Hall Problem</title>
+      <link>https://www.corylogan.com/bits/bits/proving-the-monty-hall-problem/</link>
+      <pubDate>Tue, 21 May 2019 04:35:16 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
+      <guid>https://www.corylogan.com/bits/bits/proving-the-monty-hall-problem/</guid>
+      <description>Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&amp;rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I stil don&amp;rsquo;t quit believe it.</description>
+      <content:encoded><![CDATA[   Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&amp;rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I stil don&amp;rsquo;t quit believe it. Which is why I&amp;rsquo;m going to write a program that can run the problem over and over to show wether or not the Monty Hall problem actually has a solution.
+The Monty Hall Problem Itself Imagine you are a gameshow contestant standing in front of three doors. You know that behind one door is a pile of money and the other two doors, there is nothing. You then pick one door, let&amp;rsquo;s say door A. After selecting a door, the game show host points to one of the other two doors, door B, and tells you that this door does not contain the prize. At this point you are offered the opportunity to switch doors from door A to door C, or stick with your original choice of door A.
+You should always switch.
+To most people, it appears obvious that you have 50&amp;frasl;50 odds in this case. But in fact, you should always switch. If you don&amp;rsquo;t switch, your odds of winning are 1&amp;frasl;3, and if you do, your odds are 2&amp;frasl;3.
+Explanation of why this works When you first guess at a door your odds are exactly 1/3. So your odds of picking wrong are 2/3. Once one door is eliminated, it&amp;rsquo;s still true that your probably picked incorrectly, thus, you should switch doors.
+Code to Prove It Here we run the experiment 10k times to show what the odds really are.
+def gameshow(switch) doors = [1, 0, 0].shuffle choice = rand(3) removed_door = [0,1,2] .reject { |d| d == choice } .filter { |d| doors[d] == 0 } .sample switched_choice = [0, 1, 2] .reject { |d| removed_door == d || choice == d } .first choice = switched_choice if switch doors[choice] end def run_experiment switch_results = 10_000.times.map do gameshow(true) end.sum / 100.0 stay_results = 10_000.times.map do gameshow(false) end.sum / 100.0 puts &amp;#34;By switching you won #{switch_results}&amp;#34; puts &amp;#34;By staying you won #{stay_results}&amp;#34; end run_experiment This returns as anticipated:
+By switching you won 67.89 By staying you won 34.11  ]]></content:encoded>
+    </item>
     <item>
       <title>Find Adjascent Squares for a Coding Challeng</title>
       <link>https://www.corylogan.com/bits/bits/find-adjascent-squares-for-a-coding-challeng/</link>
@@ -53,11 +69,11 @@ many = 1..1_000_000 def o_of_one(arg) 2 &#43; 2 end o_of_one(many)   Visualizing
       <pubDate>Fri, 17 May 2019 19:31:13 UT</pubDate>
       <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/use-terraform-to-set-up-github-pages-with-route-53/</guid>
-      <description>This will result in a certificate error if you don&#39;t take further steps.  It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS.
-After doing this you&amp;rsquo;ll still need to specify the CNAME on your target project, and set the name servers on the domain.</description>
+      <description>This will result in a certificate error if you don&#39;t take further steps.  It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS. This assumes you want to point everything at the apex domain rather than the www.
+After doing this you&amp;rsquo;ll still need to specify the CNAME file on your target project, and set the name servers on the domain.</description>
       <category domain="https://www.corylogan.com/categories/infrastructure">Infrastructure</category>
-      <content:encoded><![CDATA[ This will result in a certificate error if you don&#39;t take further steps.  It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS.
-After doing this you&amp;rsquo;ll still need to specify the CNAME on your target project, and set the name servers on the domain. This requires that you&amp;rsquo;re using terraform to manage all DNS for this domain.
+      <content:encoded><![CDATA[ This will result in a certificate error if you don&#39;t take further steps.  It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS. This assumes you want to point everything at the apex domain rather than the www.
+After doing this you&amp;rsquo;ll still need to specify the CNAME file on your target project, and set the name servers on the domain. This requires that you&amp;rsquo;re using terraform to manage all DNS for this domain.
 This will direct any traffic from any of https://example.com, http://example.com, and http://www.example.com to the same github pages location. The only problem with this is when it comes to directing https://www.example.com to your github pages site. You&amp;rsquo;ll need to do a server side redirect if you want that part to work.
 resource &amp;#34;aws_route53_zone&amp;#34; &amp;#34;primary&amp;#34; { name = &amp;#34;example.com&amp;#34; } resource &amp;#34;aws_route53_record&amp;#34; &amp;#34;main&amp;#34; { zone_id = &amp;#34;${aws_route53_zone.primary.zone_id}&amp;#34; name = &amp;#34;example.com&amp;#34; type = &amp;#34;A&amp;#34; ttl = &amp;#34;300&amp;#34; records = [&amp;#34;185.199.108.153&amp;#34;, &amp;#34;185.199.109.153&amp;#34;, &amp;#34;185.199.110.153&amp;#34;, &amp;#34;185.199.111.153&amp;#34;] } resource &amp;#34;aws_route53_record&amp;#34; &amp;#34;www&amp;#34; { zone_id = &amp;#34;${aws_route53_zone.primary.zone_id}&amp;#34; name = &amp;#34;www.example.com&amp;#34; type = &amp;#34;CNAME&amp;#34; ttl = &amp;#34;300&amp;#34; records = [&amp;#34;yourusername.github.io&amp;#34;] } output &amp;#34;name_servers&amp;#34; { value = &amp;#34;${aws_route53_zone.primary.name_servers}&amp;#34; } ]]></content:encoded>
     </item>
@@ -87,20 +103,6 @@ It seems like I generally reach for these when doing some type of meta-programmi
  Create a CNAME record from your www subdomain to your-username.github.io Create an A record to each of the following from your apex domains   185.199.108.153 185.199.109.153 185.199.110.153 185.199.111.153   Once your DNS has propagated, visit the settings on your repo, add either your www or apex domain as your custom domain:   GitHub Pages Control Panel     Once GitHub has gotten a cert from LetsEncrypt, the option to enforce HTTPS will be available to you. Now all you have to do is set up an index.html file on the gh-pages branch (if you selected that option), or on the master in the docs folder (if you chose this route). This will probably depend on how you choose to build your site, what’s convenient.  I use a build server that builds all of my blogs as static sites, and then adds them to my gh-pages branch and pushes to git after I make any change to any of them, that’s beyond the scope of this article, but it’s something to think about.
 GitHub pages seem perfect for small businesses, personal blogs, or software docs. More complete documentation can be found on GitHub. These are just the settings I generally go with, as I think they’re great defaults.
 The problem with this setup You&amp;rsquo;ll get a cert error when visiting the https:// version of the site. If you want to avoid this, you&amp;rsquo;ll need to point the version of the domain, be it the www or the apex, to a server that can perform a 301 redirect.
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Github Pages With Apex Domain</title>
-      <link>https://www.corylogan.com/bits/bytes/github-pages-with-apex-domain/</link>
-      <pubDate>Thu, 12 Jul 2018 18:56:11 UT</pubDate>
-      <dc:creator>Cory Logan</dc:creator>
-      <guid>https://www.corylogan.com/bits/bytes/github-pages-with-apex-domain/</guid>
-      <description>Saving time and money with GitHub Pages I know that GitHub Pages are nothing new, but I only recently realized how versatile they are. You can host any static content you want there for free, and I’ve recently started using it for my blogs. Major benefits of using GitHub Pages as I see it:
- Free hosting for simple pages Deployment is as easy as a git push SSL certs are a one time checkbox It handles redirecting to the www subdomain, or to the apex domain without no real configuration  My default configuration You just have to set up the DNS.</description>
-      <content:encoded><![CDATA[ Saving time and money with GitHub Pages I know that GitHub Pages are nothing new, but I only recently realized how versatile they are. You can host any static content you want there for free, and I’ve recently started using it for my blogs. Major benefits of using GitHub Pages as I see it:
- Free hosting for simple pages Deployment is as easy as a git push SSL certs are a one time checkbox It handles redirecting to the www subdomain, or to the apex domain without no real configuration  My default configuration You just have to set up the DNS.
- Create a CNAME record from your www subdomain to your-username.github.io Create an A record to each of the following from your apex domains  185.199.108.153 185.199.109.153 185.199.110.153 185.199.111.153  Once your DNS has propagated, visit the settings on your repo, add either your www or apex domain as your custom domain:   GitHub Pages Control Panel     Once GitHub has gotten a cert from LetsEncrypt, the option to enforce HTTPS will be available to you. Now all you have to do is set up an index.html file on the gh-pages branch (if you selected that option), or on the master in the docs folder (if you chose this route). This will probably depend on how you choose to build your site, what’s convenient.  I use a build server that builds all of my blogs as static sites, and then adds them to my gh-pages branch and pushes to git after I make any change to any of them, that’s beyond the scope of this article, but it’s something to think about.
-GitHub pages seem perfect for small businesses, personal blogs, or software docs. More complete documentation can be found on GitHub. These are just the settings I generally go with, as I think they’re great defaults.
 ]]></content:encoded>
     </item>
     <item>
@@ -156,7 +158,7 @@ Instead, here&amp;rsquo;s a quick bit of jQuery, which is already available in t
       <content:encoded><![CDATA[I was in the process of moving my DNS from MediaTemple to Route53 and was having trouble making sure I&amp;rsquo;d moved all of the entries. I decided I&amp;rsquo;d just export a zone file to do a comparison in a text editor.
 Surprise! You can&amp;rsquo;t.
 Instead, here&amp;rsquo;s a quick bit of jQuery, which is already available in the MediaTemple control panel. Just navigate to the zone file editor, open your console, and use this:
-$.each($(&amp;#34;.dns_record&amp;#34;), function(i, el) { name = $(el).find(&amp;#34;.u-nowrap input&amp;#34;).val() type = $(el).find(&amp;#34;select.dropdown-select&amp;#34;).val() data = $(el).find(&amp;#34;td input.textInput--full[name^=&amp;#39;data&amp;#39;]&amp;#34;).val() console.log(name &#43; &amp;#34; &amp;#34; &#43; type &#43; &amp;#34; &amp;#34; &#43; data) })  From here, it&amp;rsquo;s pretty easy to clean up and convert. Good luck!
+$.each($(&amp;#34;.dns_record&amp;#34;), function(i, el) { name = $(el) .find(&amp;#34;.u-nowrap input&amp;#34;) .val(); type = $(el) .find(&amp;#34;select.dropdown-select&amp;#34;) .val(); data = $(el) .find(&amp;#34;td input.textInput--full[name^=&amp;#39;data&amp;#39;]&amp;#34;) .val(); console.log(name &#43; &amp;#34; &amp;#34; &#43; type &#43; &amp;#34; &amp;#34; &#43; data); });  From here, it&amp;rsquo;s pretty easy to clean up and convert. Good luck!
 ]]></content:encoded>
     </item>
     <item>

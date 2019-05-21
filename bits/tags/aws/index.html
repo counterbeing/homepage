@@ -231,8 +231,8 @@ a[itemprop="url"]:hover {
     <blockquote itemprop="headline">Terraform can quickly build the DNS records for your github pages site. It&#39;s declarative, and easy to keep up to date, and replicate.</blockquote>
   
   <div itemprop="description">
-    This will result in a certificate error if you don't take further steps.  It&rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&rsquo;re using amazon for AWS, here&rsquo;s a basic terraform configuration that should do everything you want in terms of DNS.
-After doing this you&rsquo;ll still need to specify the CNAME on your target project, and set the name servers on the domain.
+    This will result in a certificate error if you don't take further steps.  It&rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&rsquo;re using amazon for AWS, here&rsquo;s a basic terraform configuration that should do everything you want in terms of DNS. This assumes you want to point everything at the apex domain rather than the www.
+After doing this you&rsquo;ll still need to specify the CNAME file on your target project, and set the name servers on the domain.
   </div>
   
     <nav class="readmore"><p>

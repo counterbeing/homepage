@@ -9,7 +9,7 @@
     <language>en-us</language>
     <managingEditor> (Cory Logan)</managingEditor>
     <webMaster> (Cory Logan)</webMaster>
-    <lastBuildDate>Tue, 21 May 2019 04:03:14 UT</lastBuildDate>
+    <lastBuildDate>Tue, 21 May 2019 05:35:47 UT</lastBuildDate>
     <atom:link href="https://www.corylogan.com/bits/categories/infrastructure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use Terraform to Set Up Github Pages With Route 53</title>
@@ -17,11 +17,11 @@
       <pubDate>Fri, 17 May 2019 19:31:13 UT</pubDate>
       <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/bits/use-terraform-to-set-up-github-pages-with-route-53/</guid>
-      <description>This will result in a certificate error if you don&#39;t take further steps.  It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS.
-After doing this you&amp;rsquo;ll still need to specify the CNAME on your target project, and set the name servers on the domain.</description>
+      <description>This will result in a certificate error if you don&#39;t take further steps.  It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS. This assumes you want to point everything at the apex domain rather than the www.
+After doing this you&amp;rsquo;ll still need to specify the CNAME file on your target project, and set the name servers on the domain.</description>
       <category domain="https://www.corylogan.com/categories/infrastructure">Infrastructure</category>
-      <content:encoded><![CDATA[ This will result in a certificate error if you don&#39;t take further steps.  It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS.
-After doing this you&amp;rsquo;ll still need to specify the CNAME on your target project, and set the name servers on the domain. This requires that you&amp;rsquo;re using terraform to manage all DNS for this domain.
+      <content:encoded><![CDATA[ This will result in a certificate error if you don&#39;t take further steps.  It&amp;rsquo;s nice to be able to spin up everything you need for github pages all in one go. If you&amp;rsquo;re using amazon for AWS, here&amp;rsquo;s a basic terraform configuration that should do everything you want in terms of DNS. This assumes you want to point everything at the apex domain rather than the www.
+After doing this you&amp;rsquo;ll still need to specify the CNAME file on your target project, and set the name servers on the domain. This requires that you&amp;rsquo;re using terraform to manage all DNS for this domain.
 This will direct any traffic from any of https://example.com, http://example.com, and http://www.example.com to the same github pages location. The only problem with this is when it comes to directing https://www.example.com to your github pages site. You&amp;rsquo;ll need to do a server side redirect if you want that part to work.
 resource &amp;#34;aws_route53_zone&amp;#34; &amp;#34;primary&amp;#34; { name = &amp;#34;example.com&amp;#34; } resource &amp;#34;aws_route53_record&amp;#34; &amp;#34;main&amp;#34; { zone_id = &amp;#34;${aws_route53_zone.primary.zone_id}&amp;#34; name = &amp;#34;example.com&amp;#34; type = &amp;#34;A&amp;#34; ttl = &amp;#34;300&amp;#34; records = [&amp;#34;185.199.108.153&amp;#34;, &amp;#34;185.199.109.153&amp;#34;, &amp;#34;185.199.110.153&amp;#34;, &amp;#34;185.199.111.153&amp;#34;] } resource &amp;#34;aws_route53_record&amp;#34; &amp;#34;www&amp;#34; { zone_id = &amp;#34;${aws_route53_zone.primary.zone_id}&amp;#34; name = &amp;#34;www.example.com&amp;#34; type = &amp;#34;CNAME&amp;#34; ttl = &amp;#34;300&amp;#34; records = [&amp;#34;yourusername.github.io&amp;#34;] } output &amp;#34;name_servers&amp;#34; { value = &amp;#34;${aws_route53_zone.primary.name_servers}&amp;#34; } ]]></content:encoded>
     </item>

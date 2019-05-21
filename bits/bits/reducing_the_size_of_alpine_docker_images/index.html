@@ -252,9 +252,11 @@ This is a dirty little one-liner that yields a sorted list of all of the package
 
 <h2 id="why-the-heck-is-my-alpine-docker-image-so-huge">Why the heck is my alpine docker image so huge?</h2>
 
-<p>That&rsquo;s a tough question to answer, especially when you have no idea what&rsquo;s taking up all of the space.</p>
+<p>That&rsquo;s a tough question to answer, especially when you have no idea what&rsquo;s
+taking up all of the space.</p>
 
-<p>This is a dirty little one-liner that yields a sorted list of all of the packages on your alpine image by size. It does this by</p>
+<p>This is a dirty little one-liner that yields a sorted list of all of the
+packages on your alpine image by size. It does this by</p>
 
 <ul>
 <li>Getting the complete list from <code>apk info</code></li>
@@ -264,7 +266,8 @@ This is a dirty little one-liner that yields a sorted list of all of the package
 <li>Sorting by size</li>
 </ul>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">apk info <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> a<span class="p">;</span> <span class="k">do</span> apk info -s <span class="nv">$a</span><span class="p">;</span> <span class="k">done</span> <span class="p">|</span> awk NF <span class="p">|</span> sed <span class="s1">&#39;Ns/\n/ /&#39;</span> <span class="p">|</span> sort -k4 -n</code></pre></div>
-<p>It may be ugly, but now I can make an informed decision about wether or not there are binaries that can be axed.</p>
+<p>It may be ugly, but now I can make an informed decision about wether or not
+there are binaries that can be axed.</p>
 
     </div>
     <footer>

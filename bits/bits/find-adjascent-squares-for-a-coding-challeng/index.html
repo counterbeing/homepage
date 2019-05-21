@@ -276,11 +276,14 @@ Find Contiguous Squares Imagine you have a grid of n width and height, and it&rs
 
 
 <p>I spotted a challenge that was something like this online, and I adapted it.
-There was something that I wanted to understand a little bit better. The interesting thing here is about the data structures used, to increase efficiency.</p>
+There was something that I wanted to understand a little bit better. The
+interesting thing here is about the data structures used, to increase
+efficiency.</p>
 
 <h3 id="find-contiguous-squares">Find Contiguous Squares</h3>
 
-<p>Imagine you have a grid of <code>n</code> width and height, and it&rsquo;s populated with random numbers. It could be represented something like this:</p>
+<p>Imagine you have a grid of <code>n</code> width and height, and it&rsquo;s populated with random
+numbers. It could be represented something like this:</p>
 <div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">[</span>
   <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
   <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
@@ -354,13 +357,25 @@ There was something that I wanted to understand a little bit better. The interes
 <span class="k">end</span></code></pre></div>
 <h3 id="the-twist">The Twist</h3>
 
-<p>Here&rsquo;s the thing that surprised me a little bit, and took some learning. I&rsquo;ve always thought about arrays as being simpler data structures than hashes (or objects or libraries depending on your language), and so in my mind I had just taken for granted that using them was more efficient for many things. But this simple task very quickly demonstrats that this is not the case.</p>
+<p>Here&rsquo;s the thing that surprised me a little bit, and took some learning. I&rsquo;ve
+always thought about arrays as being simpler data structures than hashes (or
+objects or libraries depending on your language), and so in my mind I had just
+taken for granted that using them was more efficient for many things. But this
+simple task very quickly demonstrats that this is not the case.</p>
 
-<p>The key here is that in the <code>@assessed</code> instance variable, I&rsquo;ve used a hash rather than an Array. It&rsquo;s easy to use either in this case. It feels weird to be assigning arbitrary <code>nil</code> values that aren&rsquo;t even used for anything. But the thing is that the look up time on this ever growing variable is so much faster when using a hash, and it doesn&rsquo;t slow down the way it does with an array. Using an array for the same thing means that you have to iterate over it repeatedly, leading to a huge slow down as you add more data.</p>
+<p>The key here is that in the <code>@assessed</code> instance variable, I&rsquo;ve used a hash
+rather than an Array. It&rsquo;s easy to use either in this case. It feels weird to be
+assigning arbitrary <code>nil</code> values that aren&rsquo;t even used for anything. But the
+thing is that the look up time on this ever growing variable is so much faster
+when using a hash, and it doesn&rsquo;t slow down the way it does with an array. Using
+an array for the same thing means that you have to iterate over it repeatedly,
+leading to a huge slow down as you add more data.</p>
 
 <h3 id="something-else-to-play-with">Something Else to Play with</h3>
 
-<p>Here&rsquo;s a quick script to generate a grid of n dimensions to play with. It&rsquo;s a quick way to get started with your own implementation, or to play with performance.</p>
+<p>Here&rsquo;s a quick script to generate a grid of n dimensions to play with. It&rsquo;s a
+quick way to get started with your own implementation, or to play with
+performance.</p>
 <div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;json&#39;</span>
 
 <span class="k">def</span> <span class="nf">gen_grid</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>

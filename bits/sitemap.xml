@@ -4,13 +4,36 @@
   
   <url>
     <loc>https://www.corylogan.com/bits/bits/</loc>
-    <lastmod>2019-05-21T00:35:16-04:00</lastmod>
+    <lastmod>2019-05-21T16:39:32-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.corylogan.com/bits/</loc>
-    <lastmod>2019-05-21T00:35:16-04:00</lastmod>
+    <lastmod>2019-05-21T16:39:32-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.corylogan.com/bits/bits/comparing-performance-of-ruby-and-golang-with-a-benchmark/</loc>
+    <lastmod>2019-05-21T16:39:32-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.corylogan.com/bits/tags/</loc>
+    <lastmod>2019-05-21T16:39:32-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.corylogan.com/bits/tags/golang/</loc>
+    <lastmod>2019-05-21T16:39:32-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.corylogan.com/bits/tags/ruby/</loc>
+    <lastmod>2019-05-21T16:39:32-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -20,25 +43,13 @@
   </url>
   
   <url>
-    <loc>https://www.corylogan.com/bits/tags/</loc>
-    <lastmod>2019-05-21T00:35:16-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.corylogan.com/bits/tags/puzzles/</loc>
     <lastmod>2019-05-21T00:35:16-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.corylogan.com/bits/tags/ruby/</loc>
-    <lastmod>2019-05-21T00:35:16-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.corylogan.com/bits/bits/find-adjascent-squares-for-a-coding-challeng/</loc>
+    <loc>https://www.corylogan.com/bits/bits/find-adjascent-squares-for-a-coding-challenge/</loc>
     <lastmod>2019-05-20T01:11:59-04:00</lastmod>
   </url>
   

@@ -22,7 +22,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.corylogan.com/bits/" />
 
-<meta property="og:updated_time" content="2019-05-21T00:35:16-04:00"/>
+<meta property="og:updated_time" content="2019-05-21T16:39:32-04:00"/>
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bits and Blocks"/>
@@ -210,6 +210,44 @@ a[itemprop="url"]:hover {
   <header>
     <h1>Bits and Blocks</h1>
   </header>
+  
+    <article itemprop="citation" itemscope itemtype="https://schema.org/CreativeWork">
+  <header>
+    <h2 itemprop="name">
+      <a href="/bits/bits/reducing_the_size_of_alpine_docker_images/" rel="bookmark">Reducing The Size Of Alpine Docker Images</a>
+    </h2>
+    
+      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+  <circle cx="16" cy="16" r="14" />
+  <path d="M16 8 L16 16 20 20" />
+</svg>
+<span>1 minute read</span>
+<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
+</svg>
+
+  Published: <time datetime="2016-12-26T22:38:02-08:00">26 Dec, 2016</time>
+
+</p>
+    
+  </header>
+  
+  <div itemprop="description">
+    Why the heck is my alpine docker image so huge? That&rsquo;s a tough question to answer, especially when you have no idea what&rsquo;s taking up all of the space.
+This is a dirty little one-liner that yields a sorted list of all of the packages on your alpine image by size. It does this by
+ Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size  apk info | while read a; do apk info -s $a; done | awk NF | sed &#39;Ns/\n/ /&#39; | sort -k4 -n It may be ugly, but now I can make an informed decision about wether or not there are binaries that can be axed.
+  </div>
+  
+    <nav class="readmore"><p>
+      <a itemprop="url" href="/bits/bits/reducing_the_size_of_alpine_docker_images/" rel="bookmark">Read More&nbsp;&raquo;</a>
+    </p></nav>
+  
+  <meta itemprop="inLanguage" content="en-us">
+  <meta itemprop="datePublished" content="2016-12-26T22:38:02-08:00">
+  <meta itemprop="dateModified" content="2016-12-26T22:38:02-08:00">
+  
+</article>
+
   
     <article itemprop="citation" itemscope itemtype="https://schema.org/CreativeWork">
   <header>

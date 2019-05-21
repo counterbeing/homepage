@@ -5,11 +5,11 @@
     <link>https://www.corylogan.com/bits/tags/github-pages/</link>
     <description>Recent content in github pages on Bits and Blocks</description>
     <ttl>1440</ttl>
-    <generator>Hugo 0.55.5</generator>
+    <generator>Hugo 0.55.6</generator>
     <language>en-us</language>
     <managingEditor> (Cory Logan)</managingEditor>
     <webMaster> (Cory Logan)</webMaster>
-    <lastBuildDate>Tue, 21 May 2019 17:58:44 UT</lastBuildDate>
+    <lastBuildDate>Tue, 21 May 2019 20:53:22 UT</lastBuildDate>
     <atom:link href="https://www.corylogan.com/bits/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use Terraform to Set Up Github Pages With Route 53</title>

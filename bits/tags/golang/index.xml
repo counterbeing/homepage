@@ -1,0 +1,29 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <docs>https://blogs.law.harvard.edu/tech/rss</docs>
+    <title>golang on Bits and Blocks</title>
+    <link>https://www.corylogan.com/bits/tags/golang/</link>
+    <description>Recent content in golang on Bits and Blocks</description>
+    <ttl>1440</ttl>
+    <generator>Hugo 0.55.6</generator>
+    <language>en-us</language>
+    <managingEditor> (Cory Logan)</managingEditor>
+    <webMaster> (Cory Logan)</webMaster>
+    <lastBuildDate>Tue, 21 May 2019 20:53:22 UT</lastBuildDate>
+    <atom:link href="https://www.corylogan.com/bits/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comparing Performance of Ruby and Golang With a Benchmark</title>
+      <link>https://www.corylogan.com/bits/bits/comparing-performance-of-ruby-and-golang-with-a-benchmark/</link>
+      <pubDate>Tue, 21 May 2019 20:39:32 UT</pubDate>
+      <dc:creator>Cory Logan</dc:creator>
+      <guid>https://www.corylogan.com/bits/bits/comparing-performance-of-ruby-and-golang-with-a-benchmark/</guid>
+      <description>I recently solved a coding challenge using Ruby. I&amp;rsquo;ve been curious for some time about coding using Golang, and so I decided to port it over, and see what the performance difference was.
+I made a small adaption for a better comparison. I&amp;rsquo;m now using a grid that has 100_000_000 squares on it. This is definitely a bit of work.
+The code package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;os&amp;#34; ) var grid [][]int var gridDim [2]int var a = make(map[[2]int]bool) func main() { jsonFile, err := ioutil.</description>
+      <content:encoded><![CDATA[ I recently solved a coding challenge using Ruby. I&amp;rsquo;ve been curious for some time about coding using Golang, and so I decided to port it over, and see what the performance difference was.
+I made a small adaption for a better comparison. I&amp;rsquo;m now using a grid that has 100_000_000 squares on it. This is definitely a bit of work.
+The code package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;os&amp;#34; ) var grid [][]int var gridDim [2]int var a = make(map[[2]int]bool) func main() { jsonFile, err := ioutil.ReadFile(os.Args[1]) if err != nil { fmt.Println(err) } json.Unmarshal([]byte(jsonFile), &amp;amp;grid) gridDim[0] = len(grid) gridDim[1] = len(grid[0]) greatest := 0 for rowIndex, row := range grid { for colIndex := range row { currentKey := [2]int{rowIndex, colIndex} _, hasKey := a[currentKey] if hasKey { continue } a[currentKey] = true total := findCluster(currentKey, true) if total &amp;gt; greatest { greatest = total } } } fmt.Println(greatest) } func getValFromGrid(coords [2]int) int { return grid[coords[0]][coords[1]] } func findCluster(coords [2]int, first bool) int { currentValue := getValFromGrid(coords) adjascentSquares := [4][2]int{ {coords[0] - 1, coords[1]}, {coords[0], coords[1] - 1}, {coords[0] &#43; 1, coords[1]}, {coords[0], coords[1] &#43; 1}, } total := 1 for _, v := range adjascentSquares { _, hasKey := a[v] if hasKey { continue } if withinGrid(v) &amp;amp;&amp;amp; hasSameValue(currentValue, v) { a[v] = true total = total &#43; findCluster(v, false) } } return total } func hasSameValue(val int, coords [2]int) bool { return getValFromGrid(coords) == val } func withinGrid(coords [2]int) bool { return coords[0] &amp;gt;= 0 &amp;amp;&amp;amp; coords[0] &amp;lt; gridDim[0] &amp;amp;&amp;amp; coords[1] &amp;gt;= 0 &amp;amp;&amp;amp; coords[1] &amp;lt; gridDim[1] } The Benchamrk ruby run.rb gen_grid_10000.json 933.50s user 26.53s system 95% cpu 16:45.07 total ./grid gen_grid_10000.json 97.89s user 4.45s system 98% cpu 1:43.81 total  As you can see from the above. Golang did the job at a remarkable 10x the rate of the Ruby implementation. The tradeoff is just that it&amp;rsquo;s more annoying to write. I&amp;rsquo;ll probably stick to ruby for most things, but golang is clearly worth consideration when there&amp;rsquo;s a problem that requires a performance boost!
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

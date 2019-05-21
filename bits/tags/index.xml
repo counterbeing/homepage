@@ -9,8 +9,16 @@
     <language>en-us</language>
     <managingEditor> (Cory Logan)</managingEditor>
     <webMaster> (Cory Logan)</webMaster>
-    <lastBuildDate>Mon, 20 May 2019 05:29:39 UT</lastBuildDate>
+    <lastBuildDate>Tue, 21 May 2019 04:03:14 UT</lastBuildDate>
     <atom:link href="https://www.corylogan.com/bits/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ruby</title>
+      <link>https://www.corylogan.com/bits/tags/ruby/</link>
+      <dc:creator>Cory Logan</dc:creator>
+      <guid>https://www.corylogan.com/bits/tags/ruby/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
     <item>
       <title>aws</title>
       <link>https://www.corylogan.com/bits/tags/aws/</link>
@@ -88,14 +96,6 @@
       <link>https://www.corylogan.com/bits/tags/vim/</link>
       <dc:creator>Cory Logan</dc:creator>
       <guid>https://www.corylogan.com/bits/tags/vim/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>ruby</title>
-      <link>https://www.corylogan.com/bits/tags/ruby/</link>
-      <dc:creator>Cory Logan</dc:creator>
-      <guid>https://www.corylogan.com/bits/tags/ruby/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

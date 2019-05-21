@@ -22,19 +22,19 @@ steps:
   - name: Clone Blogs
     image: indiehosters/git
     commands:
-      - git clone https://github.com/counterbeing/europe-trip-blog.git
+      # - git clone https://github.com/counterbeing/europe-trip-blog.git
       - git clone https://github.com/counterbeing/south-america-blog.git
       - cd south-america-blog && git checkout rendered
 
-  - name: Build Europe Blog
-    image: node:8.1.2
-    commands:
-      - cd europe-trip-blog
-      # - npm install -g ember-cli@2.14.1 --silent
-      # - npm install --silent
-      - yarn global add ember-cli@2.14.1 --silent
-      - yarn --silent
-      - ember build --environment="production"
+  # - name: Build Europe Blog
+  #   image: node:8.1.2
+  #   commands:
+  #     - cd europe-trip-blog
+  #     # - npm install -g ember-cli@2.14.1 --silent
+  #     # - npm install --silent
+  #     - yarn global add ember-cli@2.14.1 --silent
+  #     - yarn --silent
+  #     - ember build --environment="production"
 
   - name: Copy Assets to Folder
     image: alpine

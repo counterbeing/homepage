@@ -19,10 +19,11 @@ This will result in a certificate error if you don't take further steps.
 
 It's nice to be able to spin up everything you need for github pages all in one
 go. If you're using amazon for AWS, here's a basic terraform configuration that
-should do everything you want in terms of DNS.
+should do everything you want in terms of DNS. This assumes you want to point
+everything at the apex domain rather than the www.
 
-After doing this you'll still need to specify the CNAME on your target project,
-and set the name servers on the domain. This requires that you're using
+After doing this you'll still need to specify the CNAME file on your target
+project, and set the name servers on the domain. This requires that you're using
 terraform to manage all DNS for this domain.
 
 This will direct any traffic from any of `https://example.com`,

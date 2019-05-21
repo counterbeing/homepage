@@ -9,7 +9,10 @@ type = "post"
 
 ### Saving time and money with GitHub Pages
 
-I know that [GitHub Pages](https://pages.github.com/) are nothing new, but I only recently realized how versatile they are. You can host any static content you want there for free, and I’ve recently started using it for my blogs. Major benefits of using GitHub Pages as I see it:
+I know that [GitHub Pages](https://pages.github.com/) are nothing new, but I
+only recently realized how versatile they are. You can host any static content
+you want there for free, and I’ve recently started using it for my blogs. Major
+benefits of using GitHub Pages as I see it:
 
 - Free hosting for simple pages
 - Deployment is as easy as a git push
@@ -28,10 +31,15 @@ You just have to set up the DNS.
 - 185.199.110.153
 - 185.199.111.153
 
-3. Once your DNS has propagated, visit the settings on your repo, add either your www or apex domain as your custom domain:
+3. Once your DNS has propagated, visit the settings on your repo, add either
+   your www or apex domain as your custom domain:
    {{< figure src="images/github-pages-control-panel.png" caption="GitHub Pages Control Panel" >}}
-4. Once GitHub has gotten a cert from LetsEncrypt, the option to enforce HTTPS will be available to you.
-5. Now all you have to do is set up an `index.html` file on the `gh-pages` branch (if you selected that option), or on the master in the docs folder (if you chose this route). This will probably depend on how you choose to build your site, what’s convenient.
+4. Once GitHub has gotten a cert from LetsEncrypt, the option to enforce HTTPS
+   will be available to you.
+5. Now all you have to do is set up an `index.html` file on the `gh-pages`
+   branch (if you selected that option), or on the master in the docs folder (if
+   you chose this route). This will probably depend on how you choose to build your
+   site, what’s convenient.
 
 I use a build server that builds all of my blogs as static sites, and then adds
 them to my `gh-pages` branch and pushes to git after I make any change to any of

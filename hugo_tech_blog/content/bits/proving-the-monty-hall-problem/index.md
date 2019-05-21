@@ -92,3 +92,7 @@ This returns as anticipated:
 By switching you won 67.89
 By staying you won 34.11
 ```
+
+### A more in depth explanation
+
+{{< youtube 4Lb-6rxZxx0 >}}

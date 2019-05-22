@@ -16,7 +16,7 @@ draft: false
 
 When I first heard of the Monty Hall problem, I read about it in Sam Harris'
 [The Moral Landscape](https://samharris.org/books/the-moral-landscape/), and it
-took me a few minutes to really wrap my brain about it. Talking about it with a
+took me a few minutes to really wrap my brain around it. Talking about it with a
 few people since, I struggle to convince them that this really works this way. I
 think part of it is that I still don't quite believe it. Which is why I'm going to
 write a program that can run the problem over and over to show wether or not the
@@ -47,8 +47,8 @@ You should always switch.
 
 ### Explanation of why this works
 
-When you first guess at a door your odds are exactly `1/3`. So your odds of
-picking wrong are `2/3`. Once one door is eliminated, it's still true that your
+When you first guess at a door your odds are exactly 1/3. So your odds of
+picking wrong are 2/3. Once one door is eliminated, it's still true that your
 probably picked incorrectly, thus, you should switch doors.
 
 ### Code to Prove It

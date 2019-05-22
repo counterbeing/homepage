@@ -11,14 +11,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proving the Monty Hall Problem | Bits and Blocks</title>
-    <meta name="description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I still don&rsquo;t quite believe it.">
+    <meta name="description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain around it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I still don&rsquo;t quite believe it.">
     <meta name="keywords" content="ruby, puzzles">
     
     
     
     
     <meta property="og:title" content="Proving the Monty Hall Problem" />
-<meta property="og:description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I still don&rsquo;t quite believe it." />
+<meta property="og:description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain around it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I still don&rsquo;t quite believe it." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.corylogan.com/bits/bits/proving-the-monty-hall-problem/" />
 <meta property="article:published_time" content="2019-05-21T00:35:16-04:00"/>
@@ -26,7 +26,7 @@
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Proving the Monty Hall Problem"/>
-<meta name="twitter:description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I still don&rsquo;t quite believe it."/>
+<meta name="twitter:description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain around it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I still don&rsquo;t quite believe it."/>
 
     
 
@@ -207,7 +207,7 @@ a[itemprop="url"]:hover {
   <article itemscope itemtype="https://schema.org/BlogPosting">
     
 <meta itemprop="name" content="Proving the Monty Hall Problem">
-<meta itemprop="description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain about it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I still don&rsquo;t quite believe it.">
+<meta itemprop="description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain around it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I still don&rsquo;t quite believe it.">
 
 
 <meta itemprop="datePublished" content="2019-05-21T00:35:16-04:00" />
@@ -273,7 +273,7 @@ a[itemprop="url"]:hover {
 
 <p>When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo;
 <a href="https://samharris.org/books/the-moral-landscape/">The Moral Landscape</a>, and it
-took me a few minutes to really wrap my brain about it. Talking about it with a
+took me a few minutes to really wrap my brain around it. Talking about it with a
 few people since, I struggle to convince them that this really works this way. I
 think part of it is that I still don&rsquo;t quite believe it. Which is why I&rsquo;m going to
 write a program that can run the problem over and over to show wether or not the
@@ -312,8 +312,8 @@ fact, you should always switch. If you don&rsquo;t switch, your odds of winning 
 
 <h3 id="explanation-of-why-this-works">Explanation of why this works</h3>
 
-<p>When you first guess at a door your odds are exactly <code>1/3</code>. So your odds of
-picking wrong are <code>2/3</code>. Once one door is eliminated, it&rsquo;s still true that your
+<p>When you first guess at a door your odds are exactly <sup>1</sup>&frasl;<sub>3</sub>. So your odds of
+picking wrong are <sup>2</sup>&frasl;<sub>3</sub>. Once one door is eliminated, it&rsquo;s still true that your
 probably picked incorrectly, thus, you should switch doors.</p>
 
 <h3 id="code-to-prove-it">Code to Prove It</h3>

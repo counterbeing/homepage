@@ -1,200 +1,72 @@
-@import 'variables';
+//colors
+@import "_variables";
 
-// Variables
-$bg-body: #f9f9f9;
-$blue: #2b2e48;
-$primary-color: $orangeish;
-$secondary-color: $blue;
-$base-font-color: #726f77;
-$timeline-color: $primary-color;
+$image-size: 300px;
+$image-radius: $image-size/2;
 
-// Mixins and Placeholders
-%clearfix {
-  &::after,
-  &::before {
-    clear: both;
-    content: '';
-    display: block;
-    width: 100%;
-  }
-}
+$icon-size: 80px;
+$icon-radius: $image-size/2;
 
-@mixin prefix($prop, $val) {
-  @each $prefix in '-webkit-', '-moz-', '-ms-', '' {
-    #{$prefix}#{$prop}: $val;
-  }
-}
-
-*, *:before, *:after {
+.container {
   box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
 }
 
-img {max-width: 100%;}
+.project-image {
+  display: block;
+  height: $image-size;
+  width: $image-size;
+  line-height: $image-size;
 
-a {
-  text-decoration: none;
+  -moz-border-radius: $image-radius; /* or 50% */
+  border-radius: $image-radius; /* or 50% */
+
+  background-color: white;
+  text-align: center;
+  img {
+    padding: 50px;
+  }
 }
 
-
-
-// Timeline
 #timeline {
-  width: 100%;
-  margin: 30px auto;
   position: relative;
-  padding: 0 10px;
-  @include prefix(transition, all .4s ease);
+}
 
-  &::before {
-    background: $timeline-color;
-    content: '';
+.timeline-icon {
+  margin-top: 50px;
+  z-index: 100;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+
+  display: block;
+  height: $icon-size;
+  width: $icon-size;
+  line-height: $icon-size;
+
+  -moz-border-radius: $icon-radius; /* or 50% */
+  border-radius: $icon-radius; /* or 50% */
+
+  background-color: white;
+  text-align: center;
+}
+.timeline-item {
+  &:before {
+    content: "";
+    width: 5px;
     height: 100%;
-    left: 50%;
+    border-radius: 20px;
+    margin: 0 auto;
+    background: $grey;
     position: absolute;
     top: 0;
-    width: 3px;
-  }
-
-  &::after {
-    content: '';
-    clear: both;
-    display: table;
-    width: 100%;
-  }
-
-  .timeline-item {
-    @extend %clearfix;
-    margin-bottom: 7rem;
-    position: relative;
-
-    .timeline-icon {
-      @include prefix(border-radius, 50%);
-      background: $timeline-color;
-      color: $white;
-      height: 50px;
-      left: 50%;
-      margin-left: -23px;
-      overflow: hidden;
-      position: absolute;
-      top: 0;
-      width: 50px;
-
-      i {
-        position: relative;
-        top: 9px;
-        left: 9px;
-      }
-    }
-
-    .timeline-opposite {
-      margin-top: -2rem;
-      width: 45%;
-      float: right;
-      img { display: inline-block; }
-
-      &.flipped { 
-        float: left;
-      }
-    }
-
-    .timeline-content {
-      // @include prefix(border-radius, 5px);
-      // @include prefix(box-shadow, 0 3px 0 rgba(0, 0, 0, .1));
-      @include prefix(transition, all .3s ease);
-      background: $white;
-      padding: 20px;
-      width: 45%;
-      display: inline-block;
-
-      h2 {
-        // @include prefix(border-radius, 3px 3px 0 0);
-        background: $timeline-color;
-        color: $white;
-        font-weight: 300;
-        margin: -20px -20px 0 -20px;
-        padding: 15px;
-      }
-
-      // Arrow
-      &:before {
-        border-bottom: 7px solid transparent; 
-        border-left:7px solid $timeline-color; 
-        border-top: 7px solid transparent;
-        content: '';
-        height: 0; 
-        left: 45%;
-        position: absolute;
-        top: 20px;
-        width: 0; 
-      }
-
-      &.flipped {
-        float: right;
-
-        &:before {
-          border-left: 0;
-          border-right: 7px solid $timeline-color;
-          content: '';
-          left: inherit;
-          right: 45%;
-        }
-      }
-    }
+    left: 0;
+    right: 0;
   }
 }
 
-// Buttons
-// .btn {
-//   padding: 5px 15px;
-//   text-decoration: none;
-//   background: transparent;
-//   border: 2px solid lighten($primary-color, 10%);
-//   color: lighten($primary-color, 10%);
-//   display: inline-block;
-//   position: relative;
-//   text-transform: uppercase;
-//   font-size: 12px;
-//   @include prefix(border-radius, 5px);
-//   @include prefix(transition, background .3s ease);
-//   @include prefix(box-shadow, 2px 2px 0 lighten($primary-color, 10%));
-//
-//   &:hover {
-//     box-shadow: none ;
-//     top: 2px;
-//     left: 2px;
-//     @include prefix(box-shadow, 2px 2px 0 transparent);
-//   }
-// }
-
-@media screen and (max-width: 768px) {
-  #timeline {
-    margin: 30px;
-    padding: 0;
-    width: 90%;
-
-    &::before {
-      left: 0;
-    }
-
-    .timeline-item {
-      .timeline-content {
-        float: right;
-        width: 90%;
-
-        &::before,
-        &.flipped::before {
-          border-left: 0;
-          border-right: 7px solid $timeline-color;
-          left: 10%;
-          margin-left: -6px;
-        }
-      }
-
-      .timeline-icon {
-        left: 0;
-      }
-    }
-  }
+.timeline-content {
+  position: absolute;
+  left: 50%;
+  padding: 40px;
 }

@@ -1,7 +1,7 @@
 ---
-title: Professional - Hard work, good ideas, and lot's of energy 
+title: Professional - Hard work, good ideas, and lot's of energy
 header: Profession and Passion
-subtitle: I love building quality tools for the web, and automating processes.  
+subtitle: I love building quality tools for the web, and automating processes.
 image: mobile-office
 image_title: my mobile office
 ---
@@ -22,34 +22,34 @@ image_title: my mobile office
             <div class="timeline-content <%= 'flipped' if index.even? %>">
               <h2><%= project.title %></h2>
               <p>
-                <% if project.description %> 
-                  <%= render_markdown(project.description) %>   
-                <% end %> 
+                <% if project.description %>
+                  <%= render_markdown(project.description) %>
+                <% end %>
               </p>
             </div>
             <div class="timeline-opposite <%= 'flipped' if index.even? %>">
               <h3><%= project.season %> of <%= project.year %></h3>
               <h4><%= project.client %></h4>
 
-                <% if project.image %> 
-                  <img class="event-image" src="/images/portfolio/<%= project.image %> ">
-                <% end %> 
+              <% if project.image %>
+                <div class="project-image" >
+                  <img src="/images/portfolio/<%= project.image %> ">
+                </div>
+              <% end %>
 
-                <% if project.technologies %> 
-                  <div class="tokens">
-                    <% project.technologies.each do |technology| %> 
-                      <span class="token"><%= technology %> </span>
-                    <% end %> 
-                  </div>
-                <% end %> 
-
+              <% if project.technologies %>
+                <div class="tokens">
+                  <% project.technologies.each do |technology| %>
+                    <span class="token"><%= technology %> </span>
+                  <% end %>
+                </div>
+              <% end %>
             </div>
           </div>
-        <% end  %>  
+        <% end  %>
 
       </div>
-    </div> 
+    </div>
 
   </div>
 </div>
-

@@ -1,5 +1,52 @@
-- 
-  title: Able Health
+- title: LiteSwarm
+  client: Self
+  year: 2019
+  season: Summer
+  image: lightswarm.png
+  url: https://github.com/counterbeing/liteswarm
+  kind: project
+  technologies:
+    - Arduino
+    - C++
+    - FastLED
+  description: >
+    This is a project for synchronizing light displays across an improvised
+    wireless network. They were used mostly in scarves and on bicycles, but
+    [@100ideas](https://github.com/100ideas) and I are trying to design an easy
+    to implement DIY project that will allow individuals to construct lights
+    that will communicate with each other.
+
+- title: Mokker
+  client: Self
+  year: 2018
+  season: Winter
+  image: mokker.png
+  kind: project
+  technologies:
+    - Node.js
+    - Express.js
+    - Rails
+    - Docker
+    - Kontena
+    - OpenCV
+    - Puppeteer
+    - Electron
+  description: >
+    This was a startup tool for advertisers to preview ads on various webpages.
+    Many advertisers have to provide some sort of mockup of how ads appear on
+    page. The problem this solved was automating the collection of up to date
+    screenshots of ads on page.
+
+
+    This was a fairly complex operation with a microservice architecture and a
+    queueing system. It consistem of:
+
+
+    - A thing
+
+    - yep
+
+- title: Able Health
   client: Able Health
   year: 2016
   season: summer
@@ -7,16 +54,33 @@
   kind: job
   technologies:
     - Rails
+    - ActiveRecord
     - Terraform
     - AWS
+    - Docker
+    - Kubernetes
+    - Terraform
+    - Pair Programming
+    - TDD
+    - PosgreSQL
   description: >
-    In recent months I joined [Able Health](http://ablehealth.com/). I'm just beginning to help withe the development of a product that will simplify the calculations  that many provider associations need to enroll in pay-for-performance programs. I constantly feel honored to be with such a dedicated and talented group of people. 
+    I worked with a group of super smart and driven folks to help build [Able
+    Health](http://ablehealth.com/). We did a lot of pairing to work on complex
+    health measures.
 
 
-    It's a bit early to say what all of my job here will entail, but I'm excited to see where it goes.
+    We worked to provide health insights to doctors in an unheard of timeframe.
+    Rather than running reports annually to determine how much money was owed to
+    providers by insurance, we ran metrics every day to give up to date feeback
+    on how providers were doing.
 
-- 
-  title: CloudPassage
+
+    Being a small team, we were all full stack developers. I spent a lot of my
+    time working with docker and kubernetes. Probably most of my work was trying
+    to use ActiveRecord to craft efficient and complex queries that fulfilled
+    the needs of the health industry.
+
+- title: CloudPassage
   client: CloudPassage
   year: 2015
   season: summer
@@ -27,15 +91,16 @@
     - Sinatra
     - CVE
   description: >
-    I had a great experience with CloudPassage working on the core product. Eventually a lot of my job solidified around an internal tool I built to collect and version vulnerability content.
-
-    
-    I proposed and built a project that resulted in one of our first in-house microservices. The benefits included centralization, and reduced redundancy in tons of data processing.
-    
+    I had a great experience with CloudPassage working on the core product.
+    Eventually a lot of my job solidified around an internal tool I built to
+    collect and version vulnerability content.
 
 
-- 
-  title: Solicitor Mail Templates
+    I proposed and built a project that resulted in one of our first in-house
+    microservices. The benefits included centralization, and reduced redundancy
+    in tons of data processing.
+
+- title: Solicitor Mail Templates
   client: Self
   year: 2015
   season: Spring
@@ -49,20 +114,23 @@
     - SASS
     - Handlebars
   description: >
-    This was a tool that I decided I needed. I looked around at various applications that were intended for the purpose but was generally dissatisfied at the primitive templating.  
+    This was a tool that I decided I needed. I looked around at various
+    applications that were intended for the purpose but was generally
+    dissatisfied at the primitive templating.
 
 
-    As a programmer, when you do something more than once, you begin to think of ways to automate it. This project began as that, but now I'm beginning to wonder if I'll be able to turn it into a sellable product.  
+    As a programmer, when you do something more than once, you begin to think of
+    ways to automate it. This project began as that, but now I'm beginning to
+    wonder if I'll be able to turn it into a sellable product.
 
 
-    The initial goal was to create a super slick interface that revolves around real time updating of data by using Angularjs resources, as well as a live templating preview that includes all the functionality  of Handlebars. The flexibility within templates gives you conditionals and loops for writing templates that are robust, and completely reusable.
-    
+    The initial goal was to create a super slick interface that revolves around
+    real time updating of data by using Angularjs resources, as well as a live
+    templating preview that includes all the functionality  of Handlebars. The
+    flexibility within templates gives you conditionals and loops for writing
+    templates that are robust, and completely reusable.
 
-
-
-
-- 
-  title: Flirtmoji Web App
+- title: Flirtmoji Web App
   client: Self
   year: 2014
   season: Fall
@@ -76,17 +144,25 @@
     - Mobile Safari
     - HAProxy
     - Ansible
+    - Docker (later)
+    - Kontena (later)
+    - ImageMagick
   description: >
-    This was a unique challenge, and a really fun project. I'm actually a partner with this company, and we've been having a blast making cool emoji for people to text with. 
+    This was a unique challenge, and a really fun project. I'm actually a
+    partner with this company, and we've been having a blast making cool emoji
+    for people to text with.
 
 
-    This project involved some original thinking because we needed to find a way to distribute our emoji without there being a store that already existed to sell them. So, we had to create our own custom workflow to both sell, and use the product.  
+    This project involved some original thinking because we needed to find a way
+    to distribute our emoji without there being a store that already existed to
+    sell them. So, we had to create our own custom workflow to both sell, and
+    use the product.
 
 
-    I did everything from the coding for the rails app, to all of the infrastructure management, and server scaling.
+    I did everything from the coding for the rails app, to all of the
+    infrastructure management, and server scaling.
 
-- 
-  title: Collar Friend Tracking App
+- title: Collar Friend Tracking App
   client: Self
   year: 2014
   season: Spring
@@ -98,10 +174,9 @@
     - Facebook API
     - Grunt.js
   description: >
-    This was a small project that I put together over a weekend. I had met a lot of people, and become friends with them on facebook. This app helps to locate where they are from. 
+    This was a small project that I put together over a weekend. I had met a lot of people, and become friends with them on facebook. This app helps to locate where they are from.
 
-- 
-  title: Marketing Website
+- title: Marketing Website
   client: MacCentric Solutions
   url: http://www.maccentricsolutions.com
   year: 2013
@@ -116,10 +191,9 @@
     - JavaScript
     - SASS
   description: >
-    This project was a much needed update to their website. They needed a new design, and a better way of getting what they do across. 
+    This project was a much needed update to their website. They needed a new design, and a better way of getting what they do across.
 
-- 
-  title: Coding Website with CMS Integration
+- title: Coding Website with CMS Integration
   client: X Winery
   url: http://www.xwinery.com/
   year: 2013
@@ -132,26 +206,24 @@
   description: >
     This great design was done by [MM Design](http://www.mm-sf.com/ "Designers."), but then the project was passed off to me for coding, and CMS integration. I chose LocomotiveCMS, and have been very happy with it.
 
-- 
-  title: Samples Database
+- title: Samples Database
   client: Terris Barnes and Walters
   year: 2009
   season: Fall
   image: samples-database.jpg
   kind: job
   technologies:
-      - jQuery
-      - Ruby
-      - Rails
-      - Heroku
+    - jQuery
+    - Ruby
+    - Rails
+    - Heroku
   description: >
     This project started with an aging filemaker database. The goal of the project initially, was just to make the old database work. But then we took a good look at what the organization really wanted, and it was more than FileMaker would reasonably offer.
 
 
-    It wasn't long before we were working on a project that would allow the organization to collaborate on this piece of their business, as never before. They no longer needed a person to type and retyple the same thing over and over again. We used nested models to elinate loads of redundant work. 
+    It wasn't long before we were working on a project that would allow the organization to collaborate on this piece of their business, as never before. They no longer needed a person to type and retyple the same thing over and over again. We used nested models to elinate loads of redundant work.
 
-- 
-  title: DPT Watch
+- title: DPT Watch
   client: Self
   url: http://www.dptwatch.com
   year: 2009
@@ -159,8 +231,7 @@
   image: dptwatch.jpg
   kind: project
   technologies:
-      - Ruby on Rails
-      - Heroku
+    - Ruby on Rails
+    - Heroku
   description: >
-    Around the time of this project, I recieved a parking ticket at a paid meter. Instead of wasting the day trying to fight the ticket, I decided to create a system where the public could post complaints about parking tickets, along with officer badge numbers. I'm pleased to say, people are still using it and referencing it regularly. 
-
+    Around the time of this project, I recieved a parking ticket at a paid meter. Instead of wasting the day trying to fight the ticket, I decided to create a system where the public could post complaints about parking tickets, along with officer badge numbers. I'm pleased to say, people are still using it and referencing it regularly.

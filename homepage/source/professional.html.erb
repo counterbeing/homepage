@@ -8,26 +8,28 @@ image_title: my mobile office
 
 <div class="container">
   <div class='row'>
-
-    <div class="timeline-container">
       <div id="timeline">
-
         <% data.projects.each_with_index do |project, index| %>
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <% icon = 'rocket' if project.kind == 'job'  %>
-              <% icon = 'flask' if project.kind == 'project'  %>
-              <i class="fa fa-<%= icon %> fa-2x" aria-hidden="true"></i>
-            </div>
-            <div class="timeline-content <%= 'flipped' if index.even? %>">
+          <div class="timeline-item <%= 'flipped' if index.even? %>">
+
+            <div class="timeline-content">
+              <div class="">
               <h2><%= project.title %></h2>
               <p>
                 <% if project.description %>
                   <%= render_markdown(project.description) %>
                 <% end %>
               </p>
+              </div>
             </div>
-            <div class="timeline-opposite <%= 'flipped' if index.even? %>">
+
+            <div class="timeline-icon">
+              <% icon = 'rocket' if project.kind == 'job'  %>
+              <% icon = 'flask' if project.kind == 'project'  %>
+              <i class="fa fa-<%= icon %> fa-2x" aria-hidden="true"></i>
+            </div>
+
+            <div class="timeline-opposite">
               <h3><%= project.season %> of <%= project.year %></h3>
               <h4><%= project.client %></h4>
 
@@ -50,6 +52,4 @@ image_title: my mobile office
 
       </div>
     </div>
-
-  </div>
 </div>

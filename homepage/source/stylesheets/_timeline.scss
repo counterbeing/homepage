@@ -11,28 +11,32 @@ $icon-radius: $image-size/2;
   box-sizing: border-box;
 }
 
+#timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
 .project-image {
-  display: block;
+  width: 100%;
+  text-align: center;
+  // display: block;
   height: $image-size;
   width: $image-size;
   line-height: $image-size;
+  display: inline;
 
-  -moz-border-radius: $image-radius; /* or 50% */
-  border-radius: $image-radius; /* or 50% */
+  // -moz-border-radius: $image-radius; /* or 50% */
+  // border-radius: $image-radius; /* or 50% */
 
-  background-color: white;
   text-align: center;
   img {
-    padding: 50px;
+    // padding: 50px;
   }
 }
 
-#timeline {
-  position: relative;
-}
-
 .timeline-icon {
-  margin-top: 50px;
+  margin-top: 25%;
   z-index: 100;
   position: absolute;
   left: 50%;
@@ -51,6 +55,15 @@ $icon-radius: $image-size/2;
   text-align: center;
 }
 .timeline-item {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-direction: row-reverse;
+
+  > div {
+    // border: 1px solid red;
+  }
   &:before {
     content: "";
     width: 5px;
@@ -63,10 +76,65 @@ $icon-radius: $image-size/2;
     left: 0;
     right: 0;
   }
+
+  .timeline-content {
+    flex: 1;
+    padding-left: 200px;
+    display: flex;
+
+    align-items: center;
+    // flex-direction: vertical-align;
+    justify-content: center;
+  }
+  .timeline-opposite {
+    flex: 1;
+    text-align: center;
+  }
+
+  &.flipped {
+    flex-direction: row;
+
+    .timeline-content {
+      flex: 1;
+      padding-left: 0px;
+      padding-right: 200px;
+    }
+
+    .timeline-opposite {
+      flex: 1;
+      text-align: center;
+    }
+  }
 }
 
-.timeline-content {
-  position: absolute;
-  left: 50%;
-  padding: 40px;
+@media only screen and(max-width:800px) {
+  .timeline-icon {
+    display: none;
+  }
+  .timeline-item {
+    flex-direction: column;
+    padding: 2rem;
+
+    &:before {
+      content: none;
+    }
+    &.flipped {
+      flex-direction: column;
+    }
+    &.flipped {
+      .timeline-content {
+        padding: 0;
+
+        flex-direction: column;
+        padding-right: 0;
+      }
+    }
+
+    .timeline-content {
+      padding: 0;
+
+      flex-direction: column;
+      padding-right: 0;
+    }
+  }
 }

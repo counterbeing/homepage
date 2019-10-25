@@ -19,7 +19,7 @@
   client: Self
   year: 2019
   season: Summer
-  image: lightswarm.png
+  image: liteswarm.png
   url: https://github.com/counterbeing/liteswarm
   kind: project
   technologies:

@@ -21,8 +21,8 @@
 <meta property="og:description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain around it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I still don&rsquo;t quite believe it." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.corylogan.com/bits/bits/proving-the-monty-hall-problem/" />
-<meta property="article:published_time" content="2019-05-21T00:35:16-04:00"/>
-<meta property="article:modified_time" content="2019-05-21T00:35:16-04:00"/>
+<meta property="article:published_time" content="2019-05-21T00:35:16-04:00" />
+<meta property="article:modified_time" content="2019-05-21T00:35:16-04:00" />
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Proving the Monty Hall Problem"/>
@@ -205,8 +205,7 @@ a[itemprop="url"]:hover {
 </header>
     <main>
   <article itemscope itemtype="https://schema.org/BlogPosting">
-    
-<meta itemprop="name" content="Proving the Monty Hall Problem">
+    <meta itemprop="name" content="Proving the Monty Hall Problem">
 <meta itemprop="description" content="Doors    When I first heard of the Monty Hall problem, I read about it in Sam Harris&rsquo; The Moral Landscape, and it took me a few minutes to really wrap my brain around it. Talking about it with a few people since, I struggle to convince them that this really works this way. I think part of it is that I still don&rsquo;t quite believe it.">
 
 
@@ -336,11 +335,11 @@ probably picked incorrectly, thus, you should switch doors.</p>
 <span class="k">def</span> <span class="nf">run_experiment</span>
   <span class="n">switch_results</span> <span class="o">=</span> <span class="mi">1_000_000</span><span class="o">.</span><span class="n">times</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span>
     <span class="n">gameshow</span><span class="p">(</span><span class="kp">true</span><span class="p">)</span>
-  <span class="k">end</span><span class="o">.</span><span class="n">sum</span> <span class="sr">/ 10_000.0
-</span><span class="sr">
-</span><span class="sr">  stay_results = 1_000_000.times.map do
-</span><span class="sr">    gameshow(false)
-</span><span class="sr">  end.sum /</span> <span class="mi">10_000</span><span class="o">.</span><span class="mi">0</span>
+  <span class="k">end</span><span class="o">.</span><span class="n">sum</span> <span class="o">/</span> <span class="mi">10_000</span><span class="o">.</span><span class="mi">0</span>
+
+  <span class="n">stay_results</span> <span class="o">=</span> <span class="mi">1_000_000</span><span class="o">.</span><span class="n">times</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span>
+    <span class="n">gameshow</span><span class="p">(</span><span class="kp">false</span><span class="p">)</span>
+  <span class="k">end</span><span class="o">.</span><span class="n">sum</span> <span class="o">/</span> <span class="mi">10_000</span><span class="o">.</span><span class="mi">0</span>
 
   <span class="nb">puts</span> <span class="s2">&#34;By switching you won </span><span class="si">#{</span><span class="n">switch_results</span><span class="si">}</span><span class="s2">&#34;</span>
   <span class="nb">puts</span> <span class="s2">&#34;By staying you won </span><span class="si">#{</span><span class="n">stay_results</span><span class="si">}</span><span class="s2">&#34;</span>
@@ -366,7 +365,7 @@ By staying you won 33.3209
 
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/4Lb-6rxZxx0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/4Lb-6rxZxx0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
 

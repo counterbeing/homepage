@@ -24,7 +24,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.corylogan.com/bits/bits/" />
 
-<meta property="og:updated_time" content="2019-05-21T16:39:32-04:00"/>
+<meta property="og:updated_time" content="2019-05-21T16:39:32-04:00" />
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bits"/>
@@ -577,7 +577,7 @@ Instead, here&rsquo;s a quick bit of jQuery, which is already available in the M
   <div itemprop="description">
     Why the heck is my alpine docker image so huge? That&rsquo;s a tough question to answer, especially when you have no idea what&rsquo;s taking up all of the space.
 This is a dirty little one-liner that yields a sorted list of all of the packages on your alpine image by size. It does this by
- Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size  apk info | while read a; do apk info -s $a; done | awk NF | sed &#39;Ns/\n/ /&#39; | sort -k4 -n It may be ugly, but now I can make an informed decision about wether or not there are binaries that can be axed.
+ Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size
   </div>
   
     <nav class="readmore"><p>

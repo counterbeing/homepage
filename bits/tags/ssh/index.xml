@@ -5,11 +5,11 @@
     <link>https://www.corylogan.com/bits/tags/ssh/</link>
     <description>Recent content in ssh on Bits and Blocks</description>
     <ttl>1440</ttl>
-    <generator>Hugo 0.55.6</generator>
+    <generator>Hugo 0.58.3</generator>
     <language>en-us</language>
     <managingEditor> (Cory Logan)</managingEditor>
     <webMaster> (Cory Logan)</webMaster>
-    <lastBuildDate>Wed, 22 May 2019 19:43:22 UT</lastBuildDate>
+    <lastBuildDate>Fri, 25 Oct 2019 05:31:48 UT</lastBuildDate>
     <atom:link href="https://www.corylogan.com/bits/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Serving Localhost to the Web with Reverse Ssh Tunnels</title>
@@ -26,7 +26,8 @@ This topic is always a little tricky, so, here&amp;rsquo;s the basic thing to kn
 Suppose you have a development rails server running on your local computer. You can access this server via curl http://localhost:3000. Which is to say, it&amp;rsquo;s running on your localhost, on port 3000. You want your client to see it, to give you feedback, but they&amp;rsquo;re nowhere near you, and you just want a quick way to show it to them.
 Fortunately for you, you know about ssh. You know that it will take you just a few seconds to set up a reverse tunnel through an intermediate server. Cake! Huh?
 Things you&amp;rsquo;ll need, and their values in my example:
- Some kind of server on the web running sshd (yourserver.com) A local webserver accessible (0.0.0.0:3000)  ssh -NR 3333:localhost:3000 user@yourserver.com Now that the tunnel is running, you should be able to access your web server at http://yourserver.com:3333. You can of course change either of the ports. There are a few caveats, but this is it in the basic form.
+ Some kind of server on the web running sshd (yourserver.com) A local webserver accessible (0.0.0.0:3000)
+ssh -NR 3333:localhost:3000 user@yourserver.com  Now that the tunnel is running, you should be able to access your web server at http://yourserver.com:3333. You can of course change either of the ports. There are a few caveats, but this is it in the basic form.
 Troubleshooting If that&amp;rsquo;s not working for you, chances are you need the GatewayPorts yes option added to the file /etc/ssh/sshd_config on the server. Go in there and add that line, then restart the ssh service. With ubuntu that&amp;rsquo;s just sudo service ssh restart.
 Tips  You can run this in the background if you want by adding the -f flag. I prefer to run it in the foreground when I&amp;rsquo;m just using it for a moment, or troubleshooting as it&amp;rsquo;s easier to kill. If you run it in the background, and you just try to run it again on the same port, they will collide, and you will fail. Lower port numbers (lower than 1024) can&amp;rsquo;t be used unless you&amp;rsquo;re a super user on the system. Generally, it&amp;rsquo;s just easier to use a higher port number on the remote server. The -v flag will give you the full ssh output with authentication. This is another common source of problems. If you have a few dollars, and not much interest in the topic, check out ngrok, it&amp;rsquo;s a great tool that really takes most of the trouble out of it. It also means you don&amp;rsquo;t need to bring your own server! If you don&amp;rsquo;t wish to run your own server, this is the way to go.  ]]></content:encoded>
     </item>

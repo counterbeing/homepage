@@ -13,7 +13,7 @@
     <title>Reducing The Size Of Alpine Docker Images | Bits and Blocks</title>
     <meta name="description" content="Why the heck is my alpine docker image so huge? That&rsquo;s a tough question to answer, especially when you have no idea what&rsquo;s taking up all of the space.
 This is a dirty little one-liner that yields a sorted list of all of the packages on your alpine image by size. It does this by
- Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size  apk info | while read a; do apk info -s $a; done | awk NF | sed &#39;Ns/\n/ /&#39; | sort -k4 -n It may be ugly, but now I can make an informed decision about wether or not there are binaries that can be axed.">
+ Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size">
     <meta name="keywords" content="infrastructure, technology, ">
     
     
@@ -22,17 +22,17 @@ This is a dirty little one-liner that yields a sorted list of all of the package
     <meta property="og:title" content="Reducing The Size Of Alpine Docker Images" />
 <meta property="og:description" content="Why the heck is my alpine docker image so huge? That&rsquo;s a tough question to answer, especially when you have no idea what&rsquo;s taking up all of the space.
 This is a dirty little one-liner that yields a sorted list of all of the packages on your alpine image by size. It does this by
- Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size  apk info | while read a; do apk info -s $a; done | awk NF | sed &#39;Ns/\n/ /&#39; | sort -k4 -n It may be ugly, but now I can make an informed decision about wether or not there are binaries that can be axed." />
+ Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.corylogan.com/bits/bits/reducing_the_size_of_alpine_docker_images/" />
-<meta property="article:published_time" content="2016-12-26T22:38:02-08:00"/>
-<meta property="article:modified_time" content="2016-12-26T22:38:02-08:00"/>
+<meta property="article:published_time" content="2016-12-26T22:38:02-08:00" />
+<meta property="article:modified_time" content="2016-12-26T22:38:02-08:00" />
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Reducing The Size Of Alpine Docker Images"/>
 <meta name="twitter:description" content="Why the heck is my alpine docker image so huge? That&rsquo;s a tough question to answer, especially when you have no idea what&rsquo;s taking up all of the space.
 This is a dirty little one-liner that yields a sorted list of all of the packages on your alpine image by size. It does this by
- Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size  apk info | while read a; do apk info -s $a; done | awk NF | sed &#39;Ns/\n/ /&#39; | sort -k4 -n It may be ugly, but now I can make an informed decision about wether or not there are binaries that can be axed."/>
+ Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size"/>
 
     
 
@@ -211,11 +211,10 @@ a[itemprop="url"]:hover {
 </header>
     <main>
   <article itemscope itemtype="https://schema.org/BlogPosting">
-    
-<meta itemprop="name" content="Reducing The Size Of Alpine Docker Images">
+    <meta itemprop="name" content="Reducing The Size Of Alpine Docker Images">
 <meta itemprop="description" content="Why the heck is my alpine docker image so huge? That&rsquo;s a tough question to answer, especially when you have no idea what&rsquo;s taking up all of the space.
 This is a dirty little one-liner that yields a sorted list of all of the packages on your alpine image by size. It does this by
- Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size  apk info | while read a; do apk info -s $a; done | awk NF | sed &#39;Ns/\n/ /&#39; | sort -k4 -n It may be ugly, but now I can make an informed decision about wether or not there are binaries that can be axed.">
+ Getting the complete list from apk info Iterating over the results to ask apk for its size Removing the blank lines Combining the size lines and the name lines Sorting by size">
 
 
 <meta itemprop="datePublished" content="2016-12-26T22:38:02-08:00" />
@@ -263,9 +262,11 @@ packages on your alpine image by size. It does this by</p>
 <li>Iterating over the results to ask <code>apk</code> for its size</li>
 <li>Removing the blank lines</li>
 <li>Combining the size lines and the name lines</li>
-<li>Sorting by size</li>
+
+<li><p>Sorting by size</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">apk info <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> a<span class="p">;</span> <span class="k">do</span> apk info -s <span class="nv">$a</span><span class="p">;</span> <span class="k">done</span> <span class="p">|</span> awk NF <span class="p">|</span> sed <span class="s1">&#39;Ns/\n/ /&#39;</span> <span class="p">|</span> sort -k4 -n</code></pre></div></li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">apk info <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> a<span class="p">;</span> <span class="k">do</span> apk info -s <span class="nv">$a</span><span class="p">;</span> <span class="k">done</span> <span class="p">|</span> awk NF <span class="p">|</span> sed <span class="s1">&#39;Ns/\n/ /&#39;</span> <span class="p">|</span> sort -k4 -n</code></pre></div>
+
 <p>It may be ugly, but now I can make an informed decision about wether or not
 there are binaries that can be axed.</p>
 

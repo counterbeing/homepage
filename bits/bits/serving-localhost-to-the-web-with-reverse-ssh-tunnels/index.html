@@ -23,8 +23,8 @@
 <meta property="og:url" content="https://www.corylogan.com/bits/bits/serving-localhost-to-the-web-with-reverse-ssh-tunnels/" />
 
 <meta property="og:image" content="https://www.corylogan.com/bits" />
-<meta property="article:published_time" content="2017-07-10T15:12:03&#43;02:00"/>
-<meta property="article:modified_time" content="2017-07-10T15:12:03&#43;02:00"/>
+<meta property="article:published_time" content="2017-07-10T15:12:03+02:00" />
+<meta property="article:modified_time" content="2017-07-10T15:12:03+02:00" />
 
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.corylogan.com/bits"/>
@@ -209,8 +209,7 @@ a[itemprop="url"]:hover {
 </header>
     <main>
   <article itemscope itemtype="https://schema.org/BlogPosting">
-    
-<meta itemprop="name" content="Serving Localhost to the Web with Reverse Ssh Tunnels">
+    <meta itemprop="name" content="Serving Localhost to the Web with Reverse Ssh Tunnels">
 <meta itemprop="description" content="So, you have a webpage on your computer you want to show to a remote person?">
 
 
@@ -269,9 +268,11 @@ Huh?</p>
 
 <ul>
 <li>Some kind of server on the web running sshd (yourserver.com)</li>
-<li>A local webserver accessible (0.0.0.0:3000)</li>
+
+<li><p>A local webserver accessible (0.0.0.0:3000)</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ssh -NR <span class="m">3333</span>:localhost:3000 user@yourserver.com</code></pre></div></li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ssh -NR <span class="m">3333</span>:localhost:3000 user@yourserver.com</code></pre></div>
+
 <p>Now that the tunnel is running, you should be able to access your web server at
 <code>http://yourserver.com:3333</code>. You can of course change either of the ports.
 There are a few caveats, but this is it in the basic form.</p>

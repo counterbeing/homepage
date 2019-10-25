@@ -10,10 +10,16 @@
     - Vue.js
     - GPS
     - Map Data
+    - Markdown
   description: >
     Together is a blog that I've created to show some travels off to the family.
     The thing that makes this project interesting is the way that it uses data
     from photos to determine what potos are related to locations and stories.
+
+
+    Stories are stored in markdown, with a small amount of yaml front-matter.
+    There is a generator for these files that runs in the command line. This
+    yields a very simple to edit blog that is just text files.
 
 - title: LiteSwarm
   client: Self
@@ -89,9 +95,13 @@
     queueing system. It consistem of:
 
 
-    - A thing
+    - A crawler to find pages with ads.
 
-    - yep
+    - A scraper to navigate to those pages in Puppeteer, inject JavaScript into the page to replace the targeted ad, and then screenshot the page.
+
+    - A rails application to provide an outward facing API.
+
+    - An electron app for quickly uploading images to your account, which would then be processed.
 
 - title: Able Health
   client: Able Health

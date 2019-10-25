@@ -1,0 +1,47 @@
+---
+title: Professional - Hard work, good ideas, and lot's of energy
+header: Profession and Passion
+subtitle: I love building quality tools for the web, and automating processes.
+image: mobile-office
+image_title: my mobile office
+---
+
+<div class="container">
+  <div class='row'>
+      <div id="timeline">
+        <% data.projects.each_with_index do |project, index| %>
+          <div class="timeline-item <%= 'flipped' if index.even? %>">
+
+            <div class="timeline-content">
+              <div class='margin-wrapper'>
+                <h2><%= project.title %></h2>
+                <h4><%= project.season %> of <%= project.year %> | <%= project.client %></h4>
+
+                <div class="timeline-image-inline">
+                  <%= partial(:portfolio_image, :locals => { project: project}) %>
+                </div>
+                <p>
+                  <% if project.description %>
+                    <%= render_markdown(project.description) %>
+                  <% end %>
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-icon-container">
+              <div class="timeline-icon">
+                <% icon = 'rocket' if project.kind == 'job'  %>
+                <% icon = 'flask' if project.kind == 'project'  %>
+                <i class="fa fa-<%= icon %> fa-2x" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <div class="timeline-opposite">
+              <%= partial(:portfolio_image, :locals => { project: project}) %>
+            </div>
+          </div>
+        <% end  %>
+
+      </div>
+    </div>
+</div>

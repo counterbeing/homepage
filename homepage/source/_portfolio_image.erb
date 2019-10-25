@@ -1,0 +1,15 @@
+<div class='margin-wrapper'>
+  <% if project.image %>
+  <div class="project-image" >
+    <img src="/images/portfolio/<%= project.image %> ">
+  </div>
+  <% end %>
+
+  <% if project.technologies %>
+  <div class="tokens">
+    <% project.technologies.each do |technology| %>
+    <span class="token"><%= technology %> </span>
+    <% end %>
+  </div>
+  <% end %>
+</div>

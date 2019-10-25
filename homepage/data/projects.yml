@@ -1,3 +1,20 @@
+- title: Together
+  client: Self
+  year: 2019
+  season: Fall
+  image: together.jpg
+  url: https://together.corylogan.com/
+  kind: project
+  technologies:
+    - Node.js
+    - Vue.js
+    - GPS
+    - Map Data
+  description: >
+    Together is a blog that I've created to show some travels off to the family.
+    The thing that makes this project interesting is the way that it uses data
+    from photos to determine what potos are related to locations and stories.
+
 - title: LiteSwarm
   client: Self
   year: 2019
@@ -9,12 +26,41 @@
     - Arduino
     - C++
     - FastLED
+    - WS281X
+    - Eagle CAD
   description: >
     This is a project for synchronizing light displays across an improvised
     wireless network. They were used mostly in scarves and on bicycles, but
     [@100ideas](https://github.com/100ideas) and I are trying to design an easy
     to implement DIY project that will allow individuals to construct lights
     that will communicate with each other.
+
+
+    In the repo are Eagle CAD design files for a custom board, to which all
+    controls and LED connections are soldered. We got a small run of these
+    boards printed for our project.
+
+- title: RiddleSticks
+  client: Self
+  year: 2018
+  season: Fall
+  image: riddlesticks.jpg
+  kind: job
+  url: https://riddlesticks.corylogan.com
+  technologies:
+    - Vue.js
+    - Cryptography
+    - AES
+  description: >
+    This small tool allows anyone to create a file that contains an encrypted
+    message with a riddle. Along with the file are all of the parts required to
+    decrypt the message if the riddle is guessed. The entire thing is then
+    packaged up as an `html` file and downloaded.
+
+
+    This is intended for people to use to write love letters, but it could be
+    used for other purposes, such as a part of a scavenger hunt or something of
+    the like.
 
 - title: Mokker
   client: Self
@@ -24,6 +70,7 @@
   kind: project
   technologies:
     - Node.js
+    - Faktory
     - Express.js
     - Rails
     - Docker
@@ -100,36 +147,6 @@
     microservices. The benefits included centralization, and reduced redundancy
     in tons of data processing.
 
-- title: Solicitor Mail Templates
-  client: Self
-  year: 2015
-  season: Spring
-  image: solicitor.jpg
-  kind: project
-  technologies:
-    - Sails.js
-    - Angularjs
-    - Node
-    - Grunt
-    - SASS
-    - Handlebars
-  description: >
-    This was a tool that I decided I needed. I looked around at various
-    applications that were intended for the purpose but was generally
-    dissatisfied at the primitive templating.
-
-
-    As a programmer, when you do something more than once, you begin to think of
-    ways to automate it. This project began as that, but now I'm beginning to
-    wonder if I'll be able to turn it into a sellable product.
-
-
-    The initial goal was to create a super slick interface that revolves around
-    real time updating of data by using Angularjs resources, as well as a live
-    templating preview that includes all the functionality  of Handlebars. The
-    flexibility within templates gives you conditionals and loops for writing
-    templates that are robust, and completely reusable.
-
 - title: Flirtmoji Web App
   client: Self
   year: 2014
@@ -161,20 +178,6 @@
 
     I did everything from the coding for the rails app, to all of the
     infrastructure management, and server scaling.
-
-- title: Collar Friend Tracking App
-  client: Self
-  year: 2014
-  season: Spring
-  url: http://collar.corylogan.com
-  image: collar-app.jpg
-  kind: project
-  technologies:
-    - jQuery
-    - Facebook API
-    - Grunt.js
-  description: >
-    This was a small project that I put together over a weekend. I had met a lot of people, and become friends with them on facebook. This app helps to locate where they are from.
 
 - title: Marketing Website
   client: MacCentric Solutions

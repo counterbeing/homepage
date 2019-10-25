@@ -181,6 +181,7 @@ footer {
 }
 
 nav {
+  width: 100%;
   margin: 15px;
 
   a {
@@ -275,5 +276,14 @@ blockquote::before {
   h1 {
     font-size: 50px;
     font-weight: bolder;
+  }
+
+  nav {
+    margin: 10px;
+
+    a {
+      font-size: 0.8em;
+      margin: 2px;
+    }
   }
 }

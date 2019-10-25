@@ -111,12 +111,15 @@
     <span class="token">Vue.js </span>
     <span class="token">GPS </span>
     <span class="token">Map Data </span>
+    <span class="token">Markdown </span>
   </div>
 </div>
 
                 </div>
                 <p>
                     <p>Together is a blog that I've created to show some travels off to the family. The thing that makes this project interesting is the way that it uses data from photos to determine what potos are related to locations and stories.</p>
+
+<p>Stories are stored in markdown, with a small amount of yaml front-matter. There is a generator for these files that runs in the command line. This yields a very simple to edit blog that is just text files.</p>
 
                 </p>
               </div>
@@ -139,6 +142,7 @@
     <span class="token">Vue.js </span>
     <span class="token">GPS </span>
     <span class="token">Map Data </span>
+    <span class="token">Markdown </span>
   </div>
 </div>
 
@@ -154,7 +158,7 @@
                 <div class="timeline-image-inline">
                   <div class='margin-wrapper'>
   <div class="project-image" >
-    <img src="images/portfolio/lightswarm.png ">
+    <img src="images/portfolio/liteswarm.png ">
   </div>
 
   <div class="tokens">
@@ -185,7 +189,7 @@
             <div class="timeline-opposite">
               <div class='margin-wrapper'>
   <div class="project-image" >
-    <img src="images/portfolio/lightswarm.png ">
+    <img src="images/portfolio/liteswarm.png ">
   </div>
 
   <div class="tokens">
@@ -283,8 +287,10 @@
 <p>This was a fairly complex operation with a microservice architecture and a queueing system. It consistem of:</p>
 
 <ul>
-  <li>A thing</li>
-  <li>yep</li>
+  <li>A crawler to find pages with ads.</li>
+  <li>A scraper to navigate to those pages in Puppeteer, inject JavaScript into the page to replace the targeted ad, and then screenshot the page.</li>
+  <li>A rails application to provide an outward facing API.</li>
+  <li>An electron app for quickly uploading images to your account, which would then be processed.</li>
 </ul>
 
                 </p>
@@ -712,7 +718,7 @@
         <div class="row">
           <div class="col-md-6">
             <h3>More Stuff</h3>
-            <ul>
+            <ul class='more-stuff'>
               <li><a href='/bits/'>Tech Blog</a><br> A place I make some notes about technology.</li>
               <li><a href='/sa/'>South America Motorcycle Trip</a><br> I rode a motorcycle from San Francisco to Buenos Aires around 2013 to 2014, all the pictures and stories are here.</li>
               <li><a href='https://riddlesticks.corylogan.com'>Riddlesticks</a><br>A tool to send encrypted messages, along with riddles that decrypt them.</li>
